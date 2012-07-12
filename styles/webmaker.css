@@ -1,0 +1,226 @@
+/* --------------------------------------------------------------------------
+ * 全ページ共通
+ * -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("/media/fonts/OpenSans-Light-webfont.eot");
+  src: url("/media/fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"),
+       url("/media/fonts/OpenSans-Light-webfont.woff") format("woff"),
+       url("/media/fonts/OpenSans-Light-webfont.ttf") format("truetype"),
+       url("/media/fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/media/fonts/OpenSans-Regular-webfont.eot");
+  src: url("/media/fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+       url("/media/fonts/OpenSans-Regular-webfont.woff") format("woff"),
+       url("/media/fonts/OpenSans-Regular-webfont.ttf") format("truetype"),
+       url("/media/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/media/fonts/OpenSans-Semibold-webfont.eot");
+  src: url("/media/fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"),
+       url("/media/fonts/OpenSans-Semibold-webfont.woff") format("woff"),
+       url("/media/fonts/OpenSans-Semibold-webfont.ttf") format("truetype"),
+       url("/media/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format("svg");
+  font-weight: bold;
+  font-style: normal
+}
+
+[lang="ja"] * {
+  font-family: "Open Sans", Corbel, Calibri, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+}
+
+[lang="ja"] p, [lang="ja"] li, [lang="ja"] dt, [lang="ja"] dd, [lang="ja"] address {
+  line-height: 1.7;
+  font-style: normal;
+}
+
+[lang="en-US"] p, [lang="en-US"] address {
+  line-height: 1.5;
+  font-style: normal;
+}
+
+#header h1 a {
+  padding-right: 0;
+}
+
+#header li a {
+  width: 96px;
+  min-width: 96px;
+}
+
+#header .factory {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: right;
+  width: 160px;
+  height: 70px;
+  background: url(/images/factory-wordmark-small.png) no-repeat center;
+  text-indent: -99999px;
+}
+
+#header .about {
+  font-size: 12px;
+}
+
+.section-projects #header .projects a:after,
+.section-tools #header .tools a:after,
+.section-events #header .events a:after,
+#page-about #header .about a:after,
+.section-news #header .news a:after {
+  border-width: 25px 64px 0;
+}
+
+.twitter-profile-widget {
+  margin: 24px -15px;
+  width: 918px;
+}
+
+.twitter-profile-widget > .call {
+  color: #6D6E71;
+  font-size: 1.143em;
+  text-align: center;
+}
+
+.twitter-profile-widget .twtr-widget h3,
+.twitter-profile-widget .twtr-widget h4 {
+  font-family: "Open Sans light", sans-serif;
+  font-weight: 400;
+}
+
+.twitter-profile-widget .twtr-widget h3 {
+  font-size: 1.143em !important;
+}
+
+.twitter-profile-widget .twtr-widget h4 {
+  font-size: 2em !important;
+}
+
+.twitter-profile-widget .twtr-ft {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+ * ホーム
+ * -------------------------------------------------------------------------- */
+
+body.section-homepage #content .veg form {
+  padding-right: 30px;
+}
+
+body.section-homepage #content .veg .share {
+  width: 22%;
+}
+
+body.section-homepage #content .veg .about {
+    padding-right: 30px;
+    border-right: 1px solid #E4E4E5;
+    box-shadow: none;
+    float: left;
+    margin: 0 10px 0 auto;
+    overflow: hidden;
+    padding: 10px 30px 10px 0;
+    width: 70%;
+}
+
+body.section-homepage #content .veg .about .button:after {
+  content: "";
+}
+
+/* --------------------------------------------------------------------------
+ * プロジェクト
+ * -------------------------------------------------------------------------- */
+
+#projects-index #project-list {
+  position: relative;
+  top: 91px;
+  margin-bottom: 100px
+}
+
+#projects-index #project-list .more {
+  text-align: center;
+  text-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+ * ツール
+ * -------------------------------------------------------------------------- */
+
+.content-page section p {
+  font-size: .8em !important;
+}
+
+/* --------------------------------------------------------------------------
+ * イベント
+ * -------------------------------------------------------------------------- */
+
+#code-party-index .intro-bar .note {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+body.section-events .involve .meta .partners {
+	background-image: url(https://webmaker.org/media/img/icons/what.png);
+}
+
+body.section-events #sec-japan {
+  margin: 24px -24px;
+  border-radius: 24px;
+  padding: 32px;
+  color: #666;
+  background: #F2F2F2;
+  text-shadow: 1px 1px 0 #FFF;
+}
+
+body.section-events #sec-japan img {
+  display: block;
+  margin: 0 auto;
+}
+
+body.section-events #sec-japan dt {
+  margin-bottom: .5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+body.section-events #sec-japan dd {
+  margin: 0 0 1.5em 0;
+}
+
+body.section-events #sec-japan .alert {
+  color: #ED1C24;
+  font-size: 1.5em;
+}
+
+body.section-events #sec-japan .archives {
+  margin-top: 2em;
+  border-top: 1px solid #E4E4E5;
+  padding-top: 2em;
+  color: #939598;
+}
+
+body.section-events #sec-japan .archives h4 {
+  font-size: 1.286em;
+}
+
+body.section-events #sec-japan .archives section {
+  margin-top: 1em;
+}
+
+body.section-events #sec-japan .archives h5,
+body.section-events #sec-japan .archives p {
+  margin: 0;
+  font-size: 1em;
+}

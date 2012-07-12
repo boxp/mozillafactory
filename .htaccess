@@ -1,0 +1,15 @@
+AddType application/x-httpd-php .php .html
+
+RewriteEngine on
+
+# 日本語ロケール (ja, ja-JP, ja-JP-mac) は日本語ページへ
+RewriteCond %{HTTP:Accept-Language} ^ja [NC]
+RewriteRule ^$              /ja/ [R=permanent,L]
+
+# それ以外のロケールは英語ページへリダイレクト
+RewriteRule ^$              /en-US/ [R=permanent,L]
+
+# Summer Code Party
+RewriteRule ^ja/projects/webmaker/videos/?$ /ja/webmaker/videos/ [R=permanent,L]
+RewriteRule ^ja/projects/webmaker/events/?$ /ja/webmaker/events/about/summer_campaign/ [R=permanent,L]
+RewriteRule ^ja/webmaker/events/about/?$ /ja/webmaker/events/about/summer_campaign/ [R=permanent,L]

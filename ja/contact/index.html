@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Mozilla Factory の取り組みに興味のある方は、このフォームからご連絡ください。">
+    <meta name="viewport" content="width=1024">
+    <meta property="og:site_name" content="Mozilla Factory">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="http://www.mozillafactory.org/ja/contact/">
+    <meta property="og:image" content="http://www.mozillafactory.org/images/factory_img.png">
+    <meta property="og:title" content="お問い合わせ | Mozilla Factory">
+    <meta property="og:description" content="Mozilla Factory の取り組みに興味のある方は、このフォームからご連絡ください。">
+    <link rel="canonical" href="http://www.mozillafactory.org/ja/contact/">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/tabzilla/media/css/tabzilla.css">
+    <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/media/css/common-min.css?build=d9e4d9e">
+    <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="/styles/factory.css">
+    <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
+    <title>お問い合わせ | Mozilla Factory</title>
+  </head>
+  <body id="page-contact" class="html-ltr windows sand lower" role="document" itemscope itemtype="http://schema.org/ContactPage">
+    <script src="http://www.mozilla.org/media/js/site-min.js?build=d9e4d9e"></script>
+    <div id="outer-wrapper">
+      <div id="wrapper">
+        <header id="masthead" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+          <a href="http://mozilla.jp/" id="tabzilla">Mozilla Japan</a>
+          <nav id="nav-main" role="presentation">
+            <ul>
+              <li class="share" role="presentation"><a class="twitter-share-button" href="https://twitter.com/mozillafactory" rel="nofollow" data-url="http://www.mozillafactory.org/ja/" data-text="Mozilla Factory — オープン x モノづくり = ??" data-hashtags="mozillafactory" data-via="mozillafactory" data-dnt="true"></a></li>
+              <li class="share" role="presentation"><div class="fb-like" data-href="http://www.mozillafactory.org/" data-size="medium" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false"></div></li>
+              <li><a href="/en-US/contact/">English</a></li>
+            </ul>
+          </nav>
+          <nav id="nav-bar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <h1><a href="/ja/"><img src="/images/factory_wordlogo_sub.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="230" height="44"></a></h1>
+            <ul>
+              <li><a href="/ja/about/">Mozilla Factory とは</a></li>
+              <li><a href="/ja/projects/">プロジェクト</a></li>
+              <li><a href="/ja/mentors/">メンターの紹介</a></li>
+              <li><a href="/ja/get-involved/">参加するには</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div id="main-content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+          <div class="row">
+            <div class="span10">
+              <div class="row" id="body-content">
+                <section class="main-column">
+                  <h1 itemprop="name">お問い合わせ</h1>
+<? @include_once dirname(__FILE__) . '/form.inc.php' ?>
+                  <p><?= htmlspecialchars($_form->description) ?></p>
+<? if ($_status->code === 1): ?>
+                  <p class="message" role="alert"><?= htmlspecialchars($_status->text) ?></p>
+<? else: ?>
+                  <form method="post" action="./">
+<?   if ($_status->code === -1): ?>
+                    <p class="warning" role="alert"><?= htmlspecialchars($_status->text) ?></p>
+<?   endif; ?>
+                    <dl>
+                      <dt>件名</dt>
+                      <dd><input type="text" name="subject" value="<?= htmlspecialchars($_subject) ?>"></dd>
+                      <dt>お名前 <em>(必須)</em></dt>
+                      <dd><input type="text" name="name" required value="<?= htmlspecialchars($_POST['name']) ?>"></dd>
+                      <dt>メールアドレス <em>(必須)</em></dt>
+                      <dd><input type="text" name="email" required value="<?= htmlspecialchars($_POST['email']) ?>"></dd>
+                      <dt>年齢 <? if (in_array('age', $_form->required)) echo '<em>(必須)</em>' ?></dt>
+                      <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['age']) ?>"></dd>
+                      <dt>学校名または所属 <? if (in_array('organization', $_form->required)) echo '<em>(必須)</em>' ?></dt>
+                      <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['organization']) ?>"></dd>
+                      <dt>コメント <? if (in_array('comment', $_form->required)) echo '<em>(必須)</em>' ?></dt>
+                      <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><?= htmlspecialchars($_form->comment) ?></textarea></dd>
+                    </dl>
+                    <p>ここで入力いただいた情報は、<a href="http://mozilla.jp/legal/privacy/japan/" target="_blank">Mozilla Japan 個人情報保護方針</a> に従って管理し、Mozilla Factory に関するご連絡および Mozilla Japan からの各種ご案内 (イベント告知など) 以外には使用しません。</p>
+                    <div><button class="button-blue" type="submit" role="button">送信</button></div>
+                    <div><input type="hidden" name="key" value="<?= $_key ?>"></div>
+                  </form>
+<? endif; ?>
+                </section><!-- end .main-column -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="footer-home"><a href="/ja/">Mozilla Factory ホーム</a></nav>
+      </div><!-- end #wrapper -->
+      <footer id="colophon" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="row">
+          <div class="span3">
+            <a href="http://mozilla.jp/" class="footer-logo"><img src="/images/mozilla-japan-logo.png" alt="Mozilla Japan" width="150" height="61"></a>
+          </div>
+          <nav class="span3" role="navigation">
+            <ul>
+              <li><a href="http://mozilla.jp/legal/privacy/">プライバシーポリシー</a></li>
+              <li><a href="http://www.mozilla.org/">mozilla.org</a> (グローバルサイト)</li>
+            </ul>
+          </nav>
+          <nav class="span3" role="navigation">
+            <ul>
+              <li><a href="/ja/contact/">お問い合わせ</a></li>
+              <li><a href="https://twitter.com/mozillafactory">Twitter</a></li>
+              <li><a href="https://www.facebook.com/MozillaFactory">Facebook</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div><!-- end #outer-wrapper -->
+    <script src="http://www.mozilla.org/media/js/common-min.js?build=d9e4d9e"></script>
+    <script src="http://platform.twitter.com/widgets.js" defer async></script>
+    <script src="http://connect.facebook.net/ja_JP/all.js#xfbml=1" defer async></script>
+    <script src="http://www.google-analytics.com/ga.js" defer async></script>
+    <script>
+      var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-6459738-11']); _gaq.push(['_trackPageview']);
+    </script>
+  </body>
+</html>
