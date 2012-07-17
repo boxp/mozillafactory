@@ -79,7 +79,10 @@
 }
 
 #main-content h1 {
-  margin: 0 0 30px 0;
+  margin-left: 0;
+  margin-bottom: 30px;
+  margin-right: 0;
+  margin-top: 0;
   font-size: 32px;
 }
 
@@ -90,6 +93,10 @@
 
 #main-content h3 {
   font-size: 23px;
+}
+
+#main-content h4 {
+  font-size: 18px;
 }
 
 #main-content p {
@@ -393,4 +400,28 @@ body#page-mentors #page-logo img {
 
 #page-projects-webmaker-videos .unisubs-widget {
   margin: 0 auto !important;
+}
+
+
+/* --------------------------------------------------------------------------
+ * Summer-Code Party　
+ * -------------------------------------------------------------------------- */
+
+#event-info {
+  width: 300px;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+
+dl{
+
+}
+
+dl dt{
+
+}
+
+dl dd{
+
 }
