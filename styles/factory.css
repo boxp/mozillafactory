@@ -199,6 +199,7 @@
 }
 
 #twitter-profile-widget {
+  clear: both;
   margin: 16px;
 }
 
@@ -208,6 +209,29 @@
 
 #twitter-profile-widget .twtr-bd {
   width: 100%;
+}
+
+#home-events {
+  margin-bottom: 4em;
+  margin-left: 24px;
+}
+
+#home-events h4 {
+  font-size: 20px;
+}
+
+#home-events ul {
+  list-style-type: none;
+}
+
+#home-events li:nth-child(1) {
+  font-size: 20px;
+}
+
+#home-events li {
+  font-size: 14px;
+  margin-left: 16px;
+  float: left;
 }
 
 /* --------------------------------------------------------------------------
