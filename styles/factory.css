@@ -79,7 +79,10 @@
 }
 
 #main-content h1 {
-  margin: 0 0 30px 0;
+  margin-left: 0;
+  margin-bottom: 30px;
+  margin-right: 0;
+  margin-top: 0;
   font-size: 32px;
 }
 
@@ -90,6 +93,10 @@
 
 #main-content h3 {
   font-size: 23px;
+}
+
+#main-content h4 {
+  font-size: 18px;
 }
 
 #main-content p {
@@ -201,6 +208,30 @@
 
 #twitter-profile-widget .twtr-bd {
   width: 100%;
+}
+
+#home-events {
+  margin-bottom: 4em;
+  margin-left: 24px;
+}
+
+#home-events h4 {
+  font-size: 20px;
+}
+
+#home-events ul {
+  list-style-type: none;
+  line-height: 20px;
+}
+
+#home-events li:nth-child(1) {
+  font-size: 20px;
+}
+
+#home-events li {
+  font-size: 14px;
+  margin-left: 16px;
+  display: inline;
 }
 
 /* --------------------------------------------------------------------------
@@ -393,4 +424,28 @@ body#page-mentors #page-logo img {
 
 #page-projects-webmaker-videos .unisubs-widget {
   margin: 0 auto !important;
+}
+
+
+/* --------------------------------------------------------------------------
+ * Summer-Code Party　
+ * -------------------------------------------------------------------------- */
+
+#event-info {
+  width: 300px;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+
+dl{
+
+}
+
+dl dt{
+
+}
+
+dl dd{
+
 }
