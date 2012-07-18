@@ -199,7 +199,6 @@
 }
 
 #twitter-profile-widget {
-  clear: both;
   margin: 16px;
 }
 
@@ -222,6 +221,7 @@
 
 #home-events ul {
   list-style-type: none;
+  line-height: 20px;
 }
 
 #home-events li:nth-child(1) {
@@ -231,7 +231,7 @@
 #home-events li {
   font-size: 14px;
   margin-left: 16px;
-  float: left;
+  display: inline;
 }
 
 /* --------------------------------------------------------------------------
