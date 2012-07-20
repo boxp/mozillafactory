@@ -335,6 +335,25 @@ figure.f2 img {
   box-shadow: 0 0 4px #CCC;
 }
 
+#project-recrute{
+  margin-bottom: 20px;
+  padding-top: 100px;
+  border-top-width: 1px;
+  border-top-color: #c8c6ad;
+  border-top-style: dashed;
+  margin-top: 10px;
+}
+
+#page-table{
+}
+
+#page-recrute{
+}
+
+#project-link{
+	margin-top: 50px;
+}
+
 /* --------------------------------------------------------------------------
  * メンター
  * -------------------------------------------------------------------------- */
@@ -467,11 +486,27 @@ body#page-mentors #page-logo img {
   font-size: 15px;
 }
 
-dl{
+#event-list{
+	margin-top: 20px;
+	float: left;
 }
 
-dl dt{
+#event-list-1{
+	margin-top: 10px;
 }
 
-dl dd{
+#event-list-2{
+	margin-top: 10px;
+}
+
+#event-list-3{
+	margin-top: 10px;
+}
+
+#event-list-4{
+	margin-top: 10px;
+}
+
+#event-list-5{
+	margin-top: 10px;
 }
