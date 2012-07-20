@@ -17,6 +17,20 @@
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/media/css/common-min.css?build=d9e4d9e">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="/styles/factory.css">
     <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
+    <sript scr="text/javascript">
+    <!-- 
+	$function(){
+		("#tab li").click(function(){
+			var num = $("#tab li").index(this);
+			$(".content_wrap").addClass('disnon');
+			$(".content_wrap").eq(num).removeClass('disnon');
+			$(this).addClass('select')
+		});
+	});
+
+	-->
+	</script>
+    
     <title>プロジェクト | Mozilla Factory</title>
   </head>
   <body id="page-projects" class="html-ltr windows sand lower" role="document" itemscope itemtype="http://schema.org/WebPage">
@@ -50,6 +64,7 @@
                 <section class="main-column">
                   <h1 itemprop="name">プロジェクト</h1>
                   <figure class="f1"><img src="/images/icon_egg01_l.png" alt="" width="250" height="250"></figure>
+                  <div style='clear:both;' id="tabdemo1">
                   <p>Mozilla Factory では、プロジェクトごとにメンバーを募集し、活動します。</p>
                   <p itemprop="description">プロジェクトは、自分たちがやりたいと思うテーマをプロジェクト化する方法と、外部機関 (研究、教育機関、企業など) から提供されたテーマなどをもとに、プロジェクト化する方法の 2 通りがあります。</p>
                   <p>プロジェクトを通して、“考える”、“創造する”、“作る”、“伝える”、“教える”の要素を体験的に学べるだけでなく、それに関わる様々なジャンルの人々と、コミュニケーションを図ることもできます。</p>

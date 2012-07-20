@@ -154,7 +154,7 @@
 #large-nav {
   clear: both;
   margin: 24px 0;
-  border: dashed #C8C6AD;
+  border: dashed #c8c6ad;
   border-width: 1px 0;
   padding-top: 10px;
 }
@@ -198,8 +198,38 @@
   background-position: center -384px !important;
 }
 
+#hot-topics{
+	margin: 40px;
+	border-bottom-color: #c8c6ad;
+	border-bottom-style: dashed;
+	text-align: left;
+}
+
+#hot-topics-picture{
+	margin-top: 20px;
+	margin-bottom: 35px;
+	float: left;
+	text-align: left;
+	width: 200px;
+	border-color: #c3c3c3;
+}
+
+#hot-topics-info{
+	margin-top: 20px;
+	margin-bottom: 35px;
+	float: left;
+	padding-left: 40px;
+	text-align: left;
+	width: 300px;
+	border-color: #c5c5c5;
+}
+
 #twitter-profile-widget {
-  margin: 16px;
+  padding-top: 120px;
+  border-top-width: 1px;
+  border-top-color: #c8c6ad;
+  border-top-style: dashed;
+  float: left;
 }
 
 #twitter-profile-widget .twtr-ft {
@@ -435,17 +465,13 @@ body#page-mentors #page-logo img {
   width: 300px;
   font-weight: bold;
   font-size: 15px;
-
 }
 
 dl{
-
 }
 
 dl dt{
-
 }
 
 dl dd{
-
 }

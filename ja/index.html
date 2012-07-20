@@ -51,29 +51,38 @@
             </ul>
           </nav>
           <section id="home-events">
+          <div id="hot-topics">
             <h4>イベント</h4>
-            <ul>
-              <li><a href="http://www.mozillafactory.org/ja/webmaker/events/about/summer_campaign/">Summer Code Party in Kyoto</a></li>
-              <li>日時：7月25日（水）11:00 - 17:00</li>
-              <li>場所：京都リサーチパーク町家スタジオ</li>
-            </ul>
+             <div id="hot-topics-picture">
+              <a href="http://www.mozillafactory.org/ja/webmaker/events/about/summer_campaign/">
+              <img itemprop="image" src="/images/ivents/webmaker.png"></a></div>
+                <div id="hot-topics-info">
+                  <ul>
+                    <li><a href="http://www.mozillafactory.org/ja/webmaker/events/about/summer_campaign/">Summer Code Party in Kyoto</br></a></li>
+                    <li>日時：7月25日（水）11:00 - 17:00</br></li>
+                    <li>場所：京都リサーチパーク町家スタジオ</li>
+                  </ul>
+                </div>
+              </div>
+           
+            
+
           </section>
-          
           <aside id="twitter-profile-widget">
             <script src="http://widgets.twimg.com/j/2/widget.js"></script>
             <script>
             new TWTR.Widget({
               version: 2,
-              type: 'search',
-              search: 'mozillafactory OR Mozilla Factory',
+              type: 'profile',
+              rpp: 10,
               interval: 30000,
               title: 'Twitter から',
               subject: 'Mozilla Factory に関する最新のツイート',
-              width: 868,
-              height: 240,
+              width: 910,
+              height: 160,
               theme: { shell: { background: 'transparent', color: '#333333' }, tweets: { background: 'transparent', color: '#333333', links: '#af3232' } },
               features: { scrollbar: true, loop: false, live: true, behavior: 'all' }
-            }).render().start();
+            }).render().setUser('mozillafactory').start();
             </script>
           </aside>
         </div>
