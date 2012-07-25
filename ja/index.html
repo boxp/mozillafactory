@@ -28,11 +28,11 @@
       $("#left-bar").click(function(){
       	$("#toptext").hide();
         $("#toptext2").fadeIn(500);
-        })
+        });
       $("#right-bar").click(function(){
       	$("#toptext2").hide();
         $("#toptext").fadeIn(500);
-        })
+        });
     });
     </script> 
     
@@ -54,12 +54,10 @@
             </nav>
           </header>
           <div class="container" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-  		 
-  		 
-  		  
+          
+          <div id="left-bar"><img itemprop="image" src="/images/arrow-prev.png"></div>
           <!-- page1 -->
           <div id="toptext">
-            <div id="left-bar"><img itemprop="image" src="/images/arrow-prev.png"></div>
             <div id="toptext-left">
               <div id="toptext-left-first">
                 <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76"></div>
@@ -68,32 +66,36 @@
                 <p itemprop="description">Mozilla Factory では、中高生を中心に“オープン”を軸としたモノづくりを学び、実践します。ここでの様々な体験 (“考える”、“創造する”、“作る”、“伝える”、“教える”…) を通して人の才能や可能性を引き出し、伸ばすことを目指しています。</p>
                 </div>
               <div id="toptext-left-third">
-                <p class="more"><a href="/ja/about/">続きを読む »</a></p></div>
+                <p class="more"><a href="/ja/about/">続きを読む »</a></p>
+              </div>
             </div>
             <div id="toptext-right">
-		      <img src="/images/factory_img.png" alt="" width="324" height="310"></div>
-		  </div>
-		  <div id="right-bar"><img itemprop="image" src="/images/arrow-next.png"></div>
-		  
+              <img src="/images/factory_img.png" alt="" width="324" height="310">
+            </div>
+          </div>
+          <!-- END page1 -->
           <!-- page2 -->
-          
           <div id="toptext2">
-            <div id="left-bar"><img itemprop="image" src="/images/arrow-prev.png"></div>
-            <div id="toptext-left">
-              <div id="toptext-left-first">
+            <div id="toptext-left2">
+              <div id="toptext-left-first2">
                 <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76"></div>
-              <div id="toptext-left-second">
-                <h2 role="presentation">オープン × モノづくり ＝ ??</h2>
-                <p itemprop="description">Mozilla Factory では、中高生を中心に“オープン”を軸としたモノづくりを学び、実践します。ここでの様々な体験 (“考える”、“創造する”、“作る”、“伝える”、“教える”…) を通して人の才能や可能性を引き出し、伸ばすことを目指しています。</p>
+              <div id="toptext-left-second2">
+                <h2 role="presentation">2</h2>
+                <p itemprop="description">ふたつめ</p>
                 </div>
-              <div id="toptext-left-third">
-                <p class="more"><a href="/ja/about/">続きを読まない »</a></p></div>
+              <div id="toptext-left-third2">
+                <p class="more"><a href="/ja/about/">続きを読まない »</a></p>
+              </div>
             </div>
             <div id="toptext-right">
-		      <img src="/images/factory_img.png" alt="" width="324" height="310"></div>
-		  </div>
+              <img src="/images/factory_img.png" alt="" width="324" height="310">
+            </div>
+          </div>
+          <!-- END page2 -->
+          <div id="right-bar"><img itemprop="image" src="/images/arrow-next.png"></div>
 
-	      <nav id="large-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+          <nav id="large-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
             <ul>
               <li id="large-nav-projects"><a href="/ja/projects/">プロジェクト</a></li>
               <li id="large-nav-mentors"><a href="/ja/mentors/">メンターの紹介</a></li>
