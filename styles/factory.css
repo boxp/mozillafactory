@@ -115,34 +115,57 @@
   margin: 0 auto;
   width: 900px;
 }
+#left-bar{
+	padding-right: 30px;
+	padding-top: 160px;
+	width: 30px;
+	height: 250px;
+	position: relative;
+	float: left;
+}
+
+#right-bar{
+	padding-top: 190px;
+	float: right;
+	text-align: right;
+	position: relative;
+	height: 250px;
+	width: 30px;
+}
 
 #toptext {
+  height: 300px;
+  margin-left: 10px;
+  margin-bottom: 32px;
+  margin-right: 10px;
+  margin-top: 32px;
   float: left;
-  margin: 32px 24px;
-  width: 480px;
 }
 
-#toptext hgroup {
-  margin: 0 0 16px 0;
+#toptext2 {
+  height: 300px;
+  margin-left: 10px;
+  margin-bottom: 32px;
+  margin-right: 10px;
+  margin-top: 32px;
+  float: left;
 }
 
-#toptext h1 {
-  margin: 16px 0;
-  padding: 0;
+#toptext-left{
+	width: 440px;
+	position: relative;
+	float: left;
 }
 
-#toptext h2 {
-  margin: 16px 0;
-  font-size: 28px;
+#toptext-left-third{
+	text-align: right;
 }
 
-#toptext p {
-  margin-bottom: 8px;
-}
-
-#toptext .more {
-  font-size: 14px;
-  text-align: right;
+#toptext-right{
+	margin-right: 10px;
+	margin-left: 10px;
+	position: relative;
+	float: right;
 }
 
 .container figure {
@@ -264,6 +287,7 @@
   display: inline;
 }
 
+
 /* --------------------------------------------------------------------------
  * 下層ページ
  * -------------------------------------------------------------------------- */
@@ -301,6 +325,8 @@ figure.f1 {
 figure.f2 img {
   margin: 0 auto;
 }
+
+
 
 /* --------------------------------------------------------------------------
  * プロジェクト
