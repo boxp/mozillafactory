@@ -313,6 +313,17 @@ css-tricks.com/musings-on-preprocessing/
                            
      
                                                             
+    width: 900px;
+                                                           
+      
+                           
+     
+                                                            
+                                                           
+      
+                           
+     
+                                                            
     height: 350px;
                                                            
       
@@ -330,8 +341,7 @@ css-tricks.com/musings-on-preprocessing/
     * Width of the container. Typically you will want to 
     * match this with the width of the panel as well. 
     *
-    *******************************************************/
-    width: 900px; 
+    *******************************************************/ 
   }
     
     .coda-slider-wrapper .coda-slider .panel {
@@ -349,7 +359,7 @@ css-tricks.com/musings-on-preprocessing/
                                   
        
                                                               
-      height: 350px;
+      width: 900px;
                                                              
         
                                         
@@ -364,7 +374,7 @@ css-tricks.com/musings-on-preprocessing/
                                   
        
                                                               
-      width: 900px; 
+      height: 350px; 
     }
       
       .coda-slider-wrapper .coda-slider .panel .panel-wrapper {
