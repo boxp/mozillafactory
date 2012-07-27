@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="ja" dir="ltr">
-  <head>
+    <head>
     <meta charset="utf-8">
     <meta name="description" content="Mozilla Factory では、中高生を中心に“オープン”を軸としたモノづくりを学び、実践します。ここでの様々な体験 (“考える”、“創造する”、“作る”、“伝える”、“教える”…) を通して人の才能や可能性を引き出し、伸ばすことを目指しています。">
     <meta name="viewport" content="width=1024">
@@ -21,23 +21,11 @@
     <!- ------Javascript----- -->
     <script src="/js/jquery-1.7.2.min.js"></script>
     <script src="/js/jquery-ui-1.8.20.custom.min.js"></script>
-    <script src="/js/jquery.coda-slider-3.0.js"></script>
+    <script src="/js/jquery.coda-slider-3.0.min.js"></script>
     <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
     <script>
-    /* var count = 0;
-    $(function(){
-      $("#toptext2").hide();
-      $("#left-bar").click(function(){
-      	$("#toptext").hide();
-        $("#toptext2").fadeIn(500);
-        });
-      $("#right-bar").click(function(){
-      	$("#toptext2").hide();
-        $("#toptext").fadeIn(500);
-        });
-    }); */
     $().ready(function(){
-      $('#toptext').codaSlider();
+      $('#slider-id').codaSlider();
     });
     </script> 
     
@@ -45,11 +33,11 @@
     <title>Mozilla Factory — オープン × モノづくり ＝ ??</title>
     </head>
     <body id="page-home" class="html-ltr windows sand home" role="document" itemscope itemtype="http://schema.org/WebPage">
-      <script src="http://www.mozilla.org/media/js/site-min.js?build=d9e4d9e"></script>
-      <div id="outer-wrapper">
-        <div id="wrapper">
-          <header id="masthead" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-            <a href="http://mozilla.jp/" id="tabzilla">Mozilla Japan</a>
+    <script src="http://www.mozilla.org/media/js/site-min.js?build=d9e4d9e"></script>
+    <div id="outer-wrapper">
+      <div id="wrapper">
+        <header id="masthead" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+          <a href="http://mozilla.jp/" id="tabzilla">Mozilla Japan</a>
             <nav id="nav-main" role="presentation">
               <ul>
                 <li class="share" role="presentation"><a class="twitter-share-button" href="https://twitter.com/mozillafactory" rel="nofollow" data-url="http://www.mozillafactory.org/ja/" data-text="Mozilla Factory — オープン x モノづくり = ??" data-hashtags="mozillafactory" data-via="mozillafactory" data-dnt="true"></a></li>
@@ -57,72 +45,46 @@
                 <li><a href="/en-US/">English</a><img scr="/images/right.png" alt=""></li>
               </ul>
             </nav>
-          </header>
-          <div class="container" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-          
-          <div id="left-bar"><img itemprop="image" src="/images/arrow-prev.png"></div>
-          <div id="toptext" class="coda-slider">
-            <div>
-              <div id="toptext-left">
-                <div id="toptext-left-first">
-                  <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76">
-                </div>
-                <div id="toptext-left-second">
-                  <h2 role="presentation">オープン × モノづくり ＝ ??</h2>
-                  <p itemprop="description">Mozilla Factory では、中高生を中心に“オープン”を軸としたモノづくりを学び、実践します。ここでの様々な体験 (“考える”、“創造する”、“作る”、“伝える”、“教える”…) を通して人の才能や可能性を引き出し、伸ばすことを目指しています。</p>
-                  </div>
-                <div id="toptext-left-third">
-                  <p class="more"><a href="/ja/about/">続きを読む »</a></p>
-                </div>
+        </header>
+        <!-- START SLIDER -->
+        <div class="coda-slider"  id="slider-id">
+          <!-- START PAGE1 -->
+          <div>
+            <div class = "top-contents">
+              <div id="toptext-left-first">
+                <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76">
               </div>
-              <div id="toptext-right">
-                <img src="/images/factory_img.png" alt="" width="324" height="310">
+              <div id="toptext-left-second">
+                <h2 role="presentation">オープン × モノづくり ＝ ??</h2>
+                <p itemprop="description">Mozilla Factory では、中高生を中心に“オープン”を軸としたモノづくりを学び、実践します。ここでの様々な体験 (“考える”、“創造する”、“作る”、“伝える”、“教える”…) を通して人の才能や可能性を引き出し、伸ばすことを目指しています。</p>
+              </div>
+              <div id="toptext-left-third">
+                <p class="more">
+                <a href="/ja/about/">続きを読む »</a></p>
               </div>
             </div>
-            <div>
-              <div id="toptext-left2">
-                <div id="toptext-left-first2">
-                  <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76">
-                </div>
-                <div id="toptext-left-second2">
-                  <h2 role="presentation">オープン × モノづくり ＝ ??</h2>
-                  <p itemprop="description">Mozilla Factory では、中高生を中心に“オープン”を軸としたモノづくりを学び、実践します。ここでの様々な体験 (“考える”、“創造する”、“作る”、“伝える”、“教える”…) を通して人の才能や可能性を引き出し、伸ばすことを目指しています。</p>
-                  </div>
-                <div id="toptext-left-third2">
-                  <p class="more"><a href="/ja/about/">続きを読む »</a></p>
-                </div>
-              </div>
-              <div id="toptext-right2">
-                <img src="/images/factory_img.png" alt="" width="324" height="310">
-              </div>
+            <div id="toptext-right">
+                <figure><img src="/images/factory_img.png" alt="" width="324" height="310"></figure>
             </div>
           </div>
-          <div id="right-bar"><img itemprop="image" src="/images/arrow-next.png"></div>
-
-
-          <nav id="large-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-            <ul>
-              <li id="large-nav-projects"><a href="/ja/projects/">プロジェクト</a></li>
-              <li id="large-nav-mentors"><a href="/ja/mentors/">メンターの紹介</a></li>
-              <li id="large-nav-involved"><a href="/ja/get-involved/">参加するには</a></li>
-            </ul> 
-          </nav>
-          <section id="home-events">
-          <div id="hot-topics">
-            <h4>イベント</h4>
-            <div id="hot-topics-picture">
-              <a href="http://www.mozillafactory.org/ja/webmaker/events/about/summer_campaign/">
-              <img itemprop="image" src="/images/ivents/webmaker.png"></a></div>
-                <div id="hot-topics-info">
-                <ul>
-                   <li><a href="http://www.mozillafactory.org/ja/webmaker/events/about/summer_campaign/">Summer Code Party in Kyoto</a></li>
-                    <li>日時：7月25日（水）11:00 - 17:00</br></li>
-                    <li>場所：京都リサーチパーク町家スタジオ</li>
-                  </ul>
-                </div>
-              </div>
-          </section>
-          <aside id="twitter-profile-widget">
+          <!-- END OF PAGE1 -->
+          <!-- START PAGE2 -->
+          <div class = "top-contents">
+            <p>teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest.</p>
+            </div>
+          </div>
+          <!-- END OF PAGE2 -->
+        <!-- END OF SLIDER -->
+        <div class="container" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+        <nav id="large-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+          <ul>
+            <li id="large-nav-projects"><a href="/ja/projects/">プロジェクト</a></li>
+            <li id="large-nav-mentors"><a href="/ja/mentors/">メンターの紹介</a></li>
+            <li id="large-nav-involved"><a href="/ja/get-involved/">参加するには</a></li>
+          </ul> 
+        </nav>
+        <section id="home-events">
+            <aside id="twitter-profile-widget">
             <script src="http://widgets.twimg.com/j/2/widget.js"></script>
             <script>
             new TWTR.Widget({
@@ -162,7 +124,7 @@
         </div>
       </footer>
     </div><!-- end #outer-wrapper -->
-    <script src="http://www.mozilla.org/media/js/common-min.js?build=d9e4d9e"></script>
+    <!-- <script src="http://www.mozilla.org/media/js/common-min.js?build=d9e4d9e"></script> -->
     <script src="http://platform.twitter.com/widgets.js" defer async></script>
     <script src="http://connect.facebook.net/ja_JP/all.js#xfbml=1" defer async></script>
     <script src="http://www.google-analytics.com/ga.js" defer async></script>

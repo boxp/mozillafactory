@@ -134,24 +134,17 @@
 }
 
 #toptext {
+  float: left;
+  position: relative;
   height: 300px;
   margin-left: 10px;
   margin-bottom: 32px;
   margin-right: 10px;
   margin-top: 32px;
-  float: left;
-}
-
-#toptext2 {
-  height: 300px;
-  margin-left: 10px;
-  margin-bottom: 32px;
-  margin-right: 10px;
-  margin-top: 32px;
-  float: left;
 }
 
 #toptext-left{
+	z-index: 0;
 	width: 440px;
 	position: relative;
 	float: left;
@@ -162,13 +155,17 @@
 }
 
 #toptext-right{
+	margin-top: -250px;
+	z-index: 0;
+	float: right;
+	text-align: right;
 	margin-right: 10px;
 	margin-left: 10px;
 	position: relative;
-	float: right;
 }
 
 .container figure {
+  position: relative;
   float: left;
   margin-top: 8px;
   width: 360px;
@@ -223,8 +220,6 @@
 
 #hot-topics{
 	margin: 40px;
-	border-bottom-color: #c8c6ad;
-	border-bottom-style: dashed;
 	text-align: left;
 }
 
@@ -248,7 +243,8 @@
 }
 
 #twitter-profile-widget {
-  padding-top: 120px;
+  margin-top: 300px;
+  padding-top: 20px;
   border-top-width: 1px;
   border-top-color: #c8c6ad;
   border-top-style: dashed;
@@ -287,6 +283,14 @@
   display: inline;
 }
 
+.top-contents{
+  position: static;
+  width: 440px;
+}
+
+.slider-id{
+	padding-left: 100px;
+}
 
 /* --------------------------------------------------------------------------
  * 下層ページ
@@ -535,4 +539,7 @@ body#page-mentors #page-logo img {
 
 #event-list-5{
 	margin-top: 10px;
+}
+
+element{
 }

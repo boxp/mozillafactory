@@ -63,6 +63,22 @@ css-tricks.com/musings-on-preprocessing/
     * Inner wrapper styles 
     *
     *******************************************************/
+                                                           
+      
+                           
+     
+                                                            
+    height: 350px;
+                                                           
+      
+                           
+     
+                                                            
+                                                           
+      
+                           
+     
+                                                            
     background: #f2f2f2;
     /******************************************************
     * 
@@ -70,7 +86,7 @@ css-tricks.com/musings-on-preprocessing/
     * match this with the width of the panel as well. 
     *
     *******************************************************/
-    width: 700px; 
+    width: 900px; 
   }
     
     .coda-slider-wrapper .coda-slider .panel {
@@ -81,7 +97,29 @@ css-tricks.com/musings-on-preprocessing/
       * of the container as well. 
       *
       *******************************************************/
-      width: 700px; 
+                                                             
+        
+                                        
+                                                             
+                                  
+       
+                                                              
+      height: 350px;
+                                                             
+        
+                                        
+                                                             
+                                  
+       
+                                                              
+                                                             
+        
+                                        
+                                                             
+                                  
+       
+                                                              
+      width: 900px; 
     }
       
       .coda-slider-wrapper .coda-slider .panel .panel-wrapper {
@@ -116,7 +154,7 @@ css-tricks.com/musings-on-preprocessing/
       * Tab styles 
       *
       *******************************************************/
-      background: #000;
+      background: black;
       color: #fff;
       margin-right: 1px;
       padding: 3px 6px; 
@@ -128,7 +166,7 @@ css-tricks.com/musings-on-preprocessing/
       * Tab styles 
       *
       *******************************************************/
-      background: #000;
+      background: black;
       color: #fff;
       text-shadow: none; 
     }
