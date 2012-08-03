@@ -138,23 +138,6 @@
 	width: 30px;
 }
 
-#toptext {
-  float: left;
-  position: relative;
-  height: 300px;
-  margin-left: 10px;
-  margin-bottom: 32px;
-  margin-right: 10px;
-  margin-top: 32px;
-}
-
-#toptext-left{
-	z-index: 0;
-	width: 440px;
-	position: relative;
-	float: left;
-}
-
 #toptext-left-third{
 	text-align: right;
 }
@@ -168,6 +151,30 @@
 	margin-left: 10px;
 	position: relative;
 }
+
+#hot-topic-text{
+	margin-top: 13px;
+	border-color: #c5c5c5;
+}
+
+#hot-topic-further{
+	width: 400px;
+	text-align: right;
+	margin-bottom: 35px;
+	border-color: #c5c5c5;
+}
+
+#hot-topics-picture{
+	margin-left: -70px;
+	margin-top: -230px;
+	z-index: 0;
+	float: right;
+	position: relative;
+	margin-bottom: 35px;
+	text-align: right;
+	border-color: #c3c3c3;
+}
+
 
 .container figure {
   position: relative;
@@ -223,32 +230,8 @@
   background-position: center -384px !important;
 }
 
-#hot-topics{
-	margin: 40px;
-	text-align: left;
-}
-
-#hot-topics-picture{
-	margin-top: 20px;
-	margin-bottom: 35px;
-	float: left;
-	text-align: left;
-	width: 200px;
-	border-color: #c3c3c3;
-}
-
-#hot-topics-info{
-	margin-top: 20px;
-	margin-bottom: 35px;
-	float: left;
-	padding-left: 40px;
-	text-align: left;
-	width: 300px;
-	border-color: #c5c5c5;
-}
-
 #twitter-profile-widget {
-  margin-top: 300px;
+  margin-top: 200px;
   padding-top: 20px;
   border-top-width: 1px;
   border-top-color: #c8c6ad;
@@ -555,3 +538,4 @@ body#page-mentors #page-logo img {
 
 element{
 }
+

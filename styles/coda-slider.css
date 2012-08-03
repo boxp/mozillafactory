@@ -325,17 +325,6 @@ css-tricks.com/musings-on-preprocessing/
      
                                                             
     height: 320px;
-                                                           
-      
-                           
-     
-                                                            
-                                                           
-      
-                           
-     
-                                                            
-    background: #f2f2f2;
     /******************************************************
     * 
     * Width of the container. Typically you will want to 
@@ -445,16 +434,31 @@ css-tricks.com/musings-on-preprocessing/
                      
        
                                                               
-      margin-top: 150px;
                                                              
         
                      
        
                                                               
-      background: #000;
-      color: #fff;
+                                                             
+        
+                     
+       
+                                                              
+      background-color: black;
+                                                             
+        
+                     
+       
+                                                              
+                                                             
+        
+                     
+       
+                                                              
+      margin-top: 150px;
+      color: white;
       padding: 5px;
-      width: 100px; 
+      width: 45px; 
     }
   
   .coda-slider-wrapper .coda-nav-left-arrow {
