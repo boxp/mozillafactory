@@ -356,7 +356,7 @@ if ( typeof Object.create !== 'function' ) {
 		crossLinking: true, // No longer used
 		dynamicArrows: true,
 		dynamicArrowsGraphical: false,
-		dynamicArrowLeftText: "&#171;aa",
+		dynamicArrowLeftText: "&#171;",
 		dynamicArrowRightText: "&#187;",
 		dynamicTabs: true,
 		dynamicTabsAlign: "center",
