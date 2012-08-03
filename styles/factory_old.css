@@ -1,0 +1,512 @@
+/* --------------------------------------------------------------------------
+ * 全ページ共通
+ * -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("/media/fonts/OpenSans-Light-webfont.eot");
+  src: url("/media/fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"),
+       url("/media/fonts/OpenSans-Light-webfont.woff") format("woff"),
+       url("/media/fonts/OpenSans-Light-webfont.ttf") format("truetype"),
+       url("/media/fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/media/fonts/OpenSans-Regular-webfont.eot");
+  src: url("/media/fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+       url("/media/fonts/OpenSans-Regular-webfont.woff") format("woff"),
+       url("/media/fonts/OpenSans-Regular-webfont.ttf") format("truetype"),
+       url("/media/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/media/fonts/OpenSans-Semibold-webfont.eot");
+  src: url("/media/fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"),
+       url("/media/fonts/OpenSans-Semibold-webfont.woff") format("woff"),
+       url("/media/fonts/OpenSans-Semibold-webfont.ttf") format("truetype"),
+       url("/media/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format("svg");
+  font-weight: bold;
+  font-style: normal
+}
+
+[lang="ja"] * {
+  font-family: "Open Sans", Corbel, Calibri, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+}
+
+[lang="ja"] p, [lang="ja"] address {
+  line-height: 1.7;
+  font-style: normal;
+}
+
+[lang="en-US"] p, [lang="en-US"] address {
+  line-height: 1.5;
+  font-style: normal;
+}
+
+#tabzilla {
+  background-image: url(/images/tabzilla-tab.png) !important;
+}
+
+#tabzilla:after {
+  background: transparent none;
+}
+
+#nav-main {
+  height: 48px;
+}
+
+#nav-main li {
+  text-transform: none;
+}
+
+#nav-main li.share {
+  padding: 12px 0;
+  height: 20px;
+}
+
+#nav-main li.share iframe {
+  vertical-align: top;
+}
+
+#main-content {
+  font-size: 14px;
+}
+
+#main-content h1 {
+  margin-left: 0;
+  margin-bottom: 30px;
+  margin-right: 0;
+  margin-top: 0;
+  font-size: 32px;
+}
+
+#main-content h2 {
+  margin: 0 0 18px 0;
+  font-size: 23px;
+}
+
+#main-content h3 {
+  font-size: 23px;
+}
+
+#main-content h4 {
+  font-size: 18px;
+}
+
+#main-content p {
+  margin: 0 0 1em 0;
+}
+
+.main-column section {
+  margin: 40px 0;
+}
+
+/* --------------------------------------------------------------------------
+ * ホーム
+ * -------------------------------------------------------------------------- */
+
+.container {
+  margin: 0 auto;
+  width: 900px;
+}
+
+#toptext {
+  float: left;
+  margin: 32px 24px;
+  width: 480px;
+}
+
+#toptext hgroup {
+  margin: 0 0 16px 0;
+}
+
+#toptext h1 {
+  margin: 16px 0;
+  padding: 0;
+}
+
+#toptext h2 {
+  margin: 16px 0;
+  font-size: 28px;
+}
+
+#toptext p {
+  margin-bottom: 8px;
+}
+
+#toptext .more {
+  font-size: 14px;
+  text-align: right;
+}
+
+.container figure {
+  float: left;
+  margin-top: 8px;
+  width: 360px;
+}
+
+#large-nav {
+  clear: both;
+  margin: 24px 0;
+  border: dashed #c8c6ad;
+  border-width: 1px 0;
+  padding-top: 10px;
+}
+
+#large-nav ul {
+  overflow: hidden;
+}
+
+#large-nav li {
+  float: left;
+  margin: 0;
+  padding: 0 10px;
+  width: 280px;
+  background: url(/images/large-nav-icons.png) no-repeat;
+  font-size: 20px;
+  text-align: center;
+  list-style: none;
+}
+
+#large-nav a {
+  display: block;
+  padding-top: 150px;
+}
+
+[lang="en-US"] #large-nav a {
+  font-family: "Open Sans Light", sans-serif;
+}
+
+#large-nav-projects {
+  background-position: center 16px !important;
+}
+
+#large-nav-mentors {
+  width: 278px !important;
+  border: dashed #C8C6AD;
+  border-width: 0 1px;
+  background-position: center -184px !important;
+}
+
+#large-nav-involved {
+  background-position: center -384px !important;
+}
+
+#hot-topics{
+	margin: 40px;
+	border-bottom-color: #c8c6ad;
+	border-bottom-style: dashed;
+	text-align: left;
+}
+
+#hot-topics-picture{
+	margin-top: 20px;
+	margin-bottom: 35px;
+	float: left;
+	text-align: left;
+	width: 200px;
+	border-color: #c3c3c3;
+}
+
+#hot-topics-info{
+	margin-top: 20px;
+	margin-bottom: 35px;
+	float: left;
+	padding-left: 40px;
+	text-align: left;
+	width: 300px;
+	border-color: #c5c5c5;
+}
+
+#twitter-profile-widget {
+  padding-top: 120px;
+  border-top-width: 1px;
+  border-top-color: #c8c6ad;
+  border-top-style: dashed;
+  float: left;
+}
+
+#twitter-profile-widget .twtr-ft {
+  display: none;
+}
+
+#twitter-profile-widget .twtr-bd {
+  width: 100%;
+}
+
+#home-events {
+  margin-bottom: 4em;
+  margin-left: 24px;
+}
+
+#home-events h4 {
+  font-size: 20px;
+}
+
+#home-events ul {
+  list-style-type: none;
+  line-height: 20px;
+}
+
+#home-events li:nth-child(1) {
+  font-size: 20px;
+}
+
+#home-events li {
+  font-size: 14px;
+  margin-left: 16px;
+  display: inline;
+}
+
+/* --------------------------------------------------------------------------
+ * 下層ページ
+ * -------------------------------------------------------------------------- */
+
+#nav-bar {
+  float: none;
+  width: 100%;
+}
+
+#nav-bar ul {
+  clear: both;
+  margin-bottom: 48px;
+  border: dotted rgba(175, 50, 50, 0.4);
+  border-width: 1px 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  text-transform: none;
+}
+
+.main-column {
+  margin-left: 124px;
+  width: 700px;
+}
+
+nav.footer-home {
+  text-align: center;
+}
+
+figure.f1 {
+  float: right;
+  margin: 0 0 16px 16px;
+}
+
+figure.f2 img {
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+ * プロジェクト
+ * -------------------------------------------------------------------------- */
+
+#page-projects #active-projects {
+  overflow: hidden;
+}
+
+#page-projects .project {
+  overflow: auto;
+  margin: 0;
+  border-top: 1px dashed #C8C6AD;
+  padding: 32px 0 32px 280px;
+}
+
+#page-projects .project:first-of-type {
+  border: none;
+}
+
+#page-projects .project p {
+  margin: 1em 0 0;
+}
+
+#page-projects .project img {
+  float: left;
+  margin-left: -260px;
+  border: 1px solid #D6D6D6;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fff;
+  box-shadow: 0 0 4px #CCC;
+}
+
+#project-recrute{
+  margin-bottom: 20px;
+  padding-top: 100px;
+  border-top-width: 1px;
+  border-top-color: #c8c6ad;
+  border-top-style: dashed;
+  margin-top: 10px;
+}
+
+#page-table{
+}
+
+#page-recrute{
+}
+
+#project-link{
+	margin-top: 50px;
+}
+
+/* --------------------------------------------------------------------------
+ * メンター
+ * -------------------------------------------------------------------------- */
+
+ul.mentors {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.mentors li {
+  overflow: hidden;
+  margin: 0;
+  border-top: 1px dashed #C8C6AD;
+  padding: 32px 0;
+}
+
+ul.mentors li:first-of-type {
+  border-top: none;
+}
+
+ul.mentors .c1 {
+  float: left;
+  width: 150px;
+  font-size: medium;
+}
+
+ul.mentors .c1 img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+ul.mentors .c3 {
+  float: left;
+  padding-left: 32px;
+  width: 516px;
+}
+
+ul.mentors .c3 h3 {
+  margin: 0 0 8px 0 !important;
+}
+
+ul.mentors .c3 p {
+  margin: 0 !important;
+  font-size: small;
+}
+
+ul.mentors .c3 p[itemprop="description"] {
+  margin: 8px 0 0 0 !important;
+}
+
+body#page-mentors #page-logo {
+  height: 1px;
+  text-align: right;
+}
+
+body#page-mentors #page-logo img {
+  width: 250px;
+  height: 145px;
+}
+
+/* --------------------------------------------------------------------------
+ * 問い合わせ
+ * -------------------------------------------------------------------------- */
+
+#page-contact .main-column [role="alert"] {
+  color: #AF3232;
+  font-weight: bold;
+}
+
+#page-contact .main-column form * {
+  font: inherit;
+}
+
+#page-contact .main-column form dt {
+  margin: 0;
+  padding-top: .5em;
+  width: 10em;
+  float: left;
+  letter-spacing: 0;
+}
+
+#page-contact .main-column form dt em {
+  color: #AF3232;
+  font-size: 10px;
+  vertical-align: bottom;
+}
+
+#page-contact .main-column form dd {
+  margin: 0 0 1em 11em;
+}
+
+#page-contact .main-column form input,
+#page-contact .main-column form textarea {
+  width: 95%;
+}
+
+#page-contact .main-column form button {
+  display: block;
+  margin: 0 auto;
+  width: 8em;
+  height: 32px;
+  line-height: 32px;
+}
+
+/* --------------------------------------------------------------------------
+ * Webmakers 動画
+ * -------------------------------------------------------------------------- */
+
+#page-projects-webmaker-videos #main-content h1 {
+  text-align: center;
+}
+
+#page-projects-webmaker-videos #main-content h1 span {
+  font-size: 24px;
+}
+
+#page-projects-webmaker-videos .unisubs-widget {
+  margin: 0 auto !important;
+}
+
+
+/* --------------------------------------------------------------------------
+ * Summer-Code Party　
+ * -------------------------------------------------------------------------- */
+
+#event-info {
+  width: 300px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#event-list{
+	margin-top: 20px;
+	float: left;
+}
+
+#event-list-1{
+	margin-top: 10px;
+}
+
+#event-list-2{
+	margin-top: 10px;
+}
+
+#event-list-3{
+	margin-top: 10px;
+}
+
+#event-list-4{
+	margin-top: 10px;
+}
+
+#event-list-5{
+	margin-top: 10px;
+}
