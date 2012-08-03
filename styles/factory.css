@@ -91,9 +91,9 @@
   font-size: 23px;
 }
 
-#main-content h21 {
-  margin: 0 0 18px 0;
-  font-size: 23px;
+h7 {
+  margin: 0 0 18px 0;!important;
+  font-size: 32px;!important;
 }
 
 #main-content h3 {
@@ -138,12 +138,16 @@
 	width: 30px;
 }
 
+#toptext-left-first{
+	margin-bottom: 13px;
+}
+
 #toptext-left-third{
 	text-align: right;
 }
 
 #toptext-right{
-	margin-top: -250px;
+	margin-top: -270px;
 	z-index: 0;
 	float: right;
 	text-align: right;
