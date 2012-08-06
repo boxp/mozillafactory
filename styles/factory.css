@@ -169,35 +169,12 @@ h7 {
 }
 
 #second-topics-picture{
-	margin-left: -70px;
+	margin-top: -240px;
+	margin-right: 10px;
+	margin-left: 10px;
 	z-index: 0;
 	float: right;
 	position: relative;
-	margin-bottom: 35px;
-	text-align: right;
-	border-color: #c3c3c3;
-}
-
-
-#third-topic-text{
-	margin-top: 13px;
-	border-color: #c5c5c5;
-}
-
-#third-topic-further{
-	width: 400px;
-	text-align: right;
-	margin-bottom: 35px;
-	border-color: #c5c5c5;
-}
-
-#third-topics-picture{
-	margin-left: -70px;
-	margin-top: -250px;
-	z-index: 0;
-	float: right;
-	position: relative;
-	margin-bottom: 35px;
 	text-align: right;
 	border-color: #c3c3c3;
 }

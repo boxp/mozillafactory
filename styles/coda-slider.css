@@ -186,6 +186,12 @@ css-tricks.com/musings-on-preprocessing/
     * Graphical arrows hover left
     *
     *************************************************/
+    margin-top: 150px;
+                                                     
+      
+                                 
+     
+                                                      
     background: url(../images/arrow.png) no-repeat bottom left; 
   }
   
@@ -207,6 +213,12 @@ css-tricks.com/musings-on-preprocessing/
     * Graphical arrows hover right
     *
     *************************************************/
+    margin-top: 150px;
+                                                     
+      
+                                  
+     
+                                                      
     background: url(../images/arrow.png) no-repeat bottom right; 
   }
 
