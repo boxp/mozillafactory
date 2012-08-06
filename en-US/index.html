@@ -15,41 +15,130 @@
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/tabzilla/media/css/tabzilla.css">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/media/css/common-min.css?build=d9e4d9e">
-    <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="/styles/factory_old.css">
+    <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="/styles/factory.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles/coda-slider.css">
+    
+    <!- ------Javascript----- -->
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script src="/js/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="/js/jquery.coda-slider-3.0.js"></script>
     <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
+    <script>
+    $().ready(function(){
+      $('#slider-id').codaSlider();
+    });
+    </script> 
+  
+    <!- ------HTML----- -->
     <title>Mozilla Factory — Discover Your Potential with Openness</title>
-  </head>
-  <body id="page-home" class="html-ltr windows sand" role="document" itemscope itemtype="http://schema.org/WebPage">
+    </head>
+    <body id="page-home" class="html-ltr windows sand home" role="document" itemscope itemtype="http://schema.org/WebPage">
     <script src="http://www.mozilla.org/media/js/site-min.js?build=d9e4d9e"></script>
     <div id="outer-wrapper">
       <div id="wrapper">
         <header id="masthead" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-          <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
-          <nav id="nav-main" role="presentation">
-            <ol>
+          <a href="http://mozilla.jp/" id="tabzilla">Mozilla Japan</a>
+            <nav id="nav-main" role="presentation">
+              <ol>
               <li class="share" role="presentation"><a class="twitter-share-button" href="https://twitter.com/mozillafactory" rel="nofollow" data-url="http://www.mozillafactory.org/en-US/" data-text="Mozilla Factory — Discover Your Potential with Openness" data-hashtags="mozillafactory" data-via="mozillafactory" data-dnt="true"></a></li>
               <li class="share" role="presentation"><div class="fb-like" data-href="http://www.mozillafactory.org/" data-size="medium" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false"></div></li>
               <li><a href="/ja/">Japanese</a></li>
             </ol>
-          </nav>
+            </nav>
         </header>
-        <div class="container" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
-          <section id="toptext">
-            <hgroup>
-              <h1 itemprop="name"><img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76"></h1>
-              <h2 role="presentation">Discover Your Potential with Openness</h2>
-            </hgroup>
-            <p itemprop="description">Mozilla Factory seeks to foster creation, particularly amongst teenagers, based on the principle of <em>openness</em>. This initiative encourages participants to discover their potential and improve their talents through a variety of experiences including conceiving, making, sharing, and teaching.</p>
-            <p class="more"><a href="/en-US/about/">Learn more »</a></p>
-          </section>
-          <figure><img src="/images/factory_img.png" alt="" width="360" height="344"></figure>
-          <nav id="large-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-            <ul>
-              <li id="large-nav-projects"><a href="/en-US/projects/">Projects</a></li>
+        <!-- START SLIDER -->
+        <div class="coda-slider"  id="slider-id">
+          <!-- START PAGE1 -->
+          <div>
+            <div class = "top-contents">
+              <div id="toptext-left-first">
+                <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76">
+              </div>
+              <div id="toptext-left-second">
+                <h8>Discover Your Potential with Openness</h8>
+                <p itemprop="description" >Mozilla Factory seeks to foster creation, particularly amongst teenagers, based on the principle of <em>openness</em>. This initiative encourages participants to discover their potential and improve their talents through a variety of experiences including conceiving, making, sharing, and teaching.</p>
+              </div>
+              <div id="toptext-left-third">
+                <p class="more">
+                  <a target=_blank href="/en-US/about/">Learn more »</a>
+                </p>
+              </div>
+            </div>
+            <div id="toptext-right">
+                <figure><img src="/images/factory_img.png" alt="" width="324" height="310"></figure>
+            </div>
+          </div>
+          <!-- END OF PAGE1 -->
+          <!-- START PAGE2 -->
+          <div>
+            <div class = "top-contents">
+              <div id="second-topics-logo">
+                <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76">
+              </div>
+              <div id="second-topic-text">
+                <h8>mozilla Webmaker</h8>
+                <p>【We encourage the “Webmaker” of rising generation. For the first step, we gathered various people and provides a great opportunity to meet each other. Then we will “make” something wonderful. Finally we will“learn” the cords behind the websites.】</p>
+              </div>
+              <div id="second-topic-further">
+                <p class="more">
+                  <a target=_blank href="/ja/webmaker/">Learn more »</a>
+                </p>
+              </div>
+            </div>
+            <div id="second-topics-picture">
+              <figure><img itemprop="image" src="/images/webmaker-scp-japan.png" width="364" height="263"></figure>
+            </div>
+          </div>
+          <!-- END OF PAGE2 -->
+          <!-- START PAGE3 -->
+          <div>
+            <div class = "top-contents">
+              <div id="third-topics-logo">
+                <img src="/images/factory_wordlogo.png" alt="Mozilla Factory — Organized by Mozilla Japan" width="418" height="76">
+              </div>
+              <div id="third-topic-text">
+                <h8>Mecha-Mozilla</h8>
+                <p>【Mecha-Mozilla is a project that explore the possibility of website as thinking a good relationship between “web” and “real world.”】</p>
+              </div>
+              <div id="third-topic-further">
+                <p class="more">
+                  <a target=_blank href="http://www.mecha-mozilla.org/">Learn more »</a>
+                </p>
+              </div>
+            </div>
+            <div id="third-topics-picture">
+              <figure><img itemprop="image" src="/images/mechamozilla.png" width="360" height="300"></figure>
+            </div>
+          </div>
+          <!-- END OF PAGE3 -->
+        </div>
+        <!-- END OF SLIDER -->
+        <div class="container" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+        <nav id="large-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+          <ul>
+            <li id="large-nav-projects"><a href="/en-US/projects/">Projects</a></li>
               <li id="large-nav-mentors"><a href="/en-US/mentors/">Mentors</a></li>
               <li id="large-nav-involved"><a href="/en-US/get-involved/">Get Involved</a></li>
-            </ul>
-          </nav>
+          </ul> 
+        </nav>
+        <section id="home-events">
+            <aside id="twitter-profile-widget">
+            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+            new TWTR.Widget({
+              version: 2,
+              type: 'profile',
+              rpp: 10,
+              interval: 30000,
+              title: 'Twitter',
+              subject: 'Tweet fromMozilla Factory',
+              width: 910,
+              height: 160,
+              theme: { shell: { background: 'transparent', color: '#333333' }, tweets: { background: 'transparent', color: '#333333', links: '#af3232' } },
+              features: { scrollbar: true, loop: false, live: true, behavior: 'all' }
+            }).render().setUser('mozillafactory').start();
+            </script>
+          </aside>
         </div>
       </div><!-- end #wrapper -->
       <footer id="colophon" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
@@ -73,7 +162,6 @@
         </div>
       </footer>
     </div><!-- end #outer-wrapper -->
-    <script src="http://www.mozilla.org/media/js/common-min.js?build=d9e4d9e"></script>
     <script src="http://platform.twitter.com/widgets.js" defer async></script>
     <script src="http://connect.facebook.net/en_US/all.js#xfbml=1" defer async></script>
     <script src="http://www.google-analytics.com/ga.js" defer async></script>
