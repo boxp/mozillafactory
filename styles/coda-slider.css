@@ -169,11 +169,7 @@ css-tricks.com/musings-on-preprocessing/
     * Graphical arrow styles 
     *
     *******************************************************/
-                                                           
-      
-                             
-     
-                                                            
+
     width: 25px;
     height: 25px;
     background: url(../images/arrow.png) no-repeat top left; 
@@ -214,11 +210,6 @@ css-tricks.com/musings-on-preprocessing/
     *
     *************************************************/
     margin-top: 150px;
-                                                     
-      
-                                  
-     
-                                                      
     background: url(../images/arrow.png) no-repeat bottom right; 
   }
 

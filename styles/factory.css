@@ -96,6 +96,11 @@ h7 {
   font-size: 32px !important;
 }
 
+h8 {
+  margin: 0 0 18px 0 !important;
+  font-size: 25px !important;
+}
+
 #main-content h3 {
   font-size: 23px;
 }
@@ -120,24 +125,6 @@ h7 {
   margin: 0 auto;
   width: 900px;
 }
-#left-bar{
-	padding-right: 30px;
-	padding-top: 160px;
-	width: 30px;
-	height: 250px;
-	position: relative;
-	float: left;
-}
-
-#right-bar{
-	padding-top: 190px;
-	float: right;
-	text-align: right;
-	position: relative;
-	height: 250px;
-	width: 30px;
-}
-
 #toptext-left-first{
 	margin-bottom: 13px;
 }
@@ -147,7 +134,7 @@ h7 {
 }
 
 #toptext-right{
-	margin-top: -270px;
+	margin-top: -280px;
 	z-index: 0;
 	float: right;
 	text-align: right;
@@ -169,7 +156,7 @@ h7 {
 }
 
 #second-topics-picture{
-	margin-top: -240px;
+	margin-top: -250px;
 	margin-right: 10px;
 	margin-left: 10px;
 	z-index: 0;
@@ -193,7 +180,7 @@ h7 {
 }
 
 #third-topics-picture{
-	margin-top: -260px;
+	margin-top: -270px;
 	margin-right: 20px;
 	margin-left: 10px;
 	z-index: 0;
@@ -259,11 +246,10 @@ h7 {
 }
 
 #twitter-profile-widget {
-  margin-top: 200px;
+  margin-top: 30px;
   padding-top: 20px;
   border-top-width: 1px;
   border-top-color: #c8c6ad;
-  border-top-style: dashed;
   float: left;
 }
 
