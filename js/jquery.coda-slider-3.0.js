@@ -334,7 +334,6 @@ if ( typeof Object.create !== 'function' ) {
 	
 	$.fn.codaSlider = function( options ) {
 		return this.each(function() {
-			
 			var slider = Object.create( Slider );
 			slider.init( options, this );
 
@@ -355,7 +354,7 @@ if ( typeof Object.create !== 'function' ) {
 		continuous: true,
 		crossLinking: true, // No longer used
 		dynamicArrows: true,
-		dynamicArrowsGraphical: false,
+		dynamicArrowsGraphical: true,
 		dynamicArrowLeftText: "&#171;",
 		dynamicArrowRightText: "&#187;",
 		dynamicTabs: true,
