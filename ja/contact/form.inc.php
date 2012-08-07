@@ -48,6 +48,9 @@ if (!empty($_POST['subject'])) {
     case 'join-scp':
       $_subject = 'Mozilla Summer Code Party in Kyoto 参加予定';
       break;
+    case 'join-buttobi':
+      $_subject = 'ぶっとびケータイプロジェクト参加希望';
+      break;
   }
 }
 
