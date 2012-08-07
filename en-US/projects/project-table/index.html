@@ -2,34 +2,34 @@
 <html class="no-js" lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="If you are interested in our Mozilla Factory initiative, please let us know by this form.">
+    <meta name="description" content="Projects may be based around a topic that the participants themselves are interested in exploring. Alternatively, projects may be based on a topic put forward by another organization (such as a research institute, educational organization, corporation etc.).">
     <meta name="viewport" content="width=1024">
     <meta property="og:site_name" content="Mozilla Factory">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="ja_JP">
-    <meta property="og:url" content="http://www.mozillafactory.org/en-US/contact/">
+    <meta property="og:url" content="http://www.mozillafactory.org/en-US/projects/">
     <meta property="og:image" content="http://www.mozillafactory.org/images/factory_img.png">
-    <meta property="og:title" content="Contact Us | Mozilla Factory">
-    <meta property="og:description" content="If you are interested in our Mozilla Factory initiative, please let us know by this form.">
-    <link rel="canonical" href="http://www.mozillafactory.org/en-US/contact/">
+    <meta property="og:title" content="Projects | Mozilla Factory">
+    <meta property="og:description" content="Projects may be based around a topic that the participants themselves are interested in exploring. Alternatively, projects may be based on a topic put forward by another organization (such as a research institute, educational organization, corporation etc.).">
+    <link rel="canonical" href="http://www.mozillafactory.org/en-US/projects/">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/tabzilla/media/css/tabzilla.css">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/media/css/common-min.css?build=d9e4d9e">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="/styles/factory.css">
     <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
-    <title>Contact Us | Mozilla Factory</title>
+    <title>Projects | Mozilla Factory</title>
   </head>
-  <body id="page-contact" class="html-ltr windows sand lower" role="document" itemscope itemtype="http://schema.org/ContactPage">
+  <body id="page-projects" class="html-ltr windows sand lower" role="document" itemscope itemtype="http://schema.org/WebPage">
     <script src="http://www.mozilla.org/media/js/site-min.js?build=d9e4d9e"></script>
     <div id="outer-wrapper">
       <div id="wrapper">
         <header id="masthead" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-          <a href="http://mozilla.jp/" id="tabzilla">Mozilla Japan</a>
+          <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
           <nav id="nav-main" role="presentation">
             <ol>
               <li class="share" role="presentation"><a class="twitter-share-button" href="https://twitter.com/mozillafactory" rel="nofollow" data-url="http://www.mozillafactory.org/en-US/" data-text="Mozilla Factory — Discover Your Potential with Openness" data-hashtags="mozillafactory" data-via="mozillafactory" data-dnt="true"></a></li>
               <li class="share" role="presentation"><div class="fb-like" data-href="http://www.mozillafactory.org/" data-size="medium" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false"></div></li>
-              <li><a href="/ja/contact/">Japanese</a></li>
+              <li><a href="/ja/projects/">Japanese</a></li>
             </ol>
           </nav>
           <nav id="nav-bar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -47,37 +47,33 @@
           <div class="row">
             <div class="span10">
               <div class="row" id="body-content">
-                <section class="main-column">
-                  <h1 itemprop="name">Contact Us</h1>
-                  <p>If you are interested in our Mozilla Factory initiative, please let us know by this form.</p>
-<? @include_once dirname(__FILE__) . '/mail.inc.php' ?>
-<? if ($_status->code === 1): ?>
-                  <p class="message" role="alert"><?= htmlspecialchars($_status->text) ?></p>
-<? else: ?>
-                  <form method="post" action="./">
-<?   if ($_status->code === -1): ?>
-                    <p class="warning" role="alert"><?= htmlspecialchars($_status->text) ?></p>
-<?   endif; ?>
-                    <dl>
-                      <dt>Subject</dt>
-                      <dd><input type="text" name="subject" value="<?= htmlspecialchars($_subject) ?>"></dd>
-                      <dt>Name <em>(required)</em></dt>
-                      <dd><input type="text" name="name" required value="<?= htmlspecialchars($_POST['name']) ?>"></dd>
-                      <dt>E-mail <em>(required)</em></dt>
-                      <dd><input type="text" name="email" required value="<?= htmlspecialchars($_POST['email']) ?>"></dd>
-                      <dt>Age</dt>
-                      <dd><input type="text" name="age" value="<?= htmlspecialchars($_POST['age']) ?>"></dd>
-                      <dt>School/Organization</dt>
-                      <dd><input type="text" name="organization" value="<?= htmlspecialchars($_POST['organization']) ?>"></dd>
-                      <dt>Comments</dt>
-                      <dd><textarea name="comment" rows="5"><?= htmlspecialchars($_POST['comment']) ?></textarea></dd>
-                    </dl>
-                    <p>Your information provided here will be managed according to the <a href="http://mozilla.jp/legal/privacy/japan/" target="_blank">Mozilla Japan Privacy Policy</a> and used only for contacts from us.</p>
-                    <div><button class="button-blue" type="submit" role="button">Submit</button></div>
-                    <div><input type="hidden" name="key" value="<?= $_key ?>"></div>
-                  </form>
-<? endif; ?>
-                </section><!-- end .main-column -->
+                  <section id="active-projects">
+                    <h2>【Active Projects】</h2>
+                    <section class="project">
+                      <h3><a href="/ja/webmaker/"><img src="/images/projects/webmaker-logo-small.png" alt=""> Webmaker</a></h3>
+                      <p>【Web is an important skill in 21st Century, and becoming the second language in the world.You don't have to be a professional web engineer to understand its structure and write a page.So let's learn how to read and write web and make something amazing.】</p>
+                      <p><a class="button-blue" href="/ja/contact/?type=join-webmaker">Join</a></p>
+                    </section>
+                    <section class="project">
+                      <h3><a href="http://www.mecha-mozilla.org/"><img src="/images/projects/mecha-logo-small.png" alt=""> Mecha-Mozilla</a></h3>
+                      <p>【Mecha-Mozilla is a project that explore the possibility of website as thinking a good relationship between “Web” and “Real World.” Now, we are working 3 sub project. For example, "weburette" is a project which enjoy web with flavors and smells.】</p>
+                      <p><a class="button-blue" href="/ja/contact/?type=join-mecha">Join</a></p>
+                    </section>
+                    <section class="project">
+                      <h3><img src="/images/projects/null.png" alt=""><a>【New Prototype Device】</a></h3>
+                      <p></br></br></br>coming soon…</p>
+                    </section>
+                  <div id="project-recrute">
+                  <section>
+                    <h2>Projects Welcome!</h2>
+                    <p>Is there some project you’ve been itching to try? Something you always wanted to do? Something you wished would happen? If so, why not suggest it as a project theme for Mozilla Factory?</p>
+                    <p>Of course, all projects are run as open projects which means that they are run not only for the benefit of those suggesting the project theme, but for all involved and for society as a whole.</p>
+                    <p>In keeping with the spirit of Open Source, everything accomplished in the project will be shared openly.</p>
+                    <address itemscope itemtype="http://schema.org/ContactPoint">If you are interested in our projects, <a href="/en-US/contact/?type=projects" itemprop="url">please let us know</a>.</address>
+                  </section>
+                  <figure class="f2"><img src="/images/puzzle01_bg.png" alt="" width="600" height="220"></figure>
+                </section>
+                <!-- end #main-column -->
               </div>
             </div>
           </div>

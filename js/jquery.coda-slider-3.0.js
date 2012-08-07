@@ -350,7 +350,7 @@ if ( typeof Object.create !== 'function' ) {
 		autoslideControls: true,
 		autoSlideStartText: 'Start',
 		autoSlideStopText: 'Stop',
-		autoSlideStopWhenClicked: false,
+		autoSlideStopWhenClicked: true,
 		continuous: true,
 		crossLinking: true, // No longer used
 		dynamicArrows: true,
