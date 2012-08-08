@@ -1,7 +1,7 @@
 <?
 
 // デバッグフラグ
-$_debug = true;
+$_debug = false;
 $_debug_mail = 'dynamis@mozilla-japan.org';
 
 // フォームのカスタマイズ
@@ -86,7 +86,7 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
       'lead' => '教える'
     );
     if ($_POST['interest']) {
-      $_interest = join(', ', array_map(function($v){
+      $_interest = implode(', ', array_map(function($v){
           global $_interest_table;
           return $_interest_table[$v];
         }, $_POST['interest']));
@@ -97,8 +97,8 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
     $_fields = array(
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
-      'to' => $_debug ? $_debug_mail : 'education@mozilla-japan.org',
-      'cc' => $_debug ? $_debug_mail : 'shuntaro@mozilla-japan.org',
+      'to' => ($_debug ? $_debug_mail : 'education@mozilla-japan.org'),
+      'cc' => ($_debug ? '' : 'shuntaro@mozilla-japan.org'),
       'bcc' => '',
       'subject' => $_subject . ' (Web サイトからの問い合わせ)',
       'body' => implode("\n\n", array(
