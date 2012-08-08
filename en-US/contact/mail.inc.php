@@ -27,7 +27,7 @@ if (!empty($_POST['subject'])) {
       $_subject = 'I\'d like to join buttobi project';
       break;
     default:
-      $_subject = 'About Mozilla Factory'; break;
+      $_subject = ''; break;
   }
 } else {
   $_subject = 'About Mozilla Factory';
