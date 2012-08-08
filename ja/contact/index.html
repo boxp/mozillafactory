@@ -61,9 +61,9 @@
                     <dl>
                       <dt>件名</dt>
                       <dd><input type="text" name="subject" value="<?= htmlspecialchars($_subject) ?>"></dd>
-                      <dt>お名前</dt>
+                      <dt>お名前<em>(必須)</em></dt>
                       <dd><input type="text" name="name" required value="<?= htmlspecialchars($_POST['name']) ?>"></dd>
-                      <dt>メールアドレス</dt>
+                      <dt>メールアドレス<em>(必須)</em></dt>
                       <dd><input type="text" name="email" required value="<?= htmlspecialchars($_POST['email']) ?>"></dd>
                       <dt>年齢 </dt>
                       <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value=""></dd>
