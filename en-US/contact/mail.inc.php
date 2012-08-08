@@ -43,7 +43,6 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
   }
 
   if ($_status->code === 0) {
-    $check = implode(",",$_POST["chk"]);
     $_fields = array(
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
@@ -56,7 +55,7 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
         'E-mail' . "\n" . $_POST['email'],
         'Age' . "\n" . $_POST['age'],
         'School/Organization' . "\n" . $_POST['organization'],
-        'What are you?' . "\n" . $_POST[$check],
+        'What are you interested in?' . "\n" . $_POST[implode(",",'chk')],
         'Comments' . "\n" . $_POST['comment']
       ))
     );
