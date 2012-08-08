@@ -17,6 +17,8 @@ if (!empty($_POST['subject'])) {
       $_subject = 'I\'d like to get involved with the Mecha-Mozilla project'; break;
     case 'mentor':
       $_subject = 'I\'d like to be a mentor'; break;
+    case 'join-buttobi':
+      $_subject = 'I\'d like to join buttobi project';
     default:
       $_subject = 'About Mozilla Factory'; break;
   }
