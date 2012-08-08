@@ -9,9 +9,9 @@ $_form = (object) array(
 if (!empty($_GET['type'])) {
   switch ($_GET['type']) {
     case 'join-scp':
-      $_form->description = 'Mozilla Summer Code Party in Kyoto への参加をご希望の方は、このフォームからお申込みください。';
+      $_form->description = 'Mozilla Summer Code Party in Kobe への参加をご希望の方は、このフォームからお申込みください。';
       $_form->required = array('age', 'comment');
-      $_form->default_comment = '来場予定時間: ';
+      $_form->default_comment = '来場予定時間:';
       break;
   }
 }
@@ -36,6 +36,9 @@ if (!empty($_POST['subject'])) {
     case 'join-webmaker':
       $_subject = 'Webmaker プロジェクト参加希望';
       break;
+    case 'join-scp':
+      $_subject = 'Mozilla Summer Code Party in Kobe 参加予定';
+      break;
     case 'mecha':
       $_subject = 'Mecha-Mozilla について';
       break;
@@ -45,14 +48,9 @@ if (!empty($_POST['subject'])) {
     case 'mentor':
       $_subject = 'メンター参加希望';
       break;
-    case 'join-scp':
-      $_subject = 'Mozilla Summer Code Party in Kyoto 参加予定';
-      break;
     case 'join-buttobi':
       $_subject = 'ぶっとびケータイプロジェクト参加希望';
       break;
-    default:
-      $_subject = 'About Mozilla Factory'; break;
   }
 }
 
@@ -79,7 +77,7 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
       'to' => 'education@mozilla-japan.org',
-      'cc' => '',
+      'cc' => 'shuntaro@mozilla-japan.org',
       'bcc' => '',
       'subject' => $_subject . ' (Web サイトからの問い合わせ)',
       'body' => implode("\n\n", array(
