@@ -61,16 +61,24 @@
                     <dl>
                       <dt>件名</dt>
                       <dd><input type="text" name="subject" value="<?= htmlspecialchars($_subject) ?>"></dd>
-                      <dt>お名前 <em>(必須)</em></dt>
+                      <dt>お名前</dt>
                       <dd><input type="text" name="name" required value="<?= htmlspecialchars($_POST['name']) ?>"></dd>
-                      <dt>メールアドレス <em>(必須)</em></dt>
+                      <dt>メールアドレス</dt>
                       <dd><input type="text" name="email" required value="<?= htmlspecialchars($_POST['email']) ?>"></dd>
-                      <dt>年齢 <? if (in_array('age', $_form->required)) echo '<em>(必須)</em>' ?></dt>
-                      <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['age']) ?>"></dd>
-                      <dt>学校名または所属 <? if (in_array('organization', $_form->required)) echo '<em>(必須)</em>' ?></dt>
-                      <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['organization']) ?>"></dd>
-                      <dt>コメント <? if (in_array('comment', $_form->required)) echo '<em>(必須)</em>' ?></dt>
-                      <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><?= htmlspecialchars($_form->comment) ?></textarea></dd>
+                      <dt>年齢 </dt>
+                      <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value=""></dd>
+                      <dt>学校名または所属 </dt>
+                      <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value=""></dd>
+                      <dt>興味のある体験は何？</dt>
+                      <dd>
+                          考える<input type="checkbox" name="chk[]" value="think">
+                          創造する<input type="checkbox" name="chk[]" value="create">
+                          デザインする<input type="checkbox" name="chk[]" value="design">
+                          作る<input type="checkbox" name="chk[]" value="make&build">
+                          教える<input type="checkbox" name="chk[]" value="lead">
+                      </dd>
+                      <dt>コメント</dt>
+                      <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>></textarea></dd>
                     </dl>
                     <p>ここで入力いただいた情報は、<a href="http://mozilla.jp/legal/privacy/japan/" target="_blank">Mozilla Japan 個人情報保護方針</a> に従って管理し、Mozilla Factory に関するご連絡および Mozilla Japan からの各種ご案内 (イベント告知など) 以外には使用しません。</p>
                     <div><button class="button-blue" type="submit" role="button">送信</button></div>

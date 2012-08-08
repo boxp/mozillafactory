@@ -55,7 +55,7 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
         'E-mail' . "\n" . $_POST['email'],
         'Age' . "\n" . $_POST['age'],
         'School/Organization' . "\n" . $_POST['organization'],
-        'What are you interested in?' . "\n" . $_POST[implode(",",'chk')],
+        'What are you interested in?' . "\n" . $_POST['chk[]'],
         'Comments' . "\n" . $_POST['comment']
       ))
     );
