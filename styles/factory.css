@@ -477,10 +477,14 @@ body#page-mentors #page-logo img {
 #page-contact .main-column form dd {
   margin: 0 0 1em 11em;
 }
-
-#page-contact .main-column form input,
+#page-contact .main-column form input[type = "text"],
 #page-contact .main-column form textarea {
   width: 95%;
+}
+
+#page-contact .main-column form input[type = "checkbox"]{
+  width: 25px;
+  margin-right: 25px;
 }
 
 #page-contact .main-column form button {
