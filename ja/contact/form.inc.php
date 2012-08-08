@@ -51,6 +51,15 @@ if (!empty($_POST['subject'])) {
     case 'join-buttobi':
       $_subject = 'ぶっとびケータイプロジェクト参加希望';
       break;
+    case 'join-mecha-en':
+      $_subject = 'I\'d like to get involved with the Mecha-Mozilla project';
+      break;
+    case 'join-webmaker-en':
+      $_subject = 'I\'d like to join webmaker';
+      break;
+    case 'join-buttobi-en':
+      $_subject = 'I\'d like to join buttobi project';
+      break;
   }
 }
 

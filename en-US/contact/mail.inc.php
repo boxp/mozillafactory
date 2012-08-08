@@ -9,7 +9,7 @@ if (!empty($_POST['subject'])) {
       $_subject = 'About Mozilla Factory projects'; break;
     case 'webmaker':
       $_subject = 'About Webmaker'; break;
-    case 'join-webmaker':
+    case 'join-webmaker-en':
       $_subject = 'I\'d like to get involved with the Webmaker project'; break;
     case 'mecha':
       $_subject = 'About Mecha-Mozilla'; break;
@@ -17,8 +17,15 @@ if (!empty($_POST['subject'])) {
       $_subject = 'I\'d like to get involved with the Mecha-Mozilla project'; break;
     case 'mentor':
       $_subject = 'I\'d like to be a mentor'; break;
-    case 'join-buttobi':
+    case 'join-mecha-en':
+      $_subject = 'I\'d like to get involved with the Mecha-Mozilla project';
+      break;
+    case 'join-webmaker-en':
+      $_subject = 'I\'d like to join webmaker';
+      break;
+    case 'join-buttobi-en':
       $_subject = 'I\'d like to join buttobi project';
+      break;
     default:
       $_subject = 'About Mozilla Factory'; break;
   }
