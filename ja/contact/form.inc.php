@@ -1,5 +1,9 @@
 <?
 
+// デバッグフラグ
+$_debug = true;
+$_debug_mail = 'dynamis@mozilla-japan.org';
+
 // フォームのカスタマイズ
 $_form = (object) array(
   'description' => 'Mozilla Factory の取り組みに興味のある方は、このフォームからご連絡ください。',
@@ -73,11 +77,28 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
   }
 
   if ($_status->code === 0) {
+    // 興味ある体験
+    $_interest_table = array(
+      'think' => '考える',
+      'create' => '創造する',
+      'design' => 'デザインする',
+      'make&build' => '作る',
+      'lead' => '教える'
+    );
+    if ($_POST['interest']) {
+      $_interest = join(', ', array_map(function($v){
+          global $_interest_table;
+          return $_interest_table[$v];
+        }, $_POST['interest']));
+    }
+    else {
+      $_interest = 'なし';
+    }
     $_fields = array(
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
-      'to' => 'education@mozilla-japan.org',
-      'cc' => 'shuntaro@mozilla-japan.org',
+      'to' => $_debug ? $_debug_mail : 'education@mozilla-japan.org',
+      'cc' => $_debug ? $_debug_mail : 'shuntaro@mozilla-japan.org',
       'bcc' => '',
       'subject' => $_subject . ' (Web サイトからの問い合わせ)',
       'body' => implode("\n\n", array(
@@ -85,6 +106,7 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
         'メールアドレス' . "\n" . $_POST['email'],
         '年齢' . "\n" . $_POST['age'],
         '学校名／所属' . "\n" . $_POST['organization'],
+        '興味のある体験' . "\n" . $_interest,
         'コメント' . "\n" . $_POST['comment']
       ))
     );

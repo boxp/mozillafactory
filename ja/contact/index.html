@@ -69,14 +69,14 @@
                       <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="">
                       <dt>学校名または所属 </dt>
                       <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value=""></dd>
-                      <!-- <dt>興味のある体験は何？</dt>
+                      <dt>興味のある体験は何？</dt>
                       <dd>
-                          考える<input type="checkbox" name="chk[]" value="think">
-                          創造する<input type="checkbox" name="chk[]" value="create">
-                          デザインする<input type="checkbox" name="chk[]" value="design">
-                          作る<input type="checkbox" name="chk[]" value="make&build">
-                          教える<input type="checkbox" name="chk[]" value="lead">
-                      </dd> -->
+                          <input type="checkbox" name="interest[]" value="think">考える
+                          <input type="checkbox" name="interest[]" value="create">創造する
+                          <input type="checkbox" name="interest[]" value="design">デザインする
+                          <input type="checkbox" name="interest[]" value="make&build">作る
+                          <input type="checkbox" name="interest[]" value="lead">教える
+                      </dd>
                       <dt>コメント<? if (in_array('comment', $_form->required)) echo '<em>(必須)</em>' ?></dd></dt>
                       <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><? if ($_form->default_comment) echo $_form->default_comment ?></textarea></dd>
                     </dl>
