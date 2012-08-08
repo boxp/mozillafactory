@@ -509,7 +509,7 @@ body#page-mentors #page-logo img {
 
 #page-contact .main-column form input[type = "checkbox"]{
   width: 20px;
-  margin-right: 20px;
+  margin-right: 5px;
   margin-top: 13px;
   margin-bottom: 20px;
 }
