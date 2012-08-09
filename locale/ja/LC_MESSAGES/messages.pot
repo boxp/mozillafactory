@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-09 19:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: trunk/includes/form.inc.php:19
+msgid "Mozilla Factory の取り組みに興味のある方は、このフォームからご連絡ください。"
+msgstr ""
+
+#: trunk/includes/form.inc.php:26
+msgid "Mozilla Summer Code Party in Kobe への参加をご希望の方は、このフォームからお申込みください。"
+msgstr ""
+
+#: trunk/includes/form.inc.php:28
+msgid "来場予定時間:"
+msgstr ""
+
+#: trunk/includes/form.inc.php:39
+msgid "Mozilla Factory について"
+msgstr ""
+
+#: trunk/includes/form.inc.php:45
+msgid "Mozilla Factory のプロジェクトについて"
+msgstr ""
+
+#: trunk/includes/form.inc.php:48
+msgid "Webmaker について"
+msgstr ""
+
+#: trunk/includes/form.inc.php:51
+msgid "Webmaker プロジェクト参加希望"
+msgstr ""
+
+#: trunk/includes/form.inc.php:54
+msgid "Mecha-Mozilla について"
+msgstr ""
+
+#: trunk/includes/form.inc.php:57
+msgid "Mecha-Mozilla プロジェクト参加希望"
+msgstr ""
+
+#: trunk/includes/form.inc.php:60
+msgid "メンター参加希望"
+msgstr ""
+
+#: trunk/includes/form.inc.php:63
+msgid "ぶっとびケータイプロジェクト参加希望"
+msgstr ""
+
+#: trunk/includes/form.inc.php:66
+msgid "Mozilla Summer Code Party in Kobe 参加予定"
+msgstr ""
+
+#: trunk/includes/form.inc.php:80
+msgid "お名前が入力されていません。"
+msgstr ""
+
+#: trunk/includes/form.inc.php:83
+msgid "メールアドレスが入力されていません。"
+msgstr ""
+
+#: trunk/includes/form.inc.php:86
+msgid "メールアドレスの形式が正しくありません。"
+msgstr ""
+
+#: trunk/includes/form.inc.php:93
+msgid "考える"
+msgstr ""
+
+#: trunk/includes/form.inc.php:94
+msgid "創造する"
+msgstr ""
+
+#: trunk/includes/form.inc.php:95
+msgid "デザインする"
+msgstr ""
+
+#: trunk/includes/form.inc.php:96
+msgid "作る"
+msgstr ""
+
+#: trunk/includes/form.inc.php:97
+msgid "教える"
+msgstr ""
+
+#: trunk/includes/form.inc.php:106
+msgid "なし"
+msgstr ""
+
+#: trunk/includes/form.inc.php:110
+msgid "お名前"
+msgstr ""
+
+#: trunk/includes/form.inc.php:111
+msgid "メールアドレス"
+msgstr ""
+
+#: trunk/includes/form.inc.php:112
+msgid "年齢"
+msgstr ""
+
+#: trunk/includes/form.inc.php:113
+msgid "学校名／所属"
+msgstr ""
+
+#: trunk/includes/form.inc.php:116
+msgid "興味のある体験"
+msgstr ""
+
+#: trunk/includes/form.inc.php:118
+msgid "コメント"
+msgstr ""
+
+#: trunk/includes/form.inc.php:125
+msgid " (Web サイトからの問い合わせ)"
+msgstr ""
+
+#: trunk/includes/form.inc.php:140
+msgid "フォームを送信できませんでした。申し訳ありませんが、また後でお試しください。"
+msgstr ""
+
+#: trunk/includes/form.inc.php:143
+msgid "ありがとうございました。折り返しご連絡を差し上げます。"
+msgstr ""

@@ -49,7 +49,7 @@
               <div class="row" id="body-content">
                 <section class="main-column">
                   <h1 itemprop="name">お問い合わせ</h1>
-<? $_locale="ja";
+<? $locale="ja";
    @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/form.inc.php' ?>
                   <p><?= htmlspecialchars($_form->description) ?></p>
 <? if ($_status->code === 1): ?>
