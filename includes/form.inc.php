@@ -1,7 +1,7 @@
 <?
 
 // デバッグフラグ
-$_debug = true;
+$_debug = false;
 $_debug_mail = 'dynamis@mozilla-japan.org';
 
 // gettext
