@@ -49,7 +49,8 @@
               <div class="row" id="body-content">
                 <section class="main-column">
                   <h1 itemprop="name">お問い合わせ</h1>
-<? @include_once dirname(__FILE__) . '/form.inc.php' ?>
+<? $_locale="ja";
+   @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/form.inc.php' ?>
                   <p><?= htmlspecialchars($_form->description) ?></p>
 <? if ($_status->code === 1): ?>
                   <p class="message" role="alert"><?= htmlspecialchars($_status->text) ?></p>
@@ -69,6 +70,7 @@
                       <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="">
                       <dt>学校名または所属 </dt>
                       <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value=""></dd>
+<? if ($_GET['type'] != 'join-scp'): ?>
                       <dt>興味のある体験は何？</dt>
                       <dd>
                           <input type="checkbox" name="interest[]" value="think">考える
@@ -77,11 +79,13 @@
                           <input type="checkbox" name="interest[]" value="make&build">作る
                           <input type="checkbox" name="interest[]" value="lead">教える
                       </dd>
+<? endif; ?>
                       <dt>コメント<? if (in_array('comment', $_form->required)) echo '<em>(必須)</em>' ?></dd></dt>
                       <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><? if ($_form->default_comment) echo $_form->default_comment ?></textarea></dd>
                     </dl>
                     <p>ここで入力いただいた情報は、<a href="http://mozilla.jp/legal/privacy/japan/" target="_blank">Mozilla Japan 個人情報保護方針</a> に従って管理し、Mozilla Factory に関するご連絡および Mozilla Japan からの各種ご案内 (イベント告知など) 以外には使用しません。</p>
                     <div><button class="button-blue" type="submit" role="button">送信</button></div>
+                    <div><input type="hidden" name="type" value="<?= $_GET['type'] ?>"></div>
                     <div><input type="hidden" name="key" value="<?= $_key ?>"></div>
                   </form>
 <? endif; ?>
