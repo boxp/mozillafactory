@@ -219,8 +219,14 @@ body.section-events #sec-japan .archives section {
   margin-top: 1em;
 }
 
-body.section-events #sec-japan .archives h5,
+body.section-events #sec-japan .archives h5{
+  font-size: 1em;
+  margin: 0px;
+}
 body.section-events #sec-japan .archives p {
-  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
   font-size: 1em;
 }
