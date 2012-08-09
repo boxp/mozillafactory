@@ -7,7 +7,7 @@ $_debug_mail = 'dynamis@mozilla-japan.org';
 
 // Loading messages.po
 if (!$locale) {
-  $locale = 'ja';
+  $locale = 'ja_JP.UTF8';
 }
 putenv("LANG=$locale");
 putenv("LANGUAGE=$locale");
