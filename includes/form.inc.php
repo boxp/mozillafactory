@@ -2,6 +2,7 @@
 
 // デバッグフラグ
 $_debug = false;
+$_debug_mail = 'shuntaro@mozilla-japan.org';
 $_debug_mail = 'dynamis@mozilla-japan.org';
 
 // gettext
@@ -116,7 +117,7 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
       'to' => ($_debug ? $_debug_mail : 'education@mozilla-japan.org'),
-      'cc' => ($_debug ? '' : 'shuntaro@mozilla-japan.org'),
+      'cc' => '',
       'bcc' => '',
       'subject' => $_subject . ' (Web サイトからの問い合わせ)',
       'body' => implode("\n\n", $_body)
