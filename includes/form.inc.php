@@ -1,17 +1,27 @@
 <?
 
+// デバッグフラグ
+$_debug = true;
+$_debug_mail = 'dynamis@mozilla-japan.org';
+
+// gettext
+setlocale(LC_ALL, $locale);
+
+$_type = $_POST['type'] ? $_POST['type'] : $_GET['type'];
+$_isEvent = $_type == 'join-scp';
+
 // フォームのカスタマイズ
 $_form = (object) array(
   'description' => 'Mozilla Factory の取り組みに興味のある方は、このフォームからご連絡ください。',
   'required' => array(),
   'default_comment' => ''
 );
-if (!empty($_GET['type'])) {
-  switch ($_GET['type']) {
+if (!empty($_type)) {
+  switch ($_type) {
     case 'join-scp':
-      $_form->description = 'Mozilla Summer Code Party in Kyoto への参加をご希望の方は、このフォームからお申込みください。';
+      $_form->description = 'Mozilla Summer Code Party in Kobe への参加をご希望の方は、このフォームからお申込みください。';
       $_form->required = array('age', 'comment');
-      $_form->default_comment = '来場予定時間: ';
+      $_form->default_comment = '来場予定時間:';
       break;
   }
 }
@@ -25,8 +35,8 @@ if (!empty($_POST['comment'])) {
 $_subject = 'Mozilla Factory について';
 if (!empty($_POST['subject'])) {
   $_subject = $_POST['subject'];
-} else if (!empty($_GET['type'])) {
-  switch ($_GET['type']) {
+} else if (!empty($_type)) {
+  switch ($_type) {
     case 'projects':
       $_subject = 'Mozilla Factory のプロジェクトについて';
       break;
@@ -45,8 +55,11 @@ if (!empty($_POST['subject'])) {
     case 'mentor':
       $_subject = 'メンター参加希望';
       break;
+    case 'join-buttobi':
+      $_subject = 'ぶっとびケータイプロジェクト参加希望';
+      break;
     case 'join-scp':
-      $_subject = 'Mozilla Summer Code Party in Kyoto 参加予定';
+      $_subject = 'Mozilla Summer Code Party in Kobe 参加予定';
       break;
   }
 }
@@ -70,20 +83,43 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
   }
 
   if ($_status->code === 0) {
+    if (!$_isEvent) {
+      // 興味ある体験
+      $_interest_table = array(
+        'think' => '考える',
+        'create' => '創造する',
+        'design' => 'デザインする',
+        'make&build' => '作る',
+        'lead' => '教える'
+      );
+      if ($_POST['interest']) {
+        $_interest = implode(', ', array_map(function($v){
+            global $_interest_table;
+            return $_interest_table[$v];
+          }, $_POST['interest']));
+      }
+      else {
+        $_interest = 'なし';
+      }
+    }
+    $_body = array(
+      'お名前' . "\n" . $_POST['name'],
+      'メールアドレス' . "\n" . $_POST['email'],
+      '年齢' . "\n" . $_POST['age'],
+      '学校名／所属' . "\n" . $_POST['organization']
+    );
+    if (!$_isEvent) {
+      $_body[] = '興味のある体験' . "\n" . $_interest;
+    }
+    $_body[] = 'コメント' . "\n" . $_POST['comment'];
     $_fields = array(
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
-      'to' => 'education@mozilla-japan.org',
-      'cc' => '',
+      'to' => ($_debug ? $_debug_mail : 'education@mozilla-japan.org'),
+      'cc' => ($_debug ? '' : 'shuntaro@mozilla-japan.org'),
       'bcc' => '',
       'subject' => $_subject . ' (Web サイトからの問い合わせ)',
-      'body' => implode("\n\n", array(
-        'お名前' . "\n" . $_POST['name'],
-        'メールアドレス' . "\n" . $_POST['email'],
-        '年齢' . "\n" . $_POST['age'],
-        '学校名／所属' . "\n" . $_POST['organization'],
-        'コメント' . "\n" . $_POST['comment']
-      ))
+      'body' => implode("\n\n", $_body)
     );
 
     // API 経由でメールを送信 (mozilla.jp のミラーサーバから直接送信できない場合を考慮)
