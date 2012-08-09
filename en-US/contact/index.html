@@ -51,15 +51,16 @@
               <div class="row" id="body-content">
                 <section class="main-column">
                   <h1 itemprop="name">Contact Us</h1>
-                  <p>If you are interested in our Mozilla Factory initiative, please let us know by this form.</p>
-                  <? @include_once dirname(__FILE__) . '/mail.inc.php' ?>
-                  <? if ($_status->code === 1): ?>
+<? $_locale="en";
+   @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/form.inc.php' ?>
+                  <p><?= htmlspecialchars($_form->description) ?></p>
+<? if ($_status->code === 1): ?>
                   <p class="message" role="alert"><?= htmlspecialchars($_status->text) ?></p>
-                  <? else: ?>
+<? else: ?>
                   <form method="post" action="./">
-                  <?   if ($_status->code === -1): ?>
+<?   if ($_status->code === -1): ?>
                     <p class="warning" role="alert"><?= htmlspecialchars($_status->text) ?></p>
-                    <?   endif; ?>
+<?   endif; ?>
                     <dl>
                       <dt>Subject</dt>
                       <dd><input type="text" name="subject" value="<?= htmlspecialchars($_subject) ?>"></dd>
@@ -84,6 +85,7 @@
                     </dl>
                     <p>Your information provided here will be managed according to the <a href="http://mozilla.jp/legal/privacy/japan/" target="_blank">Mozilla Japan Privacy Policy</a> and used only for contacts from us.</p>
                     <div><button class="button-blue" type="submit" role="button">Submit</button></div>
+                    <div><input type="hidden" name="type" value="<?= $_GET['type'] ?>"></div>
                     <div><input type="hidden" name="key" value="<?= $_key ?>"></div>
                   </form>
 <? endif; ?>

@@ -1,5 +1,30 @@
 <?
 
+// デバッグフラグ
+$_debug = false;
+$_debug_mail = 'dynamis@mozilla-japan.org';
+
+// フォームのカスタマイズ
+$_form = (object) array(
+  'description' => 'If you are interested in our Mozilla Factory initiative, please let us know by this form.',
+  'required' => array(),
+  'default_comment' => ''
+);
+if (!empty($_GET['type'])) {
+  switch ($_GET['type']) {
+    case 'join-scp':
+      $_form->description = 'Mozilla Summer Code Party in Kobe への参加をご希望の方は、このフォームからお申込みください。';
+      $_form->required = array('age', 'comment');
+      $_form->default_comment = '来場予定時間:';
+      break;
+  }
+}
+if (!empty($_POST['comment'])) {
+  $_form->comment = $_POST['comment'];
+} else {
+  $_form->comment = $_form->default_comment;
+}
+
 // 件名
 if (!empty($_POST['subject'])) {
   $_subject = $_POST['subject'];
