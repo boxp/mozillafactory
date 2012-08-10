@@ -23,11 +23,11 @@ msgstr "If you are interested in our Mozilla Factory initiative, please let us k
 
 #: trunk/includes/form.inc.php:26
 msgid "Mozilla Summer Code Party in Kobe への参加をご希望の方は、このフォームからお申込みください。"
-msgstr ""
+msgstr "If you are interested in participating in Mozilla Summer Code Party in Kobe, please let us know by this form."
 
 #: trunk/includes/form.inc.php:28
 msgid "来場予定時間:"
-msgstr ""
+msgstr "estimated time of arrival:"
 
 #: trunk/includes/form.inc.php:39
 msgid "Mozilla Factory について"
@@ -63,7 +63,7 @@ msgstr "I'd like to join buttobi project"
 
 #: trunk/includes/form.inc.php:66
 msgid "Mozilla Summer Code Party in Kobe 参加予定"
-msgstr ""
+msgstr "I'd like to participate in Mozilla Summer Code Party in Kobe"
 
 #: trunk/includes/form.inc.php:80
 msgid "お名前が入力されていません。"

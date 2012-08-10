@@ -67,9 +67,9 @@
                       <dt>メールアドレス<em>(必須)</em></dt>
                       <dd><input type="text" name="email" required value="<?= htmlspecialchars($_POST['email']) ?>"></dd>
                       <dt>年齢<? if (in_array('age', $_form->required)) echo '<em>(必須)</em>' ?></dd></dt>
-                      <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="">
+                      <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['age']) ?>">
                       <dt>学校名または所属 </dt>
-                      <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value=""></dd>
+                      <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['organization']) ?>"></dd>
 <? if ($_GET['type'] != 'join-scp'): ?>
                       <dt>興味のある体験は何？</dt>
                       <dd>
@@ -81,7 +81,12 @@
                       </dd>
 <? endif; ?>
                       <dt>コメント<? if (in_array('comment', $_form->required)) echo '<em>(必須)</em>' ?></dd></dt>
-                      <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><? if ($_form->default_comment) echo $_form->default_comment ?></textarea></dd>
+                      <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><?
+                        if ($_POST['comment'])
+                          echo htmlspecialchars($_POST['comment']);
+                        else if ($_form->default_comment)
+                          echo $_form->default_comment;
+                        ?></textarea></dd>
                     </dl>
                     <p>ここで入力いただいた情報は、<a href="http://mozilla.jp/legal/privacy/japan/" target="_blank">Mozilla Japan 個人情報保護方針</a> に従って管理し、Mozilla Factory に関するご連絡および Mozilla Japan からの各種ご案内 (イベント告知など) 以外には使用しません。</p>
                     <div><button class="button-blue" type="submit" role="button">送信</button></div>
