@@ -66,7 +66,7 @@
                       <dd><input type="text" name="name" required value="<?= htmlspecialchars($_POST['name']) ?>"></dd>
                       <dt>E-mail <em>(required)</em></dt>
                       <dd><input type="text" name="email" required value="<?= htmlspecialchars($_POST['email']) ?>"></dd>
-                      <dt>Age<? if (in_array('age', $_form->required)) echo '<em>(required)</em>' ?></dt>
+                      <dt>Age <? if (in_array('age', $_form->required)) echo '<em>(required)</em>' ?></dt>
                       <dd><input type="text" name="age" <? if (in_array('age', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['age']) ?>"></dd>
                       <dt>School/Organization</dt>
                       <dd><input type="text" name="organization" <? if (in_array('organization', $_form->required)) echo 'required' ?> value="<?= htmlspecialchars($_POST['organization']) ?>"></dd>
@@ -80,7 +80,7 @@
                           <input type="checkbox" name="chk[]" value="lead">leading
                       </dd>
 <? endif; ?>
-                      <dt>Comments<? if (in_array('comment', $_form->required)) echo '<em>(required)</em>' ?></dt>
+                      <dt>Comments <? if (in_array('comment', $_form->required)) echo '<em>(required)</em>' ?></dt>
                       <dd><textarea name="comment" rows="5" <? if (in_array('comment', $_form->required)) echo 'required' ?>><?
                         if ($_POST['comment'])
                           echo htmlspecialchars($_POST['comment']);
