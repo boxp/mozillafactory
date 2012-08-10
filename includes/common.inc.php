@@ -20,6 +20,12 @@ if (in_array($_SERVER['SERVER_NAME'], $testservers)) {
 if (!$locale) {
   $locale = 'ja_JP.UTF8';
 }
+if (!in_array($_SERVER['SERVER_NAME'], $testservers)) {
+  if ($locale === 'ja_JP.UTF8')
+    $locale = 'ja_JP.UTF-8';
+  if ($locale === 'en_US.UTF8')
+    $locale = 'en_US.UTF-8';
+}
 putenv("LANG=$locale");
 putenv("LANGUAGE=$locale");
 putenv("LC_ALL=$locale");
