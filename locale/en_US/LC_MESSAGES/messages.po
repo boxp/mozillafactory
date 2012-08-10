@@ -119,7 +119,7 @@ msgstr "School/Organization"
 
 #: trunk/includes/form.inc.php:116
 msgid "興味のある体験"
-msgstr ""
+msgstr "What experience are you interested in?"
 
 #: trunk/includes/form.inc.php:118
 msgid "コメント"
@@ -127,7 +127,7 @@ msgstr "Comments"
 
 #: trunk/includes/form.inc.php:125
 msgid " (Web サイトからの問い合わせ)"
-msgstr ""
+msgstr " (Question from Web Site)"
 
 #: trunk/includes/form.inc.php:140
 msgid "フォームを送信できませんでした。申し訳ありませんが、また後でお試しください。"

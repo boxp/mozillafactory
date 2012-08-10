@@ -51,10 +51,10 @@
                   <h1 itemprop="name">お問い合わせ</h1>
 <? $locale="ja_JP.UTF8";
    @include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/form.inc.php' ?>
-                  <p><?= htmlspecialchars($_form->description) ?></p>
 <? if ($_status->code === 1): ?>
                   <p class="message" role="alert"><?= htmlspecialchars($_status->text) ?></p>
 <? else: ?>
+                  <p><?= htmlspecialchars($_form->description) ?></p>
                   <form method="post" action="./">
 <?   if ($_status->code === -1): ?>
                     <p class="warning" role="alert"><?= htmlspecialchars($_status->text) ?></p>

@@ -1,26 +1,6 @@
 <?
+@include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/common.inc.php';
 
-// デバッグフラグ
-$_debug = false;
-$_debug_mail = 'shuntaro@mozilla-japan.org';
-$_debug_mail = 'dynamis@mozilla-japan.org';
-
-// Loading messages.po
-if (!$locale) {
-  $locale = 'ja_JP.UTF8';
-}
-putenv("LANG=$locale");
-putenv("LANGUAGE=$locale");
-putenv("LC_ALL=$locale");
-setlocale(LC_ALL, $locale);
-$textdomain = 'messages';
-bindtextdomain($textdomain, $_SERVER['DOCUMENT_ROOT'] . "/locale");
-textdomain($textdomain);
-function _e($text) {
-  echo _($text);
-}
-
-// 
 $_type = $_POST['type'] ? $_POST['type'] : $_GET['type'];
 $_isEvent = $_type == 'join-scp';
 
@@ -78,6 +58,35 @@ if (!empty($_POST['subject'])) {
   }
 }
 
+// 本文
+$bodyparts = array(
+  _('お名前') . "\n" . $_POST['name'],
+  _('メールアドレス') . "\n" . $_POST['email'],
+  _('年齢') . "\n" . $_POST['age'],
+  _('学校名／所属') . "\n" . $_POST['organization']
+);
+if (!$_isEvent) {
+  $interest_table = array(
+    'think' => _('考える'),
+    'create' => _('創造する'),
+    'design' => _('デザインする'),
+    'make&build' => _('作る'),
+    'lead' => _('教える')
+  );
+  if ($_POST['interest']) {
+    $interest = implode(', ', array_map(function($v){
+        global $interest_table;
+        return $interest_table[$v];
+      }, $_POST['interest']));
+  }
+  else {
+    $interest = _('なし');
+  }
+  $bodyparts[] = _('興味のある体験') . "\n" . $interest;
+}
+$bodyparts[] = _('コメント') . "\n" . $_POST['comment'];
+$_body = implode("\n\n", $bodyparts);
+
 // スパム送信を防ぐためのキー
 $_key = md5(strtotime('today') * 5716);
 // ステータス (-1: エラー、0: 未送信、1: 送信完了)
@@ -97,43 +106,14 @@ if (isset($_POST['key']) && $_POST['key'] === $_key) {
   }
 
   if ($_status->code === 0) {
-    if (!$_isEvent) {
-      // 興味ある体験
-      $_interest_table = array(
-        'think' => _('考える'),
-        'create' => _('創造する'),
-        'design' => _('デザインする'),
-        'make&build' => _('作る'),
-        'lead' => _('教える')
-      );
-      if ($_POST['interest']) {
-        $_interest = implode(', ', array_map(function($v){
-            global $_interest_table;
-            return $_interest_table[$v];
-          }, $_POST['interest']));
-      }
-      else {
-        $_interest = _('なし');
-      }
-    }
-    $_body = array(
-      _('お名前') . "\n" . $_POST['name'],
-      _('メールアドレス') . "\n" . $_POST['email'],
-      _('年齢') . "\n" . $_POST['age'],
-      _('学校名／所属') . "\n" . $_POST['organization']
-    );
-    if (!$_isEvent) {
-      $_body[] = _('興味のある体験') . "\n" . $_interest;
-    }
-    $_body[] = _('コメント') . "\n" . $_POST['comment'];
     $_fields = array(
       'key' => 'ohweiGeeXeichogie1aiLa9eejei)z7i',
       'from' => $_POST['email'],
-      'to' => ($_debug ? $_debug_mail : 'education@mozilla-japan.org'),
+      'to' => ($DEBUG ? $DEBUG_mail : 'education@mozilla-japan.org'),
       'cc' => '',
       'bcc' => '',
       'subject' => $_subject . _(' (Web サイトからの問い合わせ)'),
-      'body' => implode("\n\n", $_body)
+      'body' => $_body
     );
 
     // API 経由でメールを送信 (mozilla.jp のミラーサーバから直接送信できない場合を考慮)
