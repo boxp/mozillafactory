@@ -9,6 +9,10 @@ RewriteRule ^$              /ja/ [R=permanent,L]
 # それ以外のロケールは英語ページへリダイレクト
 RewriteRule ^$              /en-US/ [R=permanent,L]
 
+# Error Document
+ErrorDocument 404 /ja/errors/404.html
+
+#
 # Summer Code Party
 RewriteRule ^ja/projects/webmaker/videos/?$ /ja/webmaker/videos/ [R=permanent,L]
 RewriteRule ^ja/projects/webmaker/events/?$ /ja/webmaker/events/about/summer_campaign/ [R=permanent,L]
