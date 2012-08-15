@@ -5,6 +5,8 @@ $DEBUG = false;
 $DEBUG_mail = 'shuntaro@mozilla-japan.org';
 if ($_ENV["USER"] == 'dynamis') {
   $DEBUG_mail = 'dynamis@mozilla-japan.org';
+}elseif ($_ENV["USER"] == 'dokan') {
+  $DEBUG_mail = 'dokan@mozilla-japan.org';
 }
 
 $testservers = array(
