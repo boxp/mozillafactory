@@ -17,17 +17,6 @@
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="http://www.mozilla.org/media/css/common-min.css?build=d9e4d9e">
     <link rel="stylesheet" type="text/css" media="screen,projection,tv" href="/styles/factory.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/styles/coda-slider.css">
-    
-    <!-- ------Javascript----- -->
-    <script src="/js/jquery-1.7.2.min.js"></script>
-    <script src="/js/jquery-ui-1.8.20.custom.min.js"></script>
-    <script src="/js/jquery.coda-slider-3.0.js"></script>
-    <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
-    <script>
-      $().ready(function(){
-      $('#slider-id').codaSlider();
-      });
-    </script>
   
     <!-- ------HTML----- -->
     <title>Mozilla Factory — Discover Your Potential with Openness</title>
@@ -47,7 +36,7 @@
           </nav>
         </header>
         <!-- START SLIDER -->
-        <div class="coda-slider"  id="slider-id">
+        <div class="coda-slider"  id="top-slider" style="visibility:hidden">
           <!-- START PAGE1 -->
           <div>
             <div class = "top-contents">
@@ -163,6 +152,17 @@
         </div>
       </footer>
     </div><!-- end #outer-wrapper -->
+        <!-- ------Javascript----- -->
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script src="/js/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="/js/jquery.coda-slider-3.0.js"></script>
+    <script>
+      $().ready(function(){
+      $('#top-slider').codaSlider();
+      $('#top-slider').css("visibility","visible");
+      });
+    </script>
+    <script src="http://www.mozilla.org/media/js/libs/modernizr-2.5.0.min.js"></script>
     <script src="http://platform.twitter.com/widgets.js" defer async></script>
     <script src="http://connect.facebook.net/en_US/all.js#xfbml=1" defer async></script>
     <script src="http://www.google-analytics.com/ga.js" defer async></script>
