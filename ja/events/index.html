@@ -49,12 +49,24 @@
               <div class="row" id="body-content">
                 <section class="main-column">
                   <h1 itemprop="name">イベント</h1>
-                  <p itemprop="description">Mozilla Factory に関わるイベントを紹介します</p>
-                  <ul class="mentors">
-                    <li itemscope itemtype="http://schema.org/Person">
+                  <div class="event-tab"><!-- tab lists -->
+                    <li id="current-tab">現在のイベント</li>
+                    <li id="passed-tab">過去のイベント</li>
+                  </div>
+                  <div class="event-contents"><!-- contents -->
+                    <div id="current-contents">
+                      <figure class="f1"><img src="/images/icon_bluedragon03_l.png" alt="" width="250" height="145"></figure>
                       <h4>現在、予定されているイベントはございません</h4>
-                    </li>
-                  </ul>
+                    </div>
+                    <div id="passed-contents" style="visibility:hidden">
+                      <h4>2012年8月20日（月） Mozilla Summer Code Party in Kobe</h4>
+                      <p><a href="http://www.kih.co.jp/access/index.html">神戸国際会館 セミナーハウス901号</a></p>
+                      <h4>2012年7月25日（水） Mozilla Summer Code Party in Kyoto</h4>
+                      <p><a href="http://www.krp-machiya.co.jp/">京都リサーチパーク町屋スタジオ</a></p>
+                      <h4>2012年6月23日（土）• 6月24日（日） Mozilla Summer Code Party in Tokyo</h4>
+                      <p><a href="http://www.mozilla.jp/">Mozilla Japanオフィス</a></p>
+                    </div>
+                  </div>
                 </section><!-- end .main-column -->
               </div>
             </div>
@@ -83,6 +95,27 @@
         </div>
       </footer>
     </div><!-- end #outer-wrapper -->
+    <!-- ------Javascript----- -->
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script>
+      $().ready(function(){
+        $(".event-contents > #passed-contents").hide();
+        $(".event-tab > #passed-tab").css("backgroundColor","rgba(255,248,140,0.01)");
+        $(".event-tab > #passed-tab").hover(function(){
+          $(".event-contents > #passed-contents").css("visibility","visible");
+          $(".event-contents > #current-contents").hide();
+          $(".event-contents > #passed-contents").fadeIn(300);
+          $(".event-tab > #current-tab").css("backgroundColor","rgba(255,248,140,0.01)");
+          $(".event-tab > #passed-tab").css("backgroundColor","rgb(255,255,255)");
+        })
+        $(".event-tab > #current-tab").hover(function(){
+          $(".event-contents > #passed-contents").hide();
+          $(".event-contents > #current-contents").fadeIn(300);
+          $(".event-tab > #current-tab").css("backgroundColor","rgb(255,255,255)");
+          $(".event-tab > #passed-tab").css("backgroundColor","rgba(255,248,140,0.01)");
+        })
+      });
+    </script>
     <script src="http://www.mozilla.org/media/js/common-min.js?build=d9e4d9e"></script>
     <script src="http://platform.twitter.com/widgets.js" defer async></script>
     <script src="http://connect.facebook.net/ja_JP/all.js#xfbml=1" defer async></script>
