@@ -349,7 +349,7 @@ nav.footer-home {
 }
 
 figure.f1 {
-  float: right;
+  float: left;
   margin: 0 0 16px 16px;
 }
 
@@ -473,6 +473,72 @@ body#page-mentors #page-logo img {
 }
 
 /* --------------------------------------------------------------------------
+ * イベント
+ * -------------------------------------------------------------------------- */
+
+.event-tab li{
+  margin-left: 2px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  padding-top: 20px;
+  height: 40px;
+  width: 135px;
+  list-style: none;
+  position: relative;
+  float: left;
+  border-top: 1px solid rgba(122,122,122,0.53);
+  border-left: 1px solid rgba(122,122,122,0.53);
+  border-right: 1px solid rgba(122,122,122,0.53);
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  font-size: 16px;
+  z-index: 15;
+}
+
+#current-contents{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  float: left;
+  width: 720px;
+  height: 315px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+  z-index: 16;
+}
+
+#current-contents p{
+  font-size: 18px !important;
+  padding-left: 15px !important;
+}
+
+#passed-contents{
+  margin-top: 0px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  float: left;
+  width: 720px;
+  height: 315px;
+  background-color: rgba(255,255,255,1.0);
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+  z-index: 17;
+}
+
+#passed-contents figure{
+  position: relative;
+  float: left;
+}
+
+
+/* --------------------------------------------------------------------------
  * 問い合わせ
  * -------------------------------------------------------------------------- */
 
@@ -547,7 +613,7 @@ body#page-mentors #page-logo img {
 }
 
 /* --------------------------------------------------------------------------
- * Summer-Code Party　
+ * Summer-Code Party
  * -------------------------------------------------------------------------- */
 
 #event-info {
