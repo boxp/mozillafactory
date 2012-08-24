@@ -57,7 +57,7 @@
                       <h4 align="center">現在、予定されているイベントはございません</h4>
                     </div>
                   </div>
-                  <div class="passed-tab">過去のイベント</div>
+                  <div class="past-tab">過去のイベント</div>
                   <div class="event-contents" style="visibility:hidden">
                     <h4>2012年8月20日（月） Mozilla Summer Code Party in Kobe</h4>
                     <p><a href="http://www.kih.co.jp/access/index.html">神戸国際会館 セミナーハウス901号</a></p>
@@ -103,7 +103,7 @@
         $(".current-tab").click(function(){
           $(this).next(".event-contents").slideToggle();
         })
-        $(".passed-tab").click(function(){
+        $(".past-tab").click(function(){
           $(this).next(".event-contents").slideToggle();
         })
       });

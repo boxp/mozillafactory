@@ -49,12 +49,23 @@
               <div class="row" id="body-content">
                 <section class="main-column">
                   <h1 itemprop="name">Events</h1>
-                  <p itemprop="description">Event related to Mozilla Factory</p>
-                  <ul class="mentors">
-                    <li itemscope itemtype="http://schema.org/Person">
-                      <h4>No events currently planned.</h4>
-                    </li>
-                  </ul>
+                    <!-- tab lists -->
+                  <div class="current-tab">Current Event</div>
+                  <div class="event-contents" style="visibility:hidden">
+                    <figure class="f1"><img src="/images/icon_bluedragon03_l.png" alt="" width="250" height="145"></figure>
+                    <div id="event-contents2">
+                      <h4 align="center">There is no event currently scheduled</h4>
+                    </div>
+                  </div>
+                  <div class="past-tab">Past Event</div>
+                  <div class="event-contents" style="visibility:hidden">
+                    <h4>2012-8-20 (Mon) Mozilla Summer Code Party in Kobe</h4>
+                    <p><a href="http://www.kih.co.jp/access/index.html">Kobe International House 901</a></p>
+                    <h4>2012-7-25 (Wed) Mozilla Summer Code Party in Kyoto</h4>
+                    <p><a href="http://www.krp-machiya.co.jp/">Machiya Studio Kyoro Research Park</a></p>
+                    <h4>2012-6-23 (Sat) • 6-24- (Sun) Mozilla Summer Code Party in Tokyo</h4>
+                    <p><a href="http://www.mozilla.jp/">Mozilla Japan Office</a></p>
+                  </div>
                 </section><!-- end .main-column -->
               </div>
             </div>
@@ -83,6 +94,20 @@
         </div>
       </footer>
     </div><!-- end #outer-wrapper -->
+    <!-- ------Javascript----- -->
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script>
+      $().ready(function(){
+        $(".event-contents").hide();
+        $('.event-contents').css("visibility","visible");
+        $(".current-tab").click(function(){
+          $(this).next(".event-contents").slideToggle();
+        })
+        $(".past-tab").click(function(){
+          $(this).next(".event-contents").slideToggle();
+        })
+      });
+    </script>
     <script src="http://www.mozilla.org/media/js/common-min.js?build=d9e4d9e"></script>
     <script src="http://platform.twitter.com/widgets.js" defer async></script>
     <script src="http://connect.facebook.net/en_US/all.js#xfbml=1" defer async></script>
