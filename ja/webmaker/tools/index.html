@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <!--[if (lt IE 9)]><html class="no-js bad-ie" lang="ja" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="ja" dir="ltr"><!--<![endif]-->
-    <head>
-        <title>ツール | Mozilla Webmaker</title>
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-        <meta name="viewport" content="initial-scale=1.0, width=device-width">
-        <link rel="shortcut icon" href="https://webmaker.org/media/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="https://webmaker.org/media/img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css">
-                    <link rel="stylesheet" media="screen,projection,tv" href="https://webmaker.org/media/css/make_devices-min.css?build=9e6cfe1" />
-        
-<style>
-#thimble .poster {
-    background-image: url(https://webmaker.org/media/img/tools/thimble-poster.jpg);
-    height: 350px;
-}
-#x-ray-goggles .poster {
-    background-image: url(https://webmaker.org/media/img/tools/goggles-poster.jpg);
-    height: 350px;
-}
-#popcorn .poster {
-    background-image: url(https://webmaker.org/media/img/tools/popcorn-poster.jpg);
-    height: 350px;
-}
-@media screen and (max-width: 700px) {
-    #thimble .poster {
+  <head>
+    <title>ツール | Mozilla Webmaker</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="shortcut icon" href="https://webmaker.org/media/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://webmaker.org/media/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css">
+    <link rel="stylesheet" media="screen,projection,tv" href="https://webmaker.org/media/css/make_devices-min.css?build=9e6cfe1" />
+    <!-- style sheet  -->
+    <style>
+      #thimble .poster {
+      background-image: url(https://webmaker.org/media/img/tools/thimble-poster.jpg);
+      height: 350px;
+      }
+      #x-ray-goggles .poster {
+      background-image: url(https://webmaker.org/media/img/tools/goggles-poster.jpg);
+      height: 350px;
+      }
+      #popcorn .poster {
+      background-image: url(https://webmaker.org/media/img/tools/popcorn-poster.jpg);
+      height: 350px;
+      }
+      @media screen and (max-width: 700px) {
+        #thimble .poster {
         background-image: url(https://webmaker.org/media/img/tools/thimble-poster.tablet.jpg);
         height: 272px;
-    }
-    #x-ray-goggles .poster {
+        }
+        #x-ray-goggles .poster {
         background-image: url(https://webmaker.org/media/img/tools/goggles-poster.tablet.jpg);
         height: 272px;
-    }
-    #popcorn .poster {
+        }
+        #popcorn .poster {
         background-image: url(https://webmaker.org/media/img/tools/popcorn-poster.tablet.jpg);
         height: 272px;
-    }
-}
-@media screen and (max-width: 500px) {
-    #thimble .poster {
+        }
+      }
+      @media screen and (max-width: 500px) {
+        #thimble .poster {
         background-image: url(https://webmaker.org/media/img/tools/thimble-poster.handheld.jpg);
         height: 194px;
-    }
-    #x-ray-goggles .poster {
+        }
+        #x-ray-goggles .poster {
         background-image: url(https://webmaker.org/media/img/tools/goggles-poster.handheld.jpg);
         height: 194px;
-    }
-    #popcorn .poster {
+        }
+        #popcorn .poster {
         background-image: url(https://webmaker.org/media/img/tools/popcorn-poster.handheld.jpg);
         height: 194px;
-    }
-}
-</style>
-        <link rel="stylesheet" media="all and (min-width: 30em)" href="https://webmaker.org/media/css/make_desktop-min.css?build=9e6cfe1" />
-        <!--[if lt IE 9]>
-            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-            <link rel="stylesheet" media="screen,projection,tv" href="https://webmaker.org/media/css/make_desktop-min.css?build=9e6cfe1" />
-        <![endif]-->
-        <link rel="stylesheet" href="/styles/webmaker.css">
-        <script src="https://webmaker.org/media/js/jquery-min.js?build=9e6cfe1"></script>
-    </head>
+        }
+      }
+    </style>
+      <link rel="stylesheet" media="all and (min-width: 30em)" href="https://webmaker.org/media/css/make_desktop-min.css?build=9e6cfe1" />
+      <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <link rel="stylesheet" media="screen,projection,tv" href="https://webmaker.org/media/css/make_desktop-min.css?build=9e6cfe1" />
+      <![endif]-->
+      <link rel="stylesheet" href="/styles/webmaker.css">
+      <script src="https://webmaker.org/media/js/jquery-min.js?build=9e6cfe1"></script>
+  </head>
     <body id="tools-index" class="section-tools brochure-page content-page">
-        <script>
-            document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');
-        </script>
+      <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');
+      </script>
         <div id="header">
-    <div class="constrained">
-        <h1><a href="/ja/webmaker/"><img src="https://webmaker.org/media/img/header_logo.png" alt="Mozilla Webmaker" width="218" height="64" /></a></h1>
-        <a class="factory" href="/ja/">Mozilla Factory</a>
-        <ul>
+          <div class="constrained">
+          <h1><a href="/ja/webmaker/"><img src="https://webmaker.org/media/img/header_logo.png" alt="Mozilla Webmaker" width="218" height="64" /></a></h1>
+          <a class="factory" href="/ja/">Mozilla Factory</a>
+          <ul>
             <li class="projects"><a href="/ja/webmaker/projects/">プロジェクト</a></li>
             <li class="tools"><a href="/ja/webmaker/tools/">ツール</a></li>
             <li class="events"><a href="/ja/webmaker/events/">イベント</a></li>
             <li class="about"><a href="/ja/webmaker/about/">Webmaker とは</a></li>
-        </ul>
-    </div>
-</div>        <div id="content">
-            <div class="constrained">
-                <div class="header">
-    <hgroup>
-        <div class="masthead">
-            <h2 class="plaque">Webmaker ツール</h2>
+          </ul>
         </div>
-        <h3 class="shout">Web 上の作品を作るためのツール</h3>
-    </hgroup>
-    <div class="featured-set">
-        <h3>Featured</h3>
-        <ul class="tool-flyer-list">
-            <li><div class="tool-flyer featured">
+      </div>
+      <div id="content">
+        <div class="constrained">
+          <div class="header">
+            <hgroup>
+              <div class="masthead">
+                <h2 class="plaque">Webmaker ツール</h2>
+              </div>
+                <h3 class="shout">Web 上の作品を作るためのツール</h3>
+            </hgroup>
+          <div class="featured-set">
+            <h3>Featured</h3>
+            <ul class="tool-flyer-list">
+              <li><div class="tool-flyer featured">
                 <h4 class="title"><a href="#thimble">Thimble</a></h4>
                 <a href="#thimble" class="logo"><img src="https://webmaker.org/media/img/tools/thimble-icon.png" alt="Thimble" title=""></a>
                 <p>独自の Web ページを作って共有しよう</p>
-            </div></li>
+          </div></li>
             <li><div class="tool-flyer featured">
                 <h4 class="title"><a href="#x-ray-goggles">X-Ray ゴーグル</a></h4>
                 <a href="#x-ray-goggles" class="logo"><img src="https://webmaker.org/media/img/tools/goggles-icon.png" alt="X-Ray Goggles" title=""></a>

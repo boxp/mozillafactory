@@ -17,3 +17,8 @@ ErrorDocument 404 /ja/errors/404.html
 RewriteRule ^ja/projects/webmaker/videos/?$ /ja/webmaker/videos/ [R=permanent,L]
 RewriteRule ^ja/projects/webmaker/events/?$ /ja/webmaker/events/about/summer_campaign/ [R=permanent,L]
 RewriteRule ^ja/webmaker/events/about/?$ /ja/webmaker/events/about/summer_campaign/ [R=permanent,L]
+
+#
+# Make Public temprarily
+Allow from all
+
