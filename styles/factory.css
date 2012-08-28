@@ -489,6 +489,7 @@ body#page-mentors #page-logo img {
   border-bottom: 1px dotted rgba(122,122,122,0.53);
   background-color: rgba(255,255,255,0);
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
   font-size: 16px;
   z-index: 15;
 }
@@ -506,6 +507,7 @@ body#page-mentors #page-logo img {
   border-bottom: 1px dotted rgba(122,122,122,0.53);
   background-color: rgba(255,255,255,0);
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
   font-size: 16px;
   z-index: 14;
 }
