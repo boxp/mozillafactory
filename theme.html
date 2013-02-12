@@ -28,6 +28,99 @@
     </section>
     {/block:IndexPage}
 
+    {block:Posts}
+    <section id="posts">
+      {block:Text}
+      <article class="post text">
+        {block:Title}
+        <h3><a href="{Permalink}">{Title}</a></h3>
+        {/block:Title}
+        {Body}
+      </article>
+      {/block:Text}
+
+      {block:Photo}
+      <article class="post photo">
+        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </article>
+      {/block:Photo}
+
+      {block:Photoset}
+      <article class="post photoset">
+        {Photoset-500}
+
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </article>
+      {/block:Photoset}
+
+      {block:Quote}
+      <article class="post quote">
+        "{Quote}"
+
+        {block:Source}
+        <div class="source">{Source}</div>
+        {/block:Source}
+      </article>
+      {/block:Quote}
+
+      {block:Link}
+      <article class="post link">
+        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+        {block:Description}
+        <div class="description">{Description}</div>
+        {/block:Description}
+      </article>
+      {/block:Link}
+
+      {block:Chat}
+      <article class="post chat">
+        {block:Title}
+        <h3><a href="{Permalink}">{Title}</a></h3>
+        {/block:Title}
+
+        <ul class="chat">
+          {block:Lines}
+          <li class="{Alt} user_{UserNumber}">
+            {block:Label}
+            <span class="label">{Label}</span>
+            {/block:Label}
+
+            {Line}
+          </li>
+          {/block:Lines}
+        </ul>
+      </article>
+      {/block:Chat}
+
+      {block:Video}
+      <article class="post video">
+        {Video-500}
+
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </article>
+      {/block:Video}
+
+      {block:Audio}
+      <article class="post audio">
+        {AudioPlayerBlack}
+
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </article>
+      {/block:Audio}
+    </section>
+    {/block:Posts}
+
     <footer>
     </footer>
   </body>
