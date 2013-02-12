@@ -3,6 +3,14 @@
   width: 970px;
 }
 
+#header-navigation {
+  border: 1px black solid;
+}
+#header-navigation > ul > li {
+  display: inline-block;
+  list-style-type: none;
+}
+
 #main {
   float: right;
   width: 600px;
