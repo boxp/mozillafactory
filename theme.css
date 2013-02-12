@@ -1,0 +1,29 @@
+#page {
+  margin: auto 0;
+  width: 970px;
+}
+
+#header-navigation {
+  border: 1px black solid;/* debug */
+}
+#header-navigation > ul > li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+#main {
+  border: 1px black solid;/* debug */
+  float: right;
+  width: 600px;
+}
+
+#side-navigation {
+  border: 1px black solid;/* debug */
+  float: left;
+  width: 300px;
+}
+
+#global-footer {
+  border: 1px black solid;/* debug */
+  clear: both;
+}
