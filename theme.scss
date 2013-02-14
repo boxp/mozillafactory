@@ -8,6 +8,15 @@
  *****************/
 
 $link-color: #0096dd;
+$text-color-primary: #333;
+$base-font-size: 14px;
+
+body {
+  font-size: $base-font-size;
+  line-height: 1.7em;
+  font-family: sans-serif;
+  color: $text-color-primary;
+}
 
 a {
   color: $link-color;
