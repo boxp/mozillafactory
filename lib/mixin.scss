@@ -5,3 +5,9 @@
   -ms-transition: $transition;
   transition: $transition;
 }
+
+@mixin box-shadow($shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1)) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
