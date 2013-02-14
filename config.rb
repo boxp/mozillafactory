@@ -9,6 +9,7 @@ css_dir = "/"
 sass_dir = "/"
 images_dir = "img"
 javascripts_dir = "js"
+http_fonts_dir = "font"
 
 if environment === :development then
   output_style = :expanded
