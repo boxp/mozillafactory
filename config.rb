@@ -4,7 +4,7 @@ preferred_syntax = :scss
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path = (environment === :development) ?  "http://saneyuki.mozlabs.jp/factory" : "/"
 css_dir = "/"
 sass_dir = "/"
 images_dir = "img"
