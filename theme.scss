@@ -8,14 +8,13 @@
  *****************/
 
 $link-color: #0096dd;
-$link-color-hover: #0073aa;
 
 a {
   color: $link-color;
   text-decoration: none;
 
   &:hover, &:active {
-    color: $link-color-hover;
+    color: darken($link-color, 10%);
     text-decoration: underline;
   }
 }
