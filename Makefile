@@ -8,7 +8,7 @@ debug: $(SRCS)
 	$(CC) $(SRCS) -e development
 
 lint: $(SRCS)
-	$(CC) $(SRCS) --dry-run
+	$(CC) $(SRCS) -e development --dry-run
 
 release:
 	$(CC) $(SRCS) -e production --force
