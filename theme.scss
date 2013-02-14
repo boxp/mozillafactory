@@ -26,6 +26,7 @@ a {
  *
  *****************/
 
+
 #page {
   margin: 0 auto;
   width: 970px;
@@ -38,6 +39,10 @@ a {
     display: inline-block;
     list-style-type: none;
   }
+}
+
+#introduction {
+  border: 1px black solid;/* debug */
 }
 
 #main {
@@ -64,4 +69,8 @@ a {
 #global-footer {
   border: 1px black solid;/* debug */
   clear: both;
+}
+
+.post {
+  border: 1px black solid;/* debug */
 }
