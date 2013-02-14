@@ -48,11 +48,27 @@ html {
 }
 
 #header-navigation {
-  border: 1px black solid;/* debug */
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 0.8em;
+
+  & > ul {
+    margin: 0 auto;
+  }
 
   & > ul > li {
     display: inline-block;
     list-style-type: none;
+    border-left: 1px dotted #d6d6d6;
+
+    & > a {
+      display: block;
+      font-size: 1.2em;
+      padding: .5em;
+    }
+  }
+
+  & > ul > li:first-child {
+    border: none;
   }
 }
 
