@@ -5,10 +5,11 @@
 
 #header-navigation {
   border: 1px black solid;/* debug */
-}
-#header-navigation > ul > li {
-  display: inline-block;
-  list-style-type: none;
+
+  & > ul > li {
+    display: inline-block;
+    list-style-type: none;
+  }
 }
 
 #main {
