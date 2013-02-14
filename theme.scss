@@ -22,6 +22,15 @@
   border: 1px black solid;/* debug */
   float: left;
   width: 300px;
+
+  & ul > li {
+    list-style-type: none;
+    & > a {
+      display: block;
+      padding: 0.2em;
+      margin: 0.3em;
+    }
+  }
 }
 
 #global-footer {
