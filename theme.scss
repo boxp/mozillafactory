@@ -74,8 +74,20 @@ html {
   }
 }
 
+$bg-color-block: rgba(255, 255, 255, 0.8);
 #introduction {
   border: 1px black solid;/* debug */
+
+  & section {
+    float: left;
+    padding: 3em;
+    margin: 1em;
+    background-color: $bg-color-block;
+  }
+
+  & + * {
+    clear: both;
+  }
 }
 
 #main {
