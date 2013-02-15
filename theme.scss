@@ -8,10 +8,6 @@
  *
  *****************/
 
-$link-color: #0096dd;
-$text-color-primary: #333;
-$base-font-size: 14px;
-
 body {
   font-size: $base-font-size;
   line-height: 1.7em;
@@ -74,7 +70,6 @@ html {
   }
 }
 
-$bg-color-block: rgba(255, 255, 255, 0.8);
 #introduction {
   border: 1px black solid;/* debug */
 
