@@ -14,18 +14,20 @@
   </head>
   <body>
   <div id="page">
-    <header>
+    <header id="global-header">
 
       <h1 id="title">
         <img src="http://saneyuki.mozlabs.jp/factory/img/factory-wordlogo.png"
         alt="Mozilla Factory — Organized by Mozilla Japan">
       </h1>
 
-      <div>
+      {block:IndexPage}
+      <div id="title-cover">
         <img src="http://saneyuki.mozlabs.jp/factory/img/factory-data.png"
              alt=""/>
         <h2>オープン × モノづくり ＝ ??</h2>
       </div>
+      {/block:IndexPage}
 
       <nav id="header-navigation">
         <ul>

@@ -48,9 +48,24 @@ html {
   }
 }
 
+#global-header {
+  text-align: center;
+}
+#title {
+  margin-top: 3em;
+}
+#title-cover {
+  margin-bottom: 4em;
+
+  & h2 {
+    font-size: 3em;
+    font-weight: normal;
+  }
+}
 #header-navigation {
   background-color: rgba(255, 255, 255, 1.0);
   padding: 0.8em;
+  margin: 2em 0;
 
   & > ul {
     margin: 0 auto;
