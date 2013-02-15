@@ -9,6 +9,9 @@ $text-color-primary: #333;
 $base-font-size: 14px;
 $bg-color-block: rgba(255, 255, 255, 0.8);
 
+$page-width: 970px;
+
+$footer-bg-color: #fff;
 
 /**
  *
@@ -27,4 +30,10 @@ $bg-color-block: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
   box-shadow: $shadow;
+}
+
+%clear-float {
+  content: "";
+  display: block;
+  clear: both;
 }

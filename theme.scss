@@ -41,7 +41,11 @@ html {
 
 #page {
   margin: 0 auto;
-  width: 970px;
+  width: $page-width;
+
+  &:after {
+    @extend %clear-float;
+  }
 }
 
 #header-navigation {
@@ -106,11 +110,67 @@ html {
   }
 }
 
+
+
+/*
+ * global footer
+ *
+ */
+
 #global-footer {
-  border: 1px black solid;/* debug */
-  clear: both;
-  background-color: white;
+  width: 100%;
+  background-color: $footer-bg-color;
+  padding: 3em auto;
+
+  & > div {
+    width: $page-width;
+    padding-top: 3em;
+    margin: 0 auto;
+
+    &:after {
+      @extend %clear-float;
+    }
+  }
+
+  & > div > * {
+    float: left;
+
+    &:last-child {
+      clear: both;
+    }
+  }
+
 }
+
+#supporter-section {
+  margin-left: 3em;
+
+  & > h1 {
+    margin-bottom: 0.5em;
+  }
+}
+.supporter {
+  display: inline-block;
+  margin: 0 1em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.supporter-logo {
+  vertical-align: middle;
+}
+
+#footer-info {
+  margin: 1em auto;
+
+  & li {
+    display: inline-block;
+    margin: 0.5em 1em 1em;
+  }
+}
+
+
 
 .post {
   border: 1px black solid;/* debug */
