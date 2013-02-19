@@ -11,7 +11,7 @@
 
 body {
   font-size: $base-font-size;
-  line-height: 1.7em;
+  line-height: $base-line-height;
   font-family: $base-font-family;
   color: $text-color-primary;
 }
