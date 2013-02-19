@@ -149,10 +149,6 @@ html {
 
   & > div > * {
     float: left;
-
-    &:last-child {
-      clear: both;
-    }
   }
 
 }
