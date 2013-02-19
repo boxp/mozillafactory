@@ -67,6 +67,12 @@
       {block:Text}
       <article class="post text">
         <footer>
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span>{Year}</span-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
+          </time>
+          {/block:Date}
           {block:hastags}
           <ul class="tags">
             {block:tags}
