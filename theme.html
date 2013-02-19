@@ -61,10 +61,22 @@
 
     <section id="posts">
     {block:Posts}
+
       {block:Text}
       <article class="post text">
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
         {block:Title}
-        <h3><a href="{Permalink}">{Title}</a></h3>
+        <header>
+          <h3 class="post-title"><a href="{Permalink}">{Title}</a></h3>
+        </header>
         {/block:Title}
         {Body}
       </article>
@@ -72,36 +84,125 @@
 
       {block:Photo}
       <article class="post photo">
-        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
+        <figure>
+          <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
 
-        {block:Caption}
-        <div class="caption">{Caption}</div>
-        {/block:Caption}
+          {block:Caption}
+          <figcaption>{Caption}</figcaption>
+          {/block:Caption}
+        </figure>
       </article>
       {/block:Photo}
 
+      {block:Video}
+      <article class="post video">
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
+        <figure>
+          {Video-500}
+
+          {block:Caption}
+          <figcaption>{Caption}</figcaption>
+          {/block:Caption}
+        </figure>
+      </article>
+      {/block:Video}
+
+      {block:Audio}
+      <article class="post audio">
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
+
+        <figure>
+          {AudioPlayerBlack}
+
+          {block:Caption}
+          <figcaption>{Caption}</figcaption>
+          {/block:Caption}
+        </figure>
+      </article>
+      {/block:Audio}
+
       {block:Photoset}
       <article class="post photoset">
-        {Photoset-500}
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
 
-        {block:Caption}
-        <div class="caption">{Caption}</div>
-        {/block:Caption}
+        <figure>
+          {Photoset-500}
+          {block:Caption}
+            <figcaption class="caption">{Caption}</figcaption>
+          {/block:Caption}
+        </figure>
       </article>
       {/block:Photoset}
 
       {block:Quote}
       <article class="post quote">
-        "{Quote}"
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
 
-        {block:Source}
-        <div class="source">{Source}</div>
-        {/block:Source}
+        <blockquote>
+          <div class="quote-body">
+            "{Quote}"
+          </div>
+
+          {block:Source}
+          <cite class="source">{Source}</cite>
+          {/block:Source}
+        </blockquote>
       </article>
       {/block:Quote}
 
       {block:Link}
       <article class="post link">
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
+
         <a href="{URL}" class="link" {Target}>{Name}</a>
 
         {block:Description}
@@ -112,8 +213,20 @@
 
       {block:Chat}
       <article class="post chat">
+        <footer>
+          {block:hastags}
+          <ul class="tags">
+            {block:tags}
+            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
+        </footer>
+
         {block:Title}
-        <h3><a href="{Permalink}">{Title}</a></h3>
+        <header>
+          <h3><a href="{Permalink}">{Title}</a></h3>
+        </header>
         {/block:Title}
 
         <ul class="chat">
@@ -130,26 +243,8 @@
       </article>
       {/block:Chat}
 
-      {block:Video}
-      <article class="post video">
-        {Video-500}
-
-        {block:Caption}
-        <div class="caption">{Caption}</div>
-        {/block:Caption}
-      </article>
-      {/block:Video}
-
-      {block:Audio}
-      <article class="post audio">
-        {AudioPlayerBlack}
-
-        {block:Caption}
-        <div class="caption">{Caption}</div>
-        {/block:Caption}
-      </article>
-      {/block:Audio}
     {/block:Posts}
+
     </section>
 
 
