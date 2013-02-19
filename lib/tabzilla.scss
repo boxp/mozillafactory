@@ -2,7 +2,7 @@
 // redirects. Always use domain-relative urls like the font URLs below.
 
 // Fonts
-
+/*
 @font-face {
     font-family: 'Open Sans';
     src: url('/media/fonts/OpenSans-Regular-webfont.eot');
@@ -35,14 +35,14 @@
     font-weight: normal;
     font-style: normal;
 }
-
+*/
 
 // Tab
 
 #tabzilla {
     float: right;
     display: block;
-    background: url('http://saneyuki.mozlabs.jp/factory/img/tabzilla/tab.png');
+    background: url('http://saneyuki.mozlabs.jp/factory/img/tabzilla/tabzilla-tab.png');
     height: 44px;
     width: 150px;
     position: relative;
@@ -50,7 +50,7 @@
     overflow: hidden;
     z-index: 999;
 }
-
+/*
 #tabzilla:after {
     background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX%2F%2F%2F9ISEhr7AOpAAAAAXRSTlMAQObYZgAAACVJREFUCNdjYEACHAIMMhYMdjUM8j8Y%2BD8wsD9gYD7AwNiArAQAd4oFaCu14IQAAAAASUVORK5CYII%3D);
     content: " ";
@@ -522,3 +522,4 @@
     }
 
 }
+*/

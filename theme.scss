@@ -43,6 +43,7 @@ html {
 #page {
   margin: 0 auto;
   width: $page-width;
+  border-top: 2px solid #fff;/* for tabzilla */
 
   &:after {
     @extend %clear-float;
