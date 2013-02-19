@@ -1,5 +1,6 @@
 @import "lib/reset.scss";
 @import "lib/mixin.scss";
+@import "lib/tabzilla.scss";
 
 
 /*****************
@@ -50,9 +51,6 @@ html {
 
 #global-header {
   text-align: center;
-}
-#title {
-  margin-top: 3em;
 }
 #title-cover {
   margin-bottom: 4em;
