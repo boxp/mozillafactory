@@ -52,6 +52,9 @@ html {
 #global-header {
   text-align: center;
 }
+#tabzilla-nav:after {
+  @extend %clear-float;
+}
 #title-cover {
   margin-bottom: 4em;
 
