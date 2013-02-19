@@ -12,7 +12,7 @@
 body {
   font-size: $base-font-size;
   line-height: 1.7em;
-  font-family: sans-serif;
+  font-family: $base-font-family;
   color: $text-color-primary;
 }
 
