@@ -72,18 +72,18 @@ html {
 }
 
 #header-navigation {
-  background-color: rgba(255, 255, 255, 1.0);
+  background-color: $header-navigation-bg-color;
   margin: 2em 0;
 
-  & > ul {
+  & ul {
     margin: 0 auto;
-    text-align: center;
   }
 
-  & > ul > li {
-    display: inline-block;
+  & ul > li {
+    display: block;
     list-style-type: none;
-    border-left: 1px dotted #d6d6d6;
+    text-align: center;
+    background-color: $header-navigation-bg-color;
 
     & > a {
       display: block;
@@ -92,8 +92,23 @@ html {
     }
   }
 
-  & > ul > li:first-child {
-    border: none;
+  & .mainmenu > li {
+    display: inline-block;
+    position: relative;
+    border-left: 1px dotted #d6d6d6;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  & .submenu {
+    display: none;
+    position: absolute;
+  }
+  & li:hover > .submenu {
+    display: block;
+    z-index: 999;
   }
 }
 
