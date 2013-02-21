@@ -112,28 +112,14 @@ html {
 
 #main {
   border: 1px black solid;/* debug */
-  float: right;
+  float: left;
   width: 600px;
 }
 
-/* comment out sidebar.
 #side-navigation {
-  float: left;
+  float: right;
   width: 300px;
-
-  & ul > li {
-    list-style-type: none;
-    border-bottom: 1px solid rgb(204, 204, 204);
-
-    & > a {
-      display: block;
-      padding: 0.5em;
-      margin: 0.7em;
-      font-size: 1.2em;
-    }
-  }
 }
-*/
 
 
 /*
