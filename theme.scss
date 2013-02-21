@@ -97,7 +97,7 @@ html {
 #main {
   border: 1px black solid;/* debug */
   float: left;
-  width: 600px;
+  width: $main-width;
 }
 
 #side-navigation {
