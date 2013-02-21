@@ -56,14 +56,15 @@ html {
 #tabzilla-nav:after {
   @extend %clear-float;
 }
-#title-cover {
-  margin-bottom: 4em;
 
-  & h2 {
-    font-size: 3em;
-    font-weight: normal;
-  }
+#title-wrapper {
+  text-align: center;
 }
+#title-icon, #title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #header-navigation {
   background-color: rgba(255, 255, 255, 1.0);
   padding: 0.8em;
