@@ -95,21 +95,6 @@ html {
   }
 }
 
-#introduction {
-  border: 1px black solid;/* debug */
-
-  & section {
-    float: left;
-    padding: 3em;
-    margin: 1em;
-    background-color: $bg-color-block;
-  }
-
-  & + * {
-    clear: both;
-  }
-}
-
 #main {
   border: 1px black solid;/* debug */
   float: left;
