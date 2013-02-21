@@ -110,6 +110,10 @@ html {
     padding: 1em 0;
     margin: 1em 0;
     border-bottom: 1px dotted $text-color-primary;
+
+    .banner:first-child {
+      margin-top: 0;
+    }
   }
 }
 
