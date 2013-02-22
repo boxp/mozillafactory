@@ -105,13 +105,14 @@ html {
 
     & > li {
       float: left;
-      $sum-border-width: $menu-item-border-width * ($mainmenu-item-number - 1);
-      width: ($page-width - $sum-border-width - $menu-item-link-padding*2) / $mainmenu-item-number;
+      width: $page-width / $mainmenu-item-number;
       position: relative;
-      border-left: $menu-item-border-width dotted #d6d6d6;
 
-      &:first-child {
-        border: none;
+      & > a {
+        border-left: $menu-item-border-width dotted #d6d6d6;
+      }
+      &:first-child > a {
+        border: none;/* don't show border on left-end */
       }
     }
   }
