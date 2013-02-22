@@ -72,15 +72,21 @@ html {
 }
 
 #header-navigation {
+  $menu-item-link-padding: 8px;
+  $menu-item-border-width: 1px;
+  $mainmenu-item-number: 5;
+
   background-color: $header-navigation-bg-color;
   margin: 2em 0;
 
   & ul {
     margin: 0 auto;
+    width: 100%;
   }
 
   & ul > li {
     display: block;
+    width: 100%;
     list-style-type: none;
     text-align: center;
     background-color: $header-navigation-bg-color;
@@ -88,14 +94,19 @@ html {
     & > a {
       display: block;
       font-size: 1.2em;
-      padding: .5em;
+      padding: $menu-item-link-padding;
     }
   }
 
+  & .menutem {
+    @extend %clear-float;
+  }
   & .mainmenu > li {
-    display: inline-block;
+    float: left;
+    $sum-border-width: $menu-item-border-width * ($mainmenu-item-number - 1);
+    width: ($page-width - $sum-border-width - $menu-item-link-padding*2) / $mainmenu-item-number;
     position: relative;
-    border-left: 1px dotted #d6d6d6;
+    border-left: $menu-item-border-width dotted #d6d6d6;
 
     &:first-child {
       border: none;
