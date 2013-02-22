@@ -216,4 +216,11 @@ html {
 }
 
 .post {
+  float: left;
+  max-width: 25%;
+  max-height: 300px;
+  background-color: #fff;
+  margin: 1%;
+  padding: 2%;
+  overflow: hidden;
 }
