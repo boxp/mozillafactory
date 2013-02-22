@@ -75,14 +75,15 @@ html {
   $menu-item-link-padding: 8px;
   $menu-item-border-width: 1px;
   $mainmenu-item-number: 5;
+  $bg-color: rgba(255, 255, 255, .5);
+  $hovered-list-bg-color: rgb(245, 241, 232);
+  $hovered-item-bg-color: #fff;
 
-  background-color: $header-navigation-bg-color;
   margin: 2em 0;
 
   & ul {
     margin: 0 auto;
     width: 100%;
-    background-color: $header-navigation-bg-color;
   }
 
   & ul > li {
@@ -91,14 +92,24 @@ html {
     list-style-type: none;
     text-align: center;
 
+    &:hover {
+      background: $hovered-list-bg-color;
+    }
+
     & > a {
       display: block;
       font-size: 1.2em;
       padding: $menu-item-link-padding;
+
+      &:hover {
+        background: $hovered-item-bg-color;
+      }
     }
   }
 
   & .mainmenu {
+    background: $bg-color;
+
     &:after {
       @extend %clear-float;
     }
@@ -121,14 +132,20 @@ html {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    z-index: 999;
     font-size: 1em;
-    background-color: darken($header-navigation-bg-color, 10%);
+
+    & li {
+      z-index: 999;
+    }
   }
   & li:hover > .submenu {
     visibility: visible;
     opacity: 1;
     @include transition(all linear .15s);
+
+    & > li {
+      background: $hovered-list-bg-color;
+    }
   }
 }
 
