@@ -98,18 +98,19 @@ html {
     }
   }
 
-  & .menutem {
+  & .mainmenu {
     @extend %clear-float;
-  }
-  & .mainmenu > li {
-    float: left;
-    $sum-border-width: $menu-item-border-width * ($mainmenu-item-number - 1);
-    width: ($page-width - $sum-border-width - $menu-item-link-padding*2) / $mainmenu-item-number;
-    position: relative;
-    border-left: $menu-item-border-width dotted #d6d6d6;
 
-    &:first-child {
-      border: none;
+    & > li {
+      float: left;
+      $sum-border-width: $menu-item-border-width * ($mainmenu-item-number - 1);
+      width: ($page-width - $sum-border-width - $menu-item-link-padding*2) / $mainmenu-item-number;
+      position: relative;
+      border-left: $menu-item-border-width dotted #d6d6d6;
+
+      &:first-child {
+        border: none;
+      }
     }
   }
 

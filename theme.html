@@ -69,7 +69,11 @@
       </nav>
     </header>
 
-    <div id="main">
+  <article id="main">
+
+    {block:TagPage}
+      <h2 class="{Tag}">{URLSafeTag}</h2>
+    {/block:TagPage}
 
     <section id="posts">
     {block:Posts}
@@ -314,7 +318,7 @@
     </section>
 
 
-  </div><!-- #main -->
+  </article><!-- #main -->
 
   <nav id="side-navigation">
     <section class="banner">
