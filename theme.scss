@@ -73,7 +73,8 @@ html {
 
 #header-navigation {
   $menu-item-link-padding: 8px;
-  $menu-item-border-width: 1px;
+  $menu-item-border-color: #d6d6d6;
+  $menu-item-border: 1px dotted $menu-item-border-color;
   $mainmenu-item-number: 5;
   $bg-color: rgba(255, 255, 255, .5);
   $hovered-list-bg-color: rgb(245, 241, 232);
@@ -120,7 +121,7 @@ html {
       position: relative;
 
       & > a {
-        border-left: $menu-item-border-width dotted #d6d6d6;
+        border-left: $menu-item-border;
       }
       &:first-child > a {
         border: none;/* don't show border on left-end */
@@ -136,6 +137,7 @@ html {
 
     & li {
       z-index: 999;
+      border-top: $menu-item-border;
     }
   }
   & li:hover > .submenu {
