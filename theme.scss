@@ -245,6 +245,12 @@ html {
   overflow: hidden;
 }
 
+.tag-list {
+  list-style-type: none;
+  float: right;
+  background: red; /* dummy */
+}
+
 %hide-date-info {
   & .post .post-time {
     display: none;
