@@ -244,3 +244,17 @@ html {
   padding: 2%;
   overflow: hidden;
 }
+
+%hide-date-info {
+  & .post .post-time {
+    display: none;
+  }
+}
+
+#posts {
+
+  &.mentor {
+    @extend %hide-date-info;
+  }
+
+}
