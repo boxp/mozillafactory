@@ -82,19 +82,19 @@
       {block:Text}
       <article class="post text">
         <footer>
+          {block:hastags}
+          <ul class="tag-list">
+            {block:tags}
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
+            {/block:tags}
+          </ul>
+          {/block:hastags}
           {block:Date}
           <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
                 class="post-time">
             <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
           </time>
           {/block:Date}
-          {block:hastags}
-          <ul class="tags">
-            {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
         </footer>
         {block:Title}
         <header>
@@ -115,9 +115,9 @@
           </time>
           {/block:Date}
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
@@ -143,9 +143,9 @@
           {/block:Date}
 
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
@@ -171,9 +171,9 @@
           {/block:Date}
 
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
@@ -200,9 +200,9 @@
           {/block:Date}
 
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
@@ -228,9 +228,9 @@
           {/block:Date}
 
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
@@ -259,9 +259,9 @@
           {/block:Date}
 
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
@@ -286,9 +286,9 @@
           {/block:Date}
 
           {block:hastags}
-          <ul class="tags">
+          <ul class="tag-list">
             {block:tags}
-            <li class="tag"><a href="{tagurl}">{tag}</a></li>
+            <li class="{tag}"><a href="{tagurl}">{tag}</a></li>
             {/block:tags}
           </ul>
           {/block:hastags}
