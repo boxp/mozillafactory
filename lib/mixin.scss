@@ -18,9 +18,9 @@ $bg-color-block: rgba(255, 255, 255, 0.8);
 
 
 $page-width: 980px;
-$sidebar-width: 250px;
+$sidebar-width: 180px;
 $sidebar-margin-left: 30px;
-$main-width: $page-width - ($sidebar-width + $sidebar-margin-left);
+$main-width: $page-width - $sidebar-width;
 
 $footer-bg-color: #fff;
 

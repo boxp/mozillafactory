@@ -154,6 +154,10 @@ html {
 #main {
   float: left;
   width: $main-width;
+
+  & .post:nth-of-type(3n+1) {
+    margin-left: 0;
+  }
 }
 
 #side-navigation {
@@ -236,19 +240,36 @@ html {
 }
 
 .post {
+  $box-number: 3;
+  $margin-width: 5px;
+  $padding-width: 15px;
+  $border-width: 0;
   float: left;
-  max-width: 25%;
+  width: ($main-width - ($margin-width + $border-width + $padding-width) * 2 * $box-number) / $box-number;
   max-height: 300px;
   background-color: #fff;
-  margin: 1%;
-  padding: 2%;
+  margin: $margin-width;
+  padding: $padding-width;
   overflow: hidden;
+
 }
 
 .tag-list {
   list-style-type: none;
   float: right;
-  background: red; /* dummy */
+
+  & li {
+     a {
+        padding: 5px 10px;
+        color: white;
+     }
+  }
+  & > .project {
+    background: red;
+  }
+  & > .event {
+    background: green;
+  }
 }
 
 %hide-date-info {
