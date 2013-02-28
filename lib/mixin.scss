@@ -16,13 +16,19 @@ $base-line-height: 1.7em;
 
 $bg-color-block: rgba(255, 255, 255, 0.8);
 
-
 $page-width: 980px;
 $sidebar-width: 180px;
 $sidebar-margin-left: 30px;
 $main-width: $page-width - $sidebar-width;
 
 $footer-bg-color: #fff;
+
+$post-index-font-size: 12px;
+
+/* tag */
+$tag-project-bg-color: red;
+$tag-event-bg-color: green;
+
 
 /**
  *
@@ -47,4 +53,9 @@ $footer-bg-color: #fff;
   content: "";
   display: block;
   clear: both;
+}
+
+%media-justify {
+  width: 100%;
+  height: auto;
 }

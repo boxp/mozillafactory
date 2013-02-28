@@ -26,7 +26,6 @@ a {
   }
 }
 
-
 /*****************
  *
  * layout
@@ -232,12 +231,20 @@ html {
   }
 }
 
+
+
 #tag-title {
   background-color: rgb(255, 255, 255);
   font-size: 2.5em;
   padding: 0.3em 0.5em;
   margin-bottom: 20px;
 }
+
+
+/*
+ * 投稿の一覧表示
+ *
+ */
 
 .post {
   $box-number: 3;
@@ -247,36 +254,46 @@ html {
   float: left;
   width: ($main-width - ($margin-width + $border-width + $padding-width) * 2 * $box-number) / $box-number;
   height: 300px;
-  background-color: #fff;
+  background-color: $bg-color-block;
   margin: $margin-width;
   padding: $padding-width;
-  font-size: 12px;
+  font-size: $post-index-font-size;
   overflow: hidden;
 
-  & img {
-    width: 100%;
-    height: auto;
+  & img,
+  & video,
+  & audio,
+  & iframe {
+    @extend %media-justify;
   }
 }
 
+/* タグの表示 */
 .tag-list {
   list-style-type: none;
   float: right;
+}
+.tag {
+  & a {
+    padding: 5px 10px;
+    color: white;
+  }
 
-  & li {
-     a {
-        padding: 5px 10px;
-        color: white;
-     }
+  &.project {
+    background: $tag-project-bg-color;
   }
-  & > .project {
-    background: red;
-  }
-  & > .event {
-    background: green;
+  &.event {
+    background: $tag-event-bg-color;
   }
 }
 
+
+/*
+ * 特定のタグに関連する設定
+ *
+ */
+
+/* 投稿一覧において日付を表示しない */
 %hide-date-info {
   & .post .post-time {
     display: none;
@@ -284,8 +301,8 @@ html {
 }
 
 #posts {
-
-  &.mentor {
+  &.mentor,
+  &.project {
     @extend %hide-date-info;
   }
 
