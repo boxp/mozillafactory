@@ -159,6 +159,13 @@ html {
   }
 }
 
+#tag-title {
+  background-color: $bg-color-block;
+  font-size: 2.5em;
+  padding: 0.3em 0.5em;
+  margin-bottom: 20px;
+}
+
 #side-navigation {
   float: right;
   width: $sidebar-width;
@@ -230,16 +237,6 @@ html {
     margin: 0.5em 1em 1em;
   }
 }
-
-
-
-#tag-title {
-  background-color: rgb(255, 255, 255);
-  font-size: 2.5em;
-  padding: 0.3em 0.5em;
-  margin-bottom: 20px;
-}
-
 
 /*
  * 投稿の一覧表示
