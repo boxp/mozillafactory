@@ -67,7 +67,7 @@ html {
   vertical-align: middle;
 }
 #title-icon {
-  margin: 0 $base-font-size*0.3;
+  margin: 0 0.3em;
 }
 
 #header-navigation {
@@ -79,7 +79,7 @@ html {
   $hovered-list-bg-color: rgb(245, 241, 232);
   $hovered-item-bg-color: #fff;
 
-  margin: $base-font-size*2 0;
+  margin: 2em 0;
 
   & ul {
     margin: 0 auto;
@@ -98,7 +98,7 @@ html {
 
     & > a {
       display: block;
-      font-size: $base-font-size * 1.2;
+      font-size: 1.2em;
       padding: $menu-item-link-padding;
 
       &:hover {
@@ -132,7 +132,7 @@ html {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    font-size: $base-font-size;
+    font-size: 1em;
 
     & li {
       z-index: 999;
@@ -161,8 +161,8 @@ html {
 
 #tag-title {
   @extend %basic-block;
-  font-size: $base-font-size * 2.5;
-  padding: $base-font-size*(0.3) $base-font-size*(0.5);
+  font-size: 2.5em;
+  padding: 0.3em 0.5em;
   margin-bottom: 20px;
 }
 
@@ -173,8 +173,8 @@ html {
   & .banner {
     text-align: center;
     width: 100%;
-    padding: $base-font-size 0;
-    margin: $base-font-size 0;
+    padding: 1em 0;
+    margin: 1em 0;
     border-bottom: 1px dotted $text-color-primary;
 
     &:first-child {
@@ -192,11 +192,11 @@ html {
 #global-footer {
   width: 100%;
   background-color: $footer-bg-color;
-  padding: $base-font-size*3 auto;
+  padding: 3em auto;
 
   & > div {
     width: $page-width;
-    padding-top: $base-font-size*3;
+    padding-top: 3em;
     margin: 0 auto;
 
     &:after {
@@ -211,15 +211,15 @@ html {
 }
 
 #supporter-section {
-  margin-left: $base-font-size*5;
+  margin-left: 5em;
 
   & > h1 {
-    margin-bottom: $base-font-size * 0.5;
+    margin-bottom: 0.5em;
   }
 }
 .supporter {
   display: inline-block;
-  margin: 0 $base-font-size;
+  margin: 0 1em;
 
   &:first-child {
     margin-left: 0;
@@ -230,11 +230,11 @@ html {
 }
 
 #footer-info {
-  margin: $base-font-size auto;
+  margin: 1em auto;
 
   & li {
     display: inline-block;
-    margin: $base-font-size*0.5 $base-font-size $base-font-size;
+    margin: 0.5em 1em 1em;
   }
 }
 
