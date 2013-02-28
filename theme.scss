@@ -282,6 +282,9 @@ html {
   &.event {
     background: $tag-event-bg-color;
   }
+  &.Mentor {
+    background: $tag-mentor-bg-color;
+  }
 }
 
 
@@ -299,7 +302,8 @@ html {
 
 #posts {
   &.mentor,
-  &.project {
+  &.project,
+  &.Mentor {
     @extend %hide-date-info;
   }
 
