@@ -247,21 +247,47 @@ html {
   @extend %basic-block;
   $box-number: 3;
   $margin-width: 5px;
-  $padding-width: 15px;
+  $padding-width: 0;
   $border-width: 0;
   float: left;
   width: ($main-width - ($margin-width + $border-width + $padding-width) * 2 * $box-number) / $box-number;
   height: 300px;
   margin: $margin-width;
-  padding: $padding-width;
   font-size: $post-index-font-size;
   overflow: hidden;
+
+  %inner-content {
+    $inner-padding-width: 15px;
+    display: block;
+    padding: $inner-padding-width;
+  }
+  & > .post-body,
+  & > header {
+    @extend %inner-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 
   & img,
   & video,
   & audio,
   & iframe {
     @extend %media-justify;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .post-time {
+    @include embeded-line-bottom();
+    display: block;
+    padding: 5px 0 0;
+    margin: 0 15px 5px;
+
+    & > span {
+      font-size: 15px;
+    }
   }
 }
 
@@ -271,6 +297,9 @@ html {
   float: right;
 }
 .tag {
+
+  text-transform: uppercase;
+
   & a {
     padding: 5px 10px;
     color: white;

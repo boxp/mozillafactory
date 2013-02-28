@@ -92,7 +92,7 @@
           {block:Date}
           <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
                 class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
           </time>
           {/block:Date}
         </footer>
@@ -110,12 +110,6 @@
       {block:Photo}
       <article class="post photo">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -123,8 +117,14 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
-        <figure>
+        <figure class="post-body">
           <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
 
           {block:Caption}
@@ -137,13 +137,6 @@
       {block:Video}
       <article class="post video">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -151,6 +144,12 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
         <figure>
           {Video-500}
@@ -165,13 +164,6 @@
       {block:Audio}
       <article class="post audio">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -179,9 +171,15 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
 
-        <figure>
+        <figure class="post-body">
           {AudioPlayerBlack}
 
           {block:Caption}
@@ -194,13 +192,6 @@
       {block:Photoset}
       <article class="post photoset">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -208,9 +199,15 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
 
-        <figure>
+        <figure class="post-body">
           {Photoset-500}
           {block:Caption}
             <figcaption class="caption">{Caption}</figcaption>
@@ -222,13 +219,6 @@
       {block:Quote}
       <article class="post quote">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -236,9 +226,15 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
 
-        <blockquote>
+        <blockquote class="post-body">
           <div class="quote-body">
             "{Quote}"
           </div>
@@ -253,13 +249,6 @@
       {block:Link}
       <article class="post link">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -267,6 +256,12 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>-<span class="month">{MonthNumber}</span>-<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
 
         <a href="{URL}" class="link" {Target}>{Name}</a>
@@ -280,13 +275,6 @@
       {block:Chat}
       <article class="post chat">
         <footer>
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span>{Year}</span>-<span>{MonthNumber}</span>-<span>{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-
           {block:hastags}
           <ul class="tag-list">
             {block:tags}
@@ -294,6 +282,12 @@
             {/block:tags}
           </ul>
           {/block:hastags}
+          {block:Date}
+          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
+                class="post-time">
+            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
+          </time>
+          {/block:Date}
         </footer>
 
         {block:Title}
