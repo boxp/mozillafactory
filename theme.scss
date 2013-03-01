@@ -290,7 +290,7 @@ html {
 $post-index-padding-width: 0;
 $post-index-border-width: 0;
 $post-index-margin-width: 5px;
-.posts.index .post {
+#posts.index .post {
   @extend %basic-block;
   $box-number: 3;
 
