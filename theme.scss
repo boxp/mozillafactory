@@ -250,18 +250,6 @@ html {
  */
 
 .post {
-  %inner-content {
-    $inner-padding-width: 15px;
-    display: block;
-    padding: $inner-padding-width;
-  }
-  & > .post-body,
-  & > header {
-    @extend %inner-content;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
   & img,
   & video,
   & audio,
@@ -297,7 +285,7 @@ html {
  *
  */
 
-$post-index-padding-width: 0;
+$post-index-padding-width: 15px;
 $post-index-border-width: 0;
 $post-index-margin-width: 5px;
 #posts.index .post {
@@ -307,8 +295,10 @@ $post-index-margin-width: 5px;
   float: left;
   width: ($main-width - ($post-index-margin-width + $post-index-border-width + $post-index-padding-width) * 2
           * $box-number) / $box-number;
-  height: 300px;
+  height: 400px;
+  padding: $post-index-padding-width;
   margin: $post-index-margin-width;
+  margin-bottom: 25px;
   font-size: $post-index-font-size;
   overflow: hidden;
 
