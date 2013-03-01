@@ -238,24 +238,13 @@ html {
   }
 }
 
+
 /*
- * 投稿の一覧表示
+ * 投稿
  *
  */
 
 .post {
-  @extend %basic-block;
-  $box-number: 3;
-  $margin-width: 5px;
-  $padding-width: 0;
-  $border-width: 0;
-  float: left;
-  width: ($main-width - ($margin-width + $border-width + $padding-width) * 2 * $box-number) / $box-number;
-  height: 300px;
-  margin: $margin-width;
-  font-size: $post-index-font-size;
-  overflow: hidden;
-
   %inner-content {
     $inner-padding-width: 15px;
     display: block;
@@ -290,6 +279,28 @@ html {
       font-size: 15px;
     }
   }
+}
+
+
+/*
+ * 投稿の一覧表示
+ *
+ */
+
+$post-index-padding-width: 0;
+$post-index-border-width: 0;
+$post-index-margin-width: 5px;
+.posts.index .post {
+  @extend %basic-block;
+  $box-number: 3;
+
+  float: left;
+  width: ($main-width - ($post-index-margin-width + $post-index-border-width + $post-index-padding-width) * 2
+          * $box-number) / $box-number;
+  height: 300px;
+  margin: $post-index-margin-width;
+  font-size: $post-index-font-size;
+  overflow: hidden;
 }
 
 /* タグの表示 */
