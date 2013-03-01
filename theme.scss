@@ -81,7 +81,7 @@ html {
   $menu-item-border-color: #d6d6d6;
   $menu-item-border: 1px dotted $menu-item-border-color;
   $mainmenu-item-number: 5;
-  $bg-color: rgba(255, 255, 255, .5);
+  $bg-color: $basic-block-bg-color;
   $hovered-list-bg-color: rgb(245, 241, 232);
   $hovered-item-bg-color: #fff;
 
