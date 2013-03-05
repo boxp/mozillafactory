@@ -257,7 +257,7 @@ html {
     }
     & h1, & h2, & h3, & h4, & h5, & h6 {
       padding-bottom: 0.5em;
-      border-bottom: 1px dotted $text-color-primary;
+      @include  embeded-line-bottom();
       margin: 2em 0 .7em;
     }
   }
