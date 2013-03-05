@@ -259,6 +259,10 @@ html {
       padding-bottom: 0.5em;
       @include  embeded-line-bottom();
       margin: 2em 0 .7em;
+
+      &.clear-strong-headline {
+        @extend %clear-embeded-line-bottom;
+      }
     }
   }
 }

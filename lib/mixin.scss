@@ -77,6 +77,12 @@ $tag-mentor-bg-color: blue;
   @include box-shadow(rgba(255, 255, 255, $op2)0 1px 0);
 }
 
+%clear-embeded-line-bottom {
+  border-bottom: none;
+  @include box-shadow(none);
+}
+
+
 %clear-float {
   content: "";
   display: block;
