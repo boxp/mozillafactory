@@ -62,38 +62,35 @@
     {/block:TagPage}
 
     <section id="posts" class="{block:TagPage}{Tag}{/block:TagPage} {block:IndexPage}index{/block:IndexPage}">
+
     {block:Posts}
-
+    <article
       {block:Text}
-      <article class="post text">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
-        {block:Title}
-        <header>
-          <h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>
-        </header>
-        {/block:Title}
-        <div class="post-body">
-          {Body}
-        </div>
-      </article>
+        class="post text"
       {/block:Text}
-
       {block:Photo}
-      <article class="post photo">
+        class="post photo"
+      {/block:Photo}
+      {block:Video}
+        class="post video"
+      {/block:Video}
+      {block:Audio}
+        class="post audio"
+      {/block:Audio}
+      {block:Photoset}
+        class="post photoset"
+      {/block:Photoset}
+      {block:Quote}
+        class="post quote"
+      {/block:Quote}
+      {block:Link}
+        class="post link"
+      {/block:Link}
+      {block:Chat}
+        class="post chat"
+      {/block:Chat}
+      >
+
         <footer>
           {block:hastags}
           <ul class="tag-list">
@@ -109,33 +106,29 @@
           </time>
           {/block:Date}
         </footer>
-        <figure class="post-body">
-          <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
 
-          {block:Caption}
-          <figcaption>{Caption}</figcaption>
-          {/block:Caption}
-        </figure>
-      </article>
-      {/block:Photo}
+        {/block:Text}
+          {block:Title}
+          <header>
+            <h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>
+          </header>
+          {/block:Title}
+          <div class="post-body">
+            {Body}
+          </div>
+        {/block:Text}
+
+        {block:Photo}
+          <figure class="post-body">
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+            {block:Caption}
+            <figcaption>{Caption}</figcaption>
+            {/block:Caption}
+          </figure>
+        {/block:Photo}
 
       {block:Video}
-      <article class="post video">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
         <figure>
           {Video-500}
 
@@ -143,27 +136,9 @@
           <figcaption>{Caption}</figcaption>
           {/block:Caption}
         </figure>
-      </article>
       {/block:Video}
 
       {block:Audio}
-      <article class="post audio">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
-
         <figure class="post-body">
           {AudioPlayerBlack}
 
@@ -171,54 +146,18 @@
           <figcaption>{Caption}</figcaption>
           {/block:Caption}
         </figure>
-      </article>
       {/block:Audio}
 
       {block:Photoset}
-      <article class="post photoset">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
-
         <figure class="post-body">
           {Photoset-500}
           {block:Caption}
             <figcaption class="caption">{Caption}</figcaption>
           {/block:Caption}
         </figure>
-      </article>
       {/block:Photoset}
 
       {block:Quote}
-      <article class="post quote">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
-
         <blockquote class="post-body">
           <div class="quote-body">
             "{Quote}"
@@ -228,53 +167,17 @@
           <cite class="source">{Source}</cite>
           {/block:Source}
         </blockquote>
-      </article>
-      {/block:Quote}
+      {block:Quote}
 
       {block:Link}
-      <article class="post link">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>-<span class="month">{MonthNumber}</span>-<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
-
         <a href="{URL}" class="link" {Target}>{Name}</a>
 
         {block:Description}
         <div class="description">{Description}</div>
         {/block:Description}
-      </article>
       {/block:Link}
 
       {block:Chat}
-      <article class="post chat">
-        <footer>
-          {block:hastags}
-          <ul class="tag-list">
-            {block:tags}
-            <li class="tag {tag}"><a href="{tagurl}">{tag}</a></li>
-            {/block:tags}
-          </ul>
-          {/block:hastags}
-          {block:Date}
-          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}"
-                class="post-time">
-            <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
-          </time>
-          {/block:Date}
-        </footer>
-
         {block:Title}
         <header>
           <h3><a href="{Permalink}">{Title}</a></h3>
@@ -292,8 +195,9 @@
           </li>
           {/block:Lines}
         </ul>
-      </article>
       {/block:Chat}
+
+      </article><!-- .post -->
 
     {/block:Posts}
 
