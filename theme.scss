@@ -132,27 +132,6 @@ html {
       }
     }
   }
-
-  & .submenu {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    font-size: 1em;
-
-    & li {
-      z-index: 999;
-      border-top: $menu-item-border;
-    }
-  }
-  & li:hover > .submenu {
-    visibility: visible;
-    opacity: 1;
-    @include transition(all linear .15s);
-
-    & > li {
-      background: $hovered-list-bg-color;
-    }
-  }
 }
 
 #main {
