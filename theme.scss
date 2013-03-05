@@ -9,6 +9,8 @@
  *
  *****************/
 
+@include open-sans();
+
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
