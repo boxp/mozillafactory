@@ -24,9 +24,27 @@ $header-nav-item-width: $page-width / $header-nav-item-number;
 
 $sidebar-width: 180px;
 $sidebar-margin-left: 30px;
-$main-width: $page-width - $sidebar-width;
+
+$sidebar-based-main-width: $page-width - $sidebar-width;
+$nav-based-main-width: ($header-nav-item-number - 1) * $header-nav-item-width;
+
+/* ページ幅からサイドバー幅を差し引いた長さよりも
+   グローバルナビゲーションのアイテム数を使って算出した長さの方が長い場合、
+   ページ幅から算出したサイドバー幅を優先する */
+$main-width: 0;
+@if $sidebar-based-main-width < $nav-based-main-width {
+  $main-width: $sidebar-based-main-width;
+}
+@else {
+  $main-width: $nav-based-main-width;
+}
 
 $post-width: $main-width * 0.8;
+
+$post-index-padding-width: 15px;
+$post-index-border-width: 0;
+$post-index-margin-width: 10px;
+
 
 $footer-bg-color: #fff;
 

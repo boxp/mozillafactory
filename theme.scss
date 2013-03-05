@@ -267,29 +267,13 @@ html {
  *
  */
 
-$post-index-padding-width: 15px;
-$post-index-border-width: 0;
-$post-index-margin-width: 10px;
-
 #posts.index .post {
-  $nav-based: ($header-nav-item-number - 1) * $header-nav-item-width;
-
-  /* ページ幅からサイドバー幅を差し引いた長さよりも
-     グローバルナビゲーションのアイテム数を使って算出した長さの方が長い場合、
-     ページ幅から算出したサイドバー幅を優先する */
-  $post-index-parent-width: 0;
-  @if $main-width < $nav-based {
-    $post-index-parent-width: $main-width;
-  }
-  @else {
-    $post-index-parent-width: $nav-based;
-  }
 
   @extend %basic-block;
   $box-number: 3;
 
   @include grid-column-width($box-number,
-                       $post-index-parent-width,
+                       $main-width,
                        $post-index-padding-width,
                        $post-index-border-width,
                        $post-index-margin-width);
