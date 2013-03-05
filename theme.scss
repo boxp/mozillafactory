@@ -225,6 +225,10 @@ html {
  */
 
 .post {
+
+  width: $post-width;
+  margin: 0 auto;
+
   & img,
   & video,
   & audio,
