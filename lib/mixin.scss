@@ -74,7 +74,6 @@ $tag-mentor-bg-color: blue;
 }
 
 @mixin grid-column-width($box-number, $parent-width, $padding-width, $border-width, $margin-width) {
-  float: left;
   /*
     // 個々の要素に必要なborderとpadding
     $x = (個々の要素のborder*2 + padding*2) * 個々の要素の行数;

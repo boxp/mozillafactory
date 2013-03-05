@@ -264,7 +264,7 @@ html {
 
 $post-index-padding-width: 15px;
 $post-index-border-width: 0;
-$post-index-margin-width: 5px;
+$post-index-margin-width: 10px;
 
 #posts.index .post {
   $nav-based: ($header-nav-item-number - 1) * $header-nav-item-width;
@@ -283,13 +283,13 @@ $post-index-margin-width: 5px;
   @extend %basic-block;
   $box-number: 3;
 
-  float: left;
-  height: 400px;
   @include grid-column-width($box-number,
-                             $post-index-parent-width,
-                             $post-index-padding-width,
-                             $post-index-border-width,
-                             $post-index-margin-width);
+                       $post-index-parent-width,
+                       $post-index-padding-width,
+                       $post-index-border-width,
+                       $post-index-margin-width);
+  height: 400px;
+  margin-bottom: 25px;
   font-size: $post-index-font-size;
   overflow: hidden;
 
