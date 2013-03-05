@@ -80,7 +80,6 @@ html {
   $menu-item-link-padding: 8px;
   $menu-item-border-color: #d6d6d6;
   $menu-item-border: 1px dotted $menu-item-border-color;
-  $mainmenu-item-number: 5;
   $bg-color: $basic-block-bg-color;
   $hovered-list-bg-color: rgb(245, 241, 232);
   $hovered-item-bg-color: #fff;
@@ -121,7 +120,7 @@ html {
 
     & > li {
       float: left;
-      width: $page-width / $mainmenu-item-number;
+      width: $header-nav-item-width;
       position: relative;
 
       & > a {
@@ -266,16 +265,39 @@ html {
 $post-index-padding-width: 15px;
 $post-index-border-width: 0;
 $post-index-margin-width: 5px;
+
 #posts.index .post {
+  $nav-based: ($header-nav-item-number - 1) * $header-nav-item-width;
+
+  /* ページ幅からサイドバー幅を差し引いた長さよりも
+     グローバルナビゲーションのアイテム数を使って算出した長さの方が長い場合、
+     ページ幅から算出したサイドバー幅を優先する */
+  $post-index-parent-width: 0;
+  @if $main-width < $nav-based {
+    $post-index-parent-width: $main-width;
+  }
+  @else {
+    $post-index-parent-width: $nav-based;
+  }
+
   @extend %basic-block;
   $box-number: 3;
 
   float: left;
-  width: ($main-width - ($post-index-margin-width + $post-index-border-width + $post-index-padding-width) * 2
-          * $box-number) / $box-number;
+  /*
+    // 個々の要素に必要なborderとpadding
+    $x = (個々の要素のborder*2 + padding*2) * 個々の要素の行数;
+    // 相殺分を考慮したmargin
+    $y = 要素間margin *（要素の行数 - 1）
+    
+    個々の要素の幅 = (親の幅 - ( $x + $y) ) / 要素の行数;
+   */
+  $x: 2 * ($post-index-padding-width + $post-index-border-width) * $box-number;
+  $y: $post-index-margin-width * ($box-number - 1);
+  width: ( $post-index-parent-width - ($x + $y) ) / $box-number;
   height: 400px;
   padding: $post-index-padding-width;
-  margin: $post-index-margin-width;
+  margin-left: $post-index-margin-width;
   margin-bottom: 25px;
   font-size: $post-index-font-size;
   overflow: hidden;

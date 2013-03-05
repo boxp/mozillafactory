@@ -16,6 +16,10 @@ $base-line-height: 1.6em;
 $basic-block-bg-color: rgba(255, 255, 255, .5);
 
 $page-width: 980px;
+
+$header-nav-item-number: 5;
+$header-nav-item-width: $page-width / $header-nav-item-number;
+
 $sidebar-width: 180px;
 $sidebar-margin-left: 30px;
 $main-width: $page-width - $sidebar-width;
