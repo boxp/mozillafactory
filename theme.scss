@@ -95,6 +95,11 @@ html {
   & ul {
     margin: 0 auto;
     width: 100%;
+    background: $bg-color;
+
+    &:after {
+      @extend %clear-float;
+    }
   }
 
   & ul > li {
@@ -102,6 +107,9 @@ html {
     width: 100%;
     list-style-type: none;
     text-align: center;
+    float: left;
+    width: $header-nav-item-width;
+    position: relative;
 
     &:hover {
       background: $hovered-list-bg-color;
@@ -110,31 +118,14 @@ html {
     & > a {
       display: block;
       padding: $menu-item-link-padding;
+      border-left: $menu-item-border;
 
       &:hover {
         background: $hovered-item-bg-color;
       }
     }
-  }
-
-  & .mainmenu {
-    background: $bg-color;
-
-    &:after {
-      @extend %clear-float;
-    }
-
-    & > li {
-      float: left;
-      width: $header-nav-item-width;
-      position: relative;
-
-      & > a {
-        border-left: $menu-item-border;
-      }
-      &:first-child > a {
-        border: none;/* don't show border on left-end */
-      }
+    &:first-child > a {
+      border: none;/* don't show border on left-end */
     }
   }
 }
