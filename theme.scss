@@ -336,6 +336,21 @@ html {
   }
 }
 
+#pagination {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+#pagination-previous {
+  display: block;
+  width: 100px;
+  float: left;
+}
+#pagination-next {
+  display: block;
+  width: 100px;
+  float: right;
+}
 
 /*
  * 特定のタグに関連する設定
