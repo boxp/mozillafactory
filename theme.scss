@@ -339,17 +339,28 @@ html {
 #pagination {
   display: block;
   margin: auto;
-  width: 50%;
+  width: 200px;
+}
+%pagination-item {
+  display: block;
+  padding: 10px;
+  margin: 10px;
 }
 #pagination-previous {
-  display: block;
-  width: 100px;
+  @extend %pagination-item;
   float: left;
+
+  & > a:before {
+    content: "« ";
+  }
 }
 #pagination-next {
-  display: block;
-  width: 100px;
+  @extend %pagination-item;
   float: right;
+
+  & > a:after {
+    content: " »";
+  }
 }
 
 /*
