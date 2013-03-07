@@ -346,7 +346,7 @@ html {
   padding: 10px;
   margin: 10px;
 }
-#pagination-previous {
+#pagination-new {
   @extend %pagination-item;
   float: left;
 
@@ -354,7 +354,7 @@ html {
     content: "« ";
   }
 }
-#pagination-next {
+#pagination-old {
   @extend %pagination-item;
   float: right;
 
