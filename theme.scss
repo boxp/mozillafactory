@@ -269,6 +269,19 @@ html {
       }
     }
   }
+
+  /*
+   * 各投稿ページにて、特定のタグに所属する投稿の場合は、
+   * 投稿日時を表示しない
+   */
+  *[data-post-tag~=Mentor],
+  *[data-post-tag~=project] {
+    & {
+      & time.post-time {
+        display: none;
+      }
+    }
+  }
 }
 
 
