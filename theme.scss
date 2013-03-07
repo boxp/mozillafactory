@@ -73,10 +73,20 @@ html {
 }
 #title {
   font-size: 0; /* hide white space */
+
+  @include phone {
+    width: 100%;
+  }
 }
 #title-logo, #title-icon {
   display: inline-block;
   vertical-align: middle;
+
+  @include phone {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 #title-icon {
   margin: 0 0.3em;
