@@ -4,6 +4,11 @@
  *
  */
 
+
+
+/*
+ * general variable
+ */
 $base-path: "http://saneyuki.mozlabs.jp/factory";
 
 $link-color: #af3232;
@@ -19,9 +24,17 @@ $basic-block-bg-color: rgba(255, 255, 255, .5);
 
 $page-width: 980px;
 
+
+/*
+ * header-nav variable
+ */
 $header-nav-item-number: 5;
 $header-nav-item-width: $page-width / $header-nav-item-number;
 
+
+/*
+ * sidebar variable
+ */
 $sidebar-width: 180px;
 $sidebar-margin-left: 30px;
 
@@ -41,16 +54,25 @@ $main-width: 0;
 
 $post-width: $main-width * 0.8;
 
+
+/*
+ * post index variable
+ */
 $post-index-padding-width: 15px;
 $post-index-border-width: 0;
 $post-index-margin-width: 10px;
-
-
-$footer-bg-color: #fff;
-
 $post-index-font-size: 12px;
 
-/* tag */
+
+/*
+ * footer variable
+ */
+$footer-bg-color: #fff;
+
+
+/*
+ * tag variable
+ */
 $tag-project-bg-color: red;
 $tag-event-bg-color: green;
 $tag-mentor-bg-color: blue;
