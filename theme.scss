@@ -17,7 +17,7 @@ body {
   font-family: $base-font-family;
   color: $text-color-primary;
 
-  @media only screen and (max-width: 767px) {
+  @include phone {
     width: 100%;
   }
 }
@@ -312,6 +312,10 @@ html {
 
   .post-title {
     font-size: 20px;
+  }
+
+  @include phone {
+    float: none;
   }
 }
 
