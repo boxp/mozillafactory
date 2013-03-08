@@ -67,6 +67,11 @@ html {
 
 #global-header {
   text-align: center;
+
+  @include phone {
+    width: $page-width-phone;
+    margin: 0 auto;
+  }
 }
 #tabzilla-nav:after {
   @extend %clear-float;
@@ -77,10 +82,6 @@ html {
 }
 #title {
   font-size: 0; /* hide white space */
-
-  @include phone {
-    width: 100%;
-  }
 }
 #title-logo, #title-icon {
   display: inline-block;
@@ -150,7 +151,7 @@ html {
       }
 
       @include phone {
-        width: 100%;
+        width: $page-width-phone;
         border-left: none;
         border-top: $menu-item-border;
       }
@@ -164,10 +165,11 @@ html {
 #main {
   float: left;
   width: $main-width;
+  margin: 0 auto;
 
   @include phone {
     float: none;
-    width: 100%;
+    width: $page-width-phone;
   }
 }
 
@@ -184,7 +186,7 @@ html {
 
   @include phone {
     float: none;
-    width: 100%;
+    width: $page-width-phone;
   }
 
   & .banner {
@@ -270,10 +272,6 @@ html {
   width: $post-width;
   margin: 0 auto;
 
-  @include phone {
-    width: 100%;
-  }
-
   & img,
   & video,
   & audio,
@@ -333,7 +331,11 @@ html {
  * 投稿の一覧表示
  *
  */
-
+#posts.index {
+  @include phone {
+    width: $page-width-phone;
+  }
+}
 #posts.index .post {
 
   @extend %basic-block;

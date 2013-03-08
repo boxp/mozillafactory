@@ -23,6 +23,7 @@ $base-line-height: 1.6em;
 $basic-block-bg-color: rgba(255, 255, 255, .5);
 
 $page-width: 980px;
+$page-width-phone: 95%;
 
 
 /*
@@ -138,6 +139,18 @@ $tag-mentor-bg-color: blue;
 
   &:nth-of-type(3n+1) {
     margin-left: 0;
+
+    @include phone {
+      margin-left: auto;
+    }
+  }
+
+  @include phone {
+    width: $page-width-phone;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
