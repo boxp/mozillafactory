@@ -223,7 +223,7 @@ html {
   }
 
   @include phone {
-    width: 100%;
+    width: 80%;
   }
 }
 #footer-mozilla-japan-logo,
@@ -237,7 +237,7 @@ html {
 }
 #footer-mozilla-japan-logo {
   @include phone {
-    text-align: center;
+    margin-bottom: 40px;
   }
 }
 #supporter-section {
