@@ -232,6 +232,7 @@ html {
   float: left;
 
   @include phone {
+    text-align: center;
     float: none;
   }
 }
@@ -241,10 +242,19 @@ html {
   }
 }
 #supporter-section {
-  margin-left: 5em;
+  margin-left: 70px;
 
   & > h1 {
     margin-bottom: 0.5em;
+
+    @include phone {
+      margin-bottom: 1em;
+      font-size: 14px;
+    }
+  }
+
+  @include phone {
+    margin-left: 0;
   }
 }
 .supporter {
@@ -266,6 +276,10 @@ html {
     display: inline-block;
     margin: 0.5em 1em 1em;
   }
+
+  @include phone {
+    text-align: left;
+  }
 }
 
 
@@ -274,10 +288,19 @@ html {
  *
  */
 
+
 .post {
 
   width: $post-width;
   margin: 0 auto;
+
+  @include phone {
+    width: $page-width-phone;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   & img,
   & video,
