@@ -218,3 +218,9 @@ $tag-mentor-bg-color: blue;
     @content;
   }
 }
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) and (max-width: 1081px) {
+    @content;
+  }
+}
