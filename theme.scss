@@ -230,6 +230,15 @@ html {
 #supporter-section,
 #footer-info {
   float: left;
+
+  @include phone {
+    float: none;
+  }
+}
+#footer-mozilla-japan-logo {
+  @include phone {
+    text-align: center;
+  }
 }
 #supporter-section {
   margin-left: 5em;
