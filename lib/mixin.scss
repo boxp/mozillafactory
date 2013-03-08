@@ -105,6 +105,12 @@ $tag-mentor-bg-color: blue;
   @include box-shadow(none);
 }
 
+/* Use @mixin instead of @extend.
+ * @extending an outer selector from within @media is deprecated in Sass 3.2.
+ */
+@mixin no-linebreak() {
+  display: inline-block;
+}
 
 %clear-float {
   content: "";
