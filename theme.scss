@@ -284,6 +284,14 @@ html {
   & audio,
   & iframe {
     @extend %media-justify;
+
+    @include phone {
+      display: block;
+      float: none;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   .post-title {
