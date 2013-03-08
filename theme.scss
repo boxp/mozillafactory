@@ -152,6 +152,7 @@ html {
       @include phone {
         width: 100%;
         border-left: none;
+        border-top: $menu-item-border;
       }
     }
     &:first-child > a {
