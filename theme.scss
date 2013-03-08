@@ -376,6 +376,10 @@ html {
  *
  */
 #posts.index {
+  &:after {
+    @extend %clear-float;
+  }
+
   @include phone {
     width: $page-width-phone;
   }
