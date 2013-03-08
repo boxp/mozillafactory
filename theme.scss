@@ -212,27 +212,25 @@ html {
   width: 100%;
   background-color: $footer-bg-color;
   padding: 3em auto;
-
-  & > div {
-    width: $page-width;
-    padding-top: 3em;
-    margin: 0 auto;
-
-    &:after {
-      @extend %clear-float;
-    }
-
-    @include phone {
-      width: 100%;
-    }
-  }
-
-  & > div > * {
-    float: left;
-  }
-
 }
+#global-footer-inner {
+  width: $page-width;
+  padding-top: 3em;
+  margin: 0 auto;
 
+  &:after {
+    @extend %clear-float;
+  }
+
+  @include phone {
+    width: 100%;
+  }
+}
+#footer-mozilla-japan-logo,
+#supporter-section,
+#footer-info {
+  float: left;
+}
 #supporter-section {
   margin-left: 5em;
 
