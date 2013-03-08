@@ -38,6 +38,12 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 1px 0 rgba(255,255,255,0.75);
 }
 
+@include phone {
+  .phrase-group {
+    @include no-linebreak();
+  }
+}
+
 /*****************
  *
  * layout
@@ -59,10 +65,19 @@ html {
   &:after {
     @extend %clear-float;
   }
+
+  @include phone {
+    width: 100%;
+  }
 }
 
 #global-header {
   text-align: center;
+
+  @include phone {
+    width: $page-width-phone;
+    margin: 0 auto;
+  }
 }
 #tabzilla-nav:after {
   @extend %clear-float;
@@ -77,9 +92,22 @@ html {
 #title-logo, #title-icon {
   display: inline-block;
   vertical-align: middle;
+
+  @include phone {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 #title-icon {
   margin: 0 0.3em;
+
+  @include phone {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #header-navigation {
@@ -104,7 +132,6 @@ html {
 
   & ul > li {
     display: block;
-    width: 100%;
     list-style-type: none;
     text-align: center;
     float: left;
@@ -115,6 +142,11 @@ html {
       background: $hovered-list-bg-color;
     }
 
+    @include phone {
+      float: none;
+      width: 100%;
+    }
+
     & > a {
       display: block;
       padding: $menu-item-link-padding;
@@ -122,6 +154,12 @@ html {
 
       &:hover {
         background: $hovered-item-bg-color;
+      }
+
+      @include phone {
+        width: $page-width-phone;
+        border-left: none;
+        border-top: $menu-item-border;
       }
     }
     &:first-child > a {
@@ -133,6 +171,12 @@ html {
 #main {
   float: left;
   width: $main-width;
+  margin: 0 auto;
+
+  @include phone {
+    float: none;
+    width: $page-width-phone;
+  }
 }
 
 #tag-title {
@@ -145,6 +189,11 @@ html {
 #side-navigation {
   float: right;
   width: $sidebar-width;
+
+  @include phone {
+    float: none;
+    width: $page-width-phone;
+  }
 
   & .banner {
     text-align: center;
@@ -169,28 +218,49 @@ html {
   width: 100%;
   background-color: $footer-bg-color;
   padding: 3em auto;
-
-  & > div {
-    width: $page-width;
-    padding-top: 3em;
-    margin: 0 auto;
-
-    &:after {
-      @extend %clear-float;
-    }
-  }
-
-  & > div > * {
-    float: left;
-  }
-
 }
+#global-footer-inner {
+  width: $page-width;
+  padding-top: 3em;
+  margin: 0 auto;
 
+  &:after {
+    @extend %clear-float;
+  }
+
+  @include phone {
+    width: 80%;
+  }
+}
+#footer-mozilla-japan-logo,
+#supporter-section,
+#footer-info {
+  float: left;
+
+  @include phone {
+    text-align: center;
+    float: none;
+  }
+}
+#footer-mozilla-japan-logo {
+  @include phone {
+    margin-bottom: 40px;
+  }
+}
 #supporter-section {
-  margin-left: 5em;
+  margin-left: 70px;
 
   & > h1 {
     margin-bottom: 0.5em;
+
+    @include phone {
+      margin-bottom: 1em;
+      font-size: 14px;
+    }
+  }
+
+  @include phone {
+    margin-left: 0;
   }
 }
 .supporter {
@@ -206,11 +276,15 @@ html {
 }
 
 #footer-info {
-  margin: 1em auto;
+  padding: 1em auto;
 
   & li {
     display: inline-block;
     margin: 0.5em 1em 1em;
+  }
+
+  @include phone {
+    text-align: left;
   }
 }
 
@@ -220,16 +294,33 @@ html {
  *
  */
 
+
 .post {
 
   width: $post-width;
   margin: 0 auto;
+
+  @include phone {
+    width: $page-width-phone;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   & img,
   & video,
   & audio,
   & iframe {
     @extend %media-justify;
+
+    @include phone {
+      display: block;
+      float: none;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   .post-title {
@@ -284,7 +375,15 @@ html {
  * 投稿の一覧表示
  *
  */
+#posts.index {
+  &:after {
+    @extend %clear-float;
+  }
 
+  @include phone {
+    width: $page-width-phone;
+  }
+}
 #posts.index .post {
 
   @extend %basic-block;
