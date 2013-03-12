@@ -203,6 +203,9 @@ html {
     float: none;
     width: $page-width-phone;
   }
+  @include tablet {
+    width: $main-width-tablet;
+  }
 }
 
 #tag-title {
@@ -219,6 +222,9 @@ html {
   @include phone {
     float: none;
     width: $page-width-phone;
+  }
+  @include tablet {
+    width: $sidebar-width-tablet;
   }
 
   & .banner {
@@ -337,6 +343,9 @@ html {
   @include phone-wide {
     width: $post-width-phone-wide;
     max-width: $post-maxwidth-phone-wide;
+  }
+  @include tablet {
+    width: $main-width-tablet;
   }
 
   & img,
