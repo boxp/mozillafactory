@@ -318,6 +318,10 @@ html {
     margin-left: auto;
     margin-right: auto;
   }
+  @include phone-wide {
+    width: 80%;
+    max-width: 550px;
+  }
 
   & img,
   & video,
@@ -365,6 +369,7 @@ html {
         @extend %clear-embeded-line-bottom;
       }
     }
+
   }
 
   /*
