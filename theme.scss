@@ -319,8 +319,8 @@ html {
     margin-right: auto;
   }
   @include phone-wide {
-    width: 80%;
-    max-width: 550px;
+    width: $post-width-phone-wide;
+    max-width: $post-maxwidth-phone-wide;
   }
 
   & img,
@@ -422,6 +422,10 @@ html {
 
   @include phone {
     float: none;
+  }
+  @include phone-wide {
+    width: $post-width-phone-wide;
+    max-width: $post-maxwidth-phone-wide;
   }
 }
 
