@@ -146,6 +146,10 @@ html {
       float: none;
       width: 100%;
     }
+    @include phone-wide {
+      display: inline-block;
+      width: 40%;
+    }
 
     & > a {
       display: block;
@@ -160,6 +164,13 @@ html {
         width: $page-width-phone;
         border-left: none;
         border-top: $menu-item-border;
+      }
+      @include phone-wide {
+        border-bottom: $menu-item-border;
+
+        &:nth-of-type(5n) {
+          border: none;
+        }
       }
     }
     &:first-child > a {
