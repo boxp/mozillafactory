@@ -471,6 +471,9 @@ html {
     width: $post-width-phone-wide;
     max-width: $post-maxwidth-phone-wide;
   }
+  @include tablet {
+    width: 40%;
+  }
 }
 
 /* タグの表示 */
