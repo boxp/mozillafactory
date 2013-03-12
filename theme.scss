@@ -313,6 +313,7 @@ html {
 
   @include phone {
     width: $page-width-phone;
+    max-width: 350px;
     padding-left: auto;
     padding-right: auto;
     margin-left: auto;
