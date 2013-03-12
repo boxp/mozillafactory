@@ -263,6 +263,9 @@ html {
   @include phone {
     width: 80%;
   }
+  @include tablet {
+    width: 80%;
+  }
 }
 #footer-mozilla-japan-logo,
 #supporter-section,
@@ -273,9 +276,16 @@ html {
     text-align: center;
     float: none;
   }
+  @include tablet {
+    text-align: center;
+    float: none;
+  }
 }
 #footer-mozilla-japan-logo {
   @include phone {
+    margin-bottom: 40px;
+  }
+  @include tablet {
     margin-bottom: 40px;
   }
 }
@@ -286,13 +296,18 @@ html {
     margin-bottom: 0.5em;
 
     @include phone {
-      margin-bottom: 1em;
       font-size: 14px;
+    }
+    @include tablet {
+      font-size: 16px;
     }
   }
 
   @include phone {
-    margin-left: 0;
+    margin: 1em 0;
+  }
+  @include tablet {
+    margin: 2em 0;
   }
 }
 .supporter {
@@ -313,10 +328,13 @@ html {
   & li {
     display: inline-block;
     margin: 0.5em 1em 1em;
-  }
 
-  @include phone {
-    text-align: left;
+    @include phone {
+      display: block;
+    }
+    @include tablet {
+      display: block;
+    }
   }
 }
 
