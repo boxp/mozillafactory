@@ -32,12 +32,18 @@ $page-width-phone: 95%;
 $header-nav-item-number: 5;
 $header-nav-item-width: $page-width / $header-nav-item-number;
 
+$header-nav-margin-tablet: 1%;
+$header-nav-width-tablet: 100% - $header-nav-margin-tablet * 2;
+$header-nav-item-width-tablet: $header-nav-width-tablet / $header-nav-item-number;
+$header-nav-item-fontsize-tablet: 12px;
 
 /*
  * sidebar variable
  */
 $sidebar-width: 180px;
 $sidebar-margin-left: 30px;
+
+$sidebar-width-tablet: 20%;
 
 $sidebar-based-main-width: $page-width - $sidebar-width;
 $nav-based-main-width: ($header-nav-item-number - 1) * $header-nav-item-width;
@@ -52,6 +58,8 @@ $main-width: 0;
 @else {
   $main-width: $nav-based-main-width;
 }
+
+$main-width-tablet: 80%;
 
 $post-width: $main-width * 0.8;
 $post-width-phone-wide: 80%;

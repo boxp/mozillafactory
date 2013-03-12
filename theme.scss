@@ -20,6 +20,9 @@ body {
   @include phone {
     width: 100%;
   }
+  @include tablet {
+    width: 100%;
+  }
 }
 
 a {
@@ -67,6 +70,9 @@ html {
   }
 
   @include phone {
+    width: 100%;
+  }
+  @include tablet {
     width: 100%;
   }
 }
@@ -120,6 +126,11 @@ html {
 
   margin: 2em 0;
 
+  @include tablet {
+    margin-left: $header-nav-margin-tablet;
+    margin-right: $header-nav-margin-tablet;
+  }
+
   & ul {
     margin: 0 auto;
     width: 100%;
@@ -149,6 +160,10 @@ html {
     @include phone-wide {
       display: inline-block;
       width: 40%;
+    }
+    @include tablet {
+      width: $header-nav-item-width-tablet;
+      font-size: $header-nav-item-fontsize-tablet;
     }
 
     & > a {
