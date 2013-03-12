@@ -204,7 +204,8 @@ html {
     width: $page-width-phone;
   }
   @include tablet {
-    width: $main-width-tablet;
+    width: $main-width-tablet - $header-nav-margin-tablet;
+    margin-left: $header-nav-margin-tablet;
   }
 }
 
@@ -224,7 +225,9 @@ html {
     width: $page-width-phone;
   }
   @include tablet {
-    width: $sidebar-width-tablet;
+    width: $sidebar-width-tablet - $header-nav-margin-tablet*2;
+    margin-left: $header-nav-margin-tablet;
+    margin-right: $header-nav-margin-tablet;
   }
 
   & .banner {
@@ -472,7 +475,7 @@ html {
     max-width: $post-maxwidth-phone-wide;
   }
   @include tablet {
-    width: 40%;
+    width: 44%;
   }
 }
 

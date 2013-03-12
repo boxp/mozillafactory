@@ -161,7 +161,7 @@ $tag-mentor-bg-color: blue;
       margin-left: auto;
     }
     @include tablet {
-      margin-left: none;
+      margin-left: $margin-width;
     }
   }
 
@@ -174,7 +174,7 @@ $tag-mentor-bg-color: blue;
   }
   @include tablet {
     &:nth-of-type(2n+1) {
-      margin-left: $header-nav-margin-tablet;
+      margin-left: 0;
     }
   }
 }
