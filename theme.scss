@@ -136,6 +136,10 @@ html {
     width: 100%;
     background: $bg-color;
 
+    @include phone-wide {
+      width: 80%;
+    }
+
     &:after {
       @extend %clear-float;
     }
@@ -159,7 +163,7 @@ html {
     }
     @include phone-wide {
       display: inline-block;
-      width: 40%;
+      width: 45%;
     }
     @include tablet {
       width: $header-nav-item-width-tablet;
