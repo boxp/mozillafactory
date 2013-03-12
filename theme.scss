@@ -392,6 +392,7 @@ html {
  *
  */
 #posts.index {
+  margin: auto;
   &:after {
     @extend %clear-float;
   }
