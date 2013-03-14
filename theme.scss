@@ -237,12 +237,15 @@ html {
   & .banner {
     text-align: center;
     width: 100%;
-    padding: 1em 0;
+    padding: 1em 0 2em;
     margin: 1em 0;
     border-bottom: 1px dotted $text-color-primary;
 
     &:first-child {
       margin-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
     }
   }
 }
