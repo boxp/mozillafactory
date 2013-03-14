@@ -529,11 +529,29 @@ html {
   &.project {
     background: $tag-project-bg-color;
   }
+  &.Mentor {
+    background: $tag-mentor-bg-color;
+  }
   &.event {
     background: $tag-event-bg-color;
   }
-  &.Mentor {
-    background: $tag-mentor-bg-color;
+  &.news {
+    background: $tag-news-bg-color;
+  }
+  &.moz-bus {
+    background: $tag-mozbus-bg-color;
+  }
+  &.webmaker {
+    background: $tag-webmaker-bg-color;
+  }
+  &.mecha-mozilla {
+    background: $tag-mecha-mozilla-bg-color;
+  }
+  &.ぶっとび {
+    background: $tag-buttobi-bg-color;
+  }
+  &.spare {
+    background: $tag-spare-bg-color;
   }
 }
 
