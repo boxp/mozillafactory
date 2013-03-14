@@ -353,8 +353,10 @@ html {
 
 
 .post {
+  @extend %basic-block;
 
   width: $post-width;
+  padding: 30px;
   margin: 0 auto;
 
   @include phone {
@@ -452,8 +454,6 @@ html {
   }
 }
 #posts.index .post {
-
-  @extend %basic-block;
   $box-number: 3;
 
   @include grid-column-width($box-number,
