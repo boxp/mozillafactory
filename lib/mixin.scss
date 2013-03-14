@@ -43,7 +43,7 @@ $header-nav-item-fontsize-tablet: 12px;
  * sidebar variable
  */
 $sidebar-width: 180px;
-$sidebar-width-phone: 50%;
+$sidebar-banner-width-phone: 40%;
 
 $sidebar-margin-left: 30px;
 
@@ -51,6 +51,9 @@ $sidebar-width-tablet: 20%;
 
 $sidebar-based-main-width: $page-width - $sidebar-width;
 $nav-based-main-width: ($header-nav-item-number - 1) * $header-nav-item-width;
+
+$banner-border: 1px dotted $text-color-primary;
+
 
 /* ページ幅からサイドバー幅を差し引いた長さよりも
    グローバルナビゲーションのアイテム数を使って算出した長さの方が長い場合、

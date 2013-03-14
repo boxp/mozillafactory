@@ -227,6 +227,8 @@ html {
   @include phone {
     float: none;
     width: $page-width-phone;
+    margin: 50px auto;
+    text-align: center;
   }
   @include tablet {
     width: $sidebar-width-tablet - $header-nav-margin-tablet*2;
@@ -239,13 +241,21 @@ html {
     width: 100%;
     padding: 1em 0 2em;
     margin: 1em 0;
-    border-bottom: 1px dotted $text-color-primary;
+    border-bottom: $banner-border;
+
+    @include phone {
+      display: inline-block;
+      width: $sidebar-banner-width-phone;
+      min-width: 200px;
+      margin: auto;
+      border-bottom: none;
+    }
 
     &:first-child {
       margin-top: 0;
     }
     &:last-child {
-      border-bottom: none;
+      border: none;
     }
   }
 }
