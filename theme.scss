@@ -483,31 +483,6 @@ html {
   }
 }
 
-/* タグの表示 */
-.tag-list {
-  list-style-type: none;
-  float: right;
-}
-.tag {
-
-  text-transform: uppercase;
-
-  & a {
-    padding: 5px 10px;
-    color: white;
-  }
-
-  &.project {
-    background: $tag-project-bg-color;
-  }
-  &.event {
-    background: $tag-event-bg-color;
-  }
-  &.Mentor {
-    background: $tag-mentor-bg-color;
-  }
-}
-
 #pagination {
   display: block;
   margin: auto;
@@ -537,6 +512,30 @@ html {
  * 特定のタグに関連する設定
  *
  */
+
+.tag-list {
+  list-style-type: none;
+  float: right;
+}
+.tag {
+
+  text-transform: uppercase;
+
+  & a {
+    padding: 5px 10px;
+    color: white;
+  }
+
+  &.project {
+    background: $tag-project-bg-color;
+  }
+  &.event {
+    background: $tag-event-bg-color;
+  }
+  &.Mentor {
+    background: $tag-mentor-bg-color;
+  }
+}
 
 /* 投稿一覧において日付を表示しない */
 %hide-date-info {
