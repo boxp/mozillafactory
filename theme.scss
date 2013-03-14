@@ -497,11 +497,16 @@ html {
   display: block;
   margin: auto;
   text-align: center;
+  background: $basic-block-bg-color;
+
+  @include phone-wide {
+    width: $post-width-phone-wide;
+    max-width: $post-maxwidth-phone-wide;
+  }
 }
 %pagination-item {
   display: inline-block;
   padding: 10px;
-  margin: 10px;
 }
 #pagination-new {
   @extend %pagination-item;
