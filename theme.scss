@@ -360,10 +360,10 @@ html {
   margin: 0 auto;
 
   @include phone {
-    width: $page-width-phone;
+    width: 100% - $post-padding-phone*2;
     max-width: 350px;
-    padding-left: auto;
-    padding-right: auto;
+    padding-left: $post-padding-phone;
+    padding-right: $post-padding-phone;
     margin-left: auto;
     margin-right: auto;
   }
