@@ -433,19 +433,6 @@ html {
     }
 
   }
-
-  /*
-   * 各投稿ページにて、特定のタグに所属する投稿の場合は、
-   * 投稿日時を表示しない
-   */
-  *[data-post-tag~=Mentor],
-  *[data-post-tag~=project] {
-    & {
-      & time.post-time {
-        display: none;
-      }
-    }
-  }
 }
 
 
@@ -572,16 +559,30 @@ html {
 
 /* 投稿一覧において日付を表示しない */
 %hide-date-info {
-  & .post .post-time {
+  & .post-time {
     display: none;
   }
 }
 
+/*
+ * 各投稿ページにて、特定のタグに所属する投稿の場合は、
+ * 投稿日時を表示しない
+ */
+.post {
+  &[data-post-tag~=Mentor],
+  &[data-post-tag~=project] {
+    & time.post-time {
+      display: none;
+    }
+  }
+}
 #posts {
   &.mentor,
   &.project,
   &.Mentor {
-    @extend %hide-date-info;
+    .post {
+      @extend %hide-date-info;
+    }
   }
 
 }
