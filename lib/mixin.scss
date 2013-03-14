@@ -179,7 +179,7 @@ $tag-spare-bg-color: #003366;
   }
 
   @include phone {
-    width: $page-width-phone;
+    width: auto;
     padding-left: auto;
     padding-right: auto;
     margin-left: auto;
