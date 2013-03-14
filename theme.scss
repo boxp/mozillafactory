@@ -132,9 +132,10 @@ html {
   }
 
   & ul {
+    @extend %basic-block;
+
     margin: 0 auto;
     width: 100%;
-    background: $bg-color;
 
     @include phone-wide {
       width: 80%;
@@ -481,10 +482,11 @@ html {
 }
 
 #pagination {
+  @extend %basic-block;
+
   display: block;
   margin: auto;
   text-align: center;
-  background: $basic-block-bg-color;
 
   @include phone-wide {
     width: $post-width-phone-wide;
