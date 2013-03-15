@@ -215,10 +215,11 @@ html {
 }
 
 #tag-title {
-  @extend %basic-block;
-  font-size: 2.5em;
-  padding: 0.3em 0.5em;
+  font-size: 2.4em;
+  padding: 0 10px;
+  border-left: 10px solid;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 #side-navigation {
@@ -568,6 +569,40 @@ html {
     background: $tag-spare-bg-color;
   }
 }
+#tag-title {
+
+  &.project {
+    border-color: $tag-project-bg-color;
+  }
+  &.project {
+    border-color: $tag-project-bg-color;
+  }
+  &.Mentor {
+    border-color: $tag-mentor-bg-color;
+  }
+  &.event {
+    border-color: $tag-event-bg-color;
+  }
+  &.News {
+    border-color: $tag-news-bg-color;
+  }
+  &.moz-bus {
+    border-color: $tag-mozbus-bg-color;
+  }
+  &.webmaker {
+    border-color: $tag-webmaker-bg-color;
+  }
+  &.mecha-mozilla {
+    border-color: $tag-mecha-mozilla-bg-color;
+  }
+  &.ぶっとび {
+    border-color: $tag-buttobi-bg-color;
+  }
+  &.spare {
+    border-color: $tag-spare-bg-color;
+  }
+}
+
 
 /* 投稿一覧において日付を表示しない */
 %hide-date-info {
