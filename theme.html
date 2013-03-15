@@ -4,12 +4,38 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="http://mozillafactory.tumblr.com/">
+    <meta property="og:site_name" content="{Title}">
+    <meta property="og:image" content="{PortraitURL-48}">
+    <meta property="og:title" content="{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}">
+    <script type="text/javascript">
+    // <![CDATA[
+      var onLoad = function onLoad() {
+        var meta = document.createElement('meta');
+        meta.setAttribute("property", "og:url");
+        meta.setAttribute("content", location.href);
+        document.getElementsByTagName('head').appendChild(meta);
+
+        window.removeEventListener("DOMContentLoaded", onLoad, false);
+        window.removeEventListener("load", onLoad, false);
+      };
+      window.addEventListener("DOMContentLoaded", onLoad, false);
+      window.addEventListener("load", onLoad, false);
+    // ]]>
+    </script>
+    {block:IndexPage}
+    <meta property="og:type" content="blog">
+    <meta property="og:description" content="{MetaDescription}">
+    {/block:IndexPage}
+    {block:PermalinkPage}
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}">
+    {/block:PermalinkPage}
     <link rel="shortcut icon" type="image/png" href="http://saneyuki.mozlabs.jp/factory/img/favicon.png">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     {block:Description}
     <meta name="description" content="{MetaDescription}" />
     {/block:Description}
-    <title>{block:TagPage}{URLSafeTag}{block:Pagination} ({CurrentPage}){/block:Pagination} &mdash; {/block:TagPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
+    <title>{block:TagPage}{URLSafeTag}{block:Pagination}:page {CurrentPage}{/block:Pagination} &mdash; {/block:TagPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
     <style>
       {CustomCSS}
     </style>
