@@ -9,7 +9,7 @@
     {block:Description}
     <meta name="description" content="{MetaDescription}" />
     {/block:Description}
-    <title>{Title}</title>
+    <title>{block:TagPage}{URLSafeTag}{block:Pagination} ({CurrentPage}){/block:Pagination} &mdash; {/block:TagPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
     <style>
       {CustomCSS}
     </style>
