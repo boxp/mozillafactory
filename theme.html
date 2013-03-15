@@ -13,7 +13,7 @@
         var meta = document.createElement('meta');
         meta.setAttribute("property", "og:url");
         meta.setAttribute("content", location.href);
-        document.getElementsByTagName('head').appendChild(meta);
+        document.getElementsByTagName('head')[0].appendChild(meta);
 
         window.removeEventListener("DOMContentLoaded", onLoad, false);
         window.removeEventListener("load", onLoad, false);
