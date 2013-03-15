@@ -114,6 +114,13 @@ $tag-spare-bg-color: #003366;
   transition: $transition;
 }
 
+@mixin transform($transform) {
+  -o-transform: $transform;
+  -ms-transform: $transform;
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
 @mixin box-shadow($shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1)) {
   -webkit-box-shadow: $shadow;
   box-shadow: $shadow;

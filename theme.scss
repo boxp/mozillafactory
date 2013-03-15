@@ -260,7 +260,17 @@ html {
     }
   }
 }
-
+.bannar-icon {
+  @include transition(transform 0.1s linear 0s);
+}
+.bannar-link:hover {
+  & #banner-player-icon {
+    @include transform(rotate(-20deg) translate(-10px, -5px));
+  }
+  & #banner-mentor-icon {
+    @include transform(scaleX(1.2) scaleY(0.8) translate(0, 10px));
+  }
+}
 
 /*
  * global footer
