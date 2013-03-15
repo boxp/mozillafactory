@@ -274,9 +274,23 @@ html {
 }
 #side-nav-social-list {
   li {
-    padding: 15px 15px;
-    border-bottom: $banner-border;
+    list-style-type: none;
+
+    & > a {
+      display: block;
+      min-height: 30px;
+      padding: 5px 15px 5px 40px;
+      border-bottom: $banner-border;
+      margin: 10px auto;
+      background-repeat: no-repeat;
+    }
   }
+}
+#side-social-twitter {
+  background-image: image-url("twitter-icon.png");
+}
+#side-social-fb {
+  background-image: image-url("facebook-icon.png");
 }
 
 
