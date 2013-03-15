@@ -272,6 +272,13 @@ html {
     @include transform(scaleX(1.2) scaleY(0.8) translate(0, 10px));
   }
 }
+#side-nav-social-list {
+  li {
+    padding: 15px 15px;
+    border-bottom: $banner-border;
+  }
+}
+
 
 /*
  * global footer
