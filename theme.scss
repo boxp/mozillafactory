@@ -273,8 +273,18 @@ html {
   }
 }
 #side-nav-social-list {
+
+  @include phone {
+    width: $sidebar-banner-width-phone;
+    margin: auto;
+  }
+
   li {
     list-style-type: none;
+
+    @include phone-wide {
+      display: inline-block;
+    }
 
     & > a {
       display: block;
@@ -283,6 +293,10 @@ html {
       border-bottom: $banner-border;
       margin: 10px auto;
       background-repeat: no-repeat;
+
+      @include phone {
+        border-bottom: none;
+      }
     }
   }
 }
