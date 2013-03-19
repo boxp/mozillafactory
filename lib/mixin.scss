@@ -20,7 +20,10 @@ $base-font-family:
                    sans-serif;
 $base-line-height: 1.6em;
 
+$body-bg-color: #f5f1e8;
+
 $basic-block-bg-color: rgba(255, 255, 255, .5);
+$basic-block-bg-color-ie8: mix($body-bg-color, #fff);
 
 $page-width: 980px;
 $page-width-phone: 95%;
@@ -127,6 +130,7 @@ $tag-spare-bg-color: #003366;
 }
 
 @mixin embeded-line-bottom($op1: .2, $op2: .3) {
+  border-bottom: 1px solid rgb(0, 0, 0);
   border-bottom: 1px solid rgba(0, 0, 0, $op1);
   @include box-shadow(rgba(255, 255, 255, $op2)0 1px 0);
 }
@@ -155,22 +159,24 @@ $tag-spare-bg-color: #003366;
 }
 
 %basic-block {
-  background-color: $basic-block-bg-color;
+  background: $basic-block-bg-color-ie8;
+  background: $basic-block-bg-color;
   @include box-shadow( 0px 0px 5px 1px rgba(0, 0, 0, .1) );
 }
 
 @mixin grid-column-width($box-number, $parent-width, $padding-width, $border-width, $margin-width) {
   /*
-    // 個々の要素に必要なborderとpadding
-    $x = (個々の要素のborder*2 + padding*2) * 個々の要素の行数;
-    // 相殺分を考慮したmargin
-    $y = 要素間margin *（要素の行数 - 1）
-    
-    個々の要素の幅 = (親の幅 - ( $x + $y) ) / 要素の行数;
+   * // 個々の要素に必要なborderとpadding
+   * $x = (個々の要素のborder*2 + padding*2) * 個々の要素の行数;
+   * // 相殺分を考慮したmargin
+   * $y = 要素間margin *（要素の行数 - 1）
+   *
+   * 個々の要素の幅 = (親の幅 - ( $x + $y) ) / 要素の行数;
    */
   $x: 2 * ($padding-width + $border-width) * $box-number;
   $y: $margin-width * ($box-number - 1);
-  width: ( $parent-width - ($x + $y) ) / $box-number;
+  //width: ( $parent-width - ($x + $y) ) / $box-number;
+  width: 28%; // for IE8 support
   padding: $padding-width;
   margin-left: $margin-width;
 

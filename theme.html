@@ -8,8 +8,15 @@
     <meta property="og:image" content="{PortraitURL-48}">
     <meta property="og:title" content="{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}">
     <script type="text/javascript">
-    // <![CDATA[
-      var onLoad = function onLoad() {
+      if (!window.addEventListener) {
+        window.addEventListener = function addEventListener(type, listener, useCapture) {
+          window.attachEvent("on" + type, listener);
+        };
+        window.removeEventListener = function removeEventListener(type, listener, useCapture) {
+          window.detachEvent("on" + type, listener);
+        };
+      }
+      var onLoad = function onLoad(aEvent) {
         var meta = document.createElement('meta');
         meta.setAttribute("property", "og:url");
         meta.setAttribute("content", location.href);
@@ -20,7 +27,6 @@
       };
       window.addEventListener("DOMContentLoaded", onLoad, false);
       window.addEventListener("load", onLoad, false);
-    // ]]>
     </script>
     {block:IndexPage}
     <meta property="og:type" content="blog">
@@ -36,6 +42,9 @@
     <meta name="description" content="{MetaDescription}" />
     {/block:Description}
     <title>{block:TagPage}{URLSafeTag}{block:Pagination}:page {CurrentPage}{/block:Pagination} &mdash; {/block:TagPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
+    <!--[if lt IE 9]>
+      <script src="http://saneyuki.mozlabs.jp/factory/script/html5shiv.js"></script>
+    <![endif]-->
     <style>
       {CustomCSS}
     </style>

@@ -54,10 +54,10 @@ h1, h2, h3, h4, h5, h6 {
  *****************/
 
 html {
-  background: #f5f1e8 image-url("bg-sand.png") repeat;
+  background: $body-bg-color image-url("bg-sand.png") repeat;
   background: image-url("bg-gradient-sand.png") repeat-x 0 0,
               image-url("bg-sand.png") repeat 0 0,
-              #f5f1e8;
+              $body-bg-color;
 }
 
 #page {
