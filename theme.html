@@ -141,6 +141,9 @@
             <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
           </time>
           {/block:Date}
+          {block:RebloggedFrom}
+          <cite class="source reblog">Reblogged from: <a href="{ReblogRootURL}">{ReblogRootTitle}</a></cite>
+          {/block:RebloggedFrom}
         </footer>
 
         {/block:Text}
