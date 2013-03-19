@@ -130,6 +130,7 @@ $tag-spare-bg-color: #003366;
 }
 
 @mixin embeded-line-bottom($op1: .2, $op2: .3) {
+  border-bottom: 1px solid rgb(0, 0, 0);
   border-bottom: 1px solid rgba(0, 0, 0, $op1);
   @include box-shadow(rgba(255, 255, 255, $op2)0 1px 0);
 }
