@@ -20,8 +20,10 @@ $base-font-family:
                    sans-serif;
 $base-line-height: 1.6em;
 
+$body-bg-color: #f5f1e8;
+
 $basic-block-bg-color: rgba(255, 255, 255, .5);
-$basic-block-bg-color-ie8: rgb(246, 245, 241);
+$basic-block-bg-color-ie8: mix($body-bg-color, #fff);
 
 $page-width: 980px;
 $page-width-phone: 95%;
