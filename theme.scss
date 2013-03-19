@@ -571,7 +571,7 @@ html {
 }
 .tag {
 
-  background: #000;
+  background: $tag-fallback-bg-color;
   text-transform: uppercase;
 
   & a {
