@@ -21,6 +21,7 @@ $base-font-family:
 $base-line-height: 1.6em;
 
 $basic-block-bg-color: rgba(255, 255, 255, .5);
+$basic-block-bg-color-ie8: rgb(246, 245, 241);
 
 $page-width: 980px;
 $page-width-phone: 95%;
@@ -155,7 +156,8 @@ $tag-spare-bg-color: #003366;
 }
 
 %basic-block {
-  background-color: $basic-block-bg-color;
+  background: $basic-block-bg-color-ie8;
+  background: $basic-block-bg-color;
   @include box-shadow( 0px 0px 5px 1px rgba(0, 0, 0, .1) );
 }
 
