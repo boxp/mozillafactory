@@ -141,6 +141,30 @@
             <span class="year">{Year}</span>.<span class="month">{MonthNumber}</span>.<span class="day">{DayOfMonth}</span>
           </time>
           {/block:Date}
+
+          <div class="source-container">
+          {block:RebloggedFrom}
+          <cite class="source reblog">Reblogged from: <a href="{ReblogRootURL}">{ReblogRootTitle}</a></cite>
+          {/block:RebloggedFrom}
+
+          {block:ContentSource}
+          {lang:Source}:
+          <cite class="source">
+            {block:SourceLogo}
+            <a href="{SourceURL}">
+              <img src="{BlackLogoURL}"
+                   class="source-logo"
+                   width="{LogoWidth}"
+                   height="{LogoHeight}"
+                   alt="{SourceTitle}"/>
+            </a>
+            {/block:SourceLogo}
+            {block:NoSourceLogo}
+            <a href="{SourceURL}">{SourceTitle}</a>
+            {/block:NoSourceLogo}
+          </cite>
+          {/block:ContentSource}
+          </div>
         </footer>
 
         {/block:Text}
@@ -194,19 +218,19 @@
       {/block:Photoset}
 
       {block:Quote}
-        <blockquote class="post-body">
-          <div class="quote-body">
-            "{Quote}"
-          </div>
+        <blockquote class="post-title">{block:ContentSource}<a href="{SourceURL}">{/block:ContentSource}{Quote}{block:ContentSource}</a>{/block:ContentSource}</blockquote>
 
-          {block:Source}
-          <cite class="source">{Source}</cite>
-          {/block:Source}
-        </blockquote>
+        {block:Source}
+        <div class="quote-body post-body">
+          {Source}
+        </div>
+        {/block:Source}
       {block:Quote}
 
       {block:Link}
-        <a href="{URL}" class="link" {Target}>{Name}</a>
+        <header>
+          <h1 class="post-title"><a href="{URL}" class="link" {Target}>{Name}</a></h1>
+        </header>
 
         {block:Description}
         <div class="description">{Description}</div>
@@ -260,7 +284,7 @@
 
   <nav id="side-navigation">
     <section class="banner">
-      <a href=""
+      <a href="./about#for-youth"
          class="bannar-link">
         <img src="http://saneyuki.mozlabs.jp/factory/img/player.png"
              alt=""
@@ -270,7 +294,7 @@
       </a>
     </section>
     <section class="banner">
-      <a href=""
+      <a href="./about#for-corp"
          class="bannar-link">
         <img src="http://saneyuki.mozlabs.jp/factory/img/mentor.png"
              alt=""

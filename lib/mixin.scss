@@ -14,16 +14,14 @@ $base-path: "http://saneyuki.mozlabs.jp/factory";
 $link-color: #af3232;
 $text-color-primary: #333;
 $base-font-size: 14px;
-$base-font-family: 
+$base-font-family: 'Open Sans',
                    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
-                   メイリオ, Meiryo, sans-serif,
-                   sans-serif;
+                   メイリオ, Meiryo, sans-serif;
 $base-line-height: 1.6em;
 
 $body-bg-color: #f5f1e8;
 
-$basic-block-bg-color: rgba(255, 255, 255, .5);
-$basic-block-bg-color-ie8: mix($body-bg-color, #fff);
+$basic-block-bg-color: mix($body-bg-color, #fff);
 
 $page-width: 980px;
 $page-width-phone: 95%;
@@ -95,6 +93,7 @@ $footer-bg-color: #fff;
 /*
  * tag variable
  */
+$tag-fallback-bg-color: #000;
 $tag-project-bg-color: #666666;
 $tag-news-bg-color: #990000;
 $tag-mentor-bg-color: #666666;
@@ -134,6 +133,20 @@ $tag-spare-bg-color: #003366;
   border-bottom: 1px solid rgba(0, 0, 0, $op1);
   @include box-shadow(rgba(255, 255, 255, $op2)0 1px 0);
 }
+/* #posts.index .post::after に指定するだけのmixin */
+@mixin simple-linear-gradient-for-post-index () {
+  $top: rgba($basic-block-bg-color, 0);
+  $top-percent: 10%;
+  $bottom: $basic-block-bg-color;
+  $bottom-percent: 100%;
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(22%,rgba(255,255,255,1)), color-stop(99%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top $top-percent, $bottom $bottom-percent); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top $top-percent, $bottom $bottom-percent); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top $top-percent, $bottom $bottom-percent); /* IE10+ */
+  background: linear-gradient(to bottom, $top $top-percent, $bottom $bottom-percent); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* IE6-9 */
+}
 
 %clear-embeded-line-bottom {
   border-bottom: none;
@@ -159,7 +172,6 @@ $tag-spare-bg-color: #003366;
 }
 
 %basic-block {
-  background: $basic-block-bg-color-ie8;
   background: $basic-block-bg-color;
   @include box-shadow( 0px 0px 5px 1px rgba(0, 0, 0, .1) );
 }

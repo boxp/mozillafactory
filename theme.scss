@@ -480,8 +480,17 @@ html {
     }
 
   }
-}
 
+  .source-logo {
+    display: inline;
+  }
+}
+.source-container {
+  display: block;
+}
+.source.reblog {
+  display: block;
+}
 
 /*
  * 投稿の一覧表示
@@ -505,11 +514,21 @@ html {
                        $post-index-padding-width,
                        $post-index-border-width,
                        $post-index-margin-width);
+  position: relative;
   height: 400px;
   margin-bottom: 25px;
   font-size: $post-index-font-size;
   overflow: hidden;
   float: left;
+
+  &:after {
+    content: "";
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    @include simple-linear-gradient-for-post-index();
+  }
 
   .post-title {
     font-size: 20px;
@@ -569,6 +588,7 @@ html {
 }
 .tag {
 
+  background: $tag-fallback-bg-color;
   text-transform: uppercase;
 
   & a {
