@@ -485,6 +485,14 @@ html {
     display: inline;
   }
 }
+blockquote.post-title > a {
+  &:before {
+    content: "“";
+  }
+  &:after {
+    content: "”";
+  }
+}
 .source-container {
   display: block;
 }
