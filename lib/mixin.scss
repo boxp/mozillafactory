@@ -133,6 +133,20 @@ $tag-spare-bg-color: #003366;
   border-bottom: 1px solid rgba(0, 0, 0, $op1);
   @include box-shadow(rgba(255, 255, 255, $op2)0 1px 0);
 }
+/* #posts.index .post::after に指定するだけのmixin */
+@mixin simple-linear-gradient-for-post-index () {
+  $top: rgba($basic-block-bg-color, 0);
+  $top-percent: 10%;
+  $bottom: $basic-block-bg-color;
+  $bottom-percent: 100%;
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(22%,rgba(255,255,255,1)), color-stop(99%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top $top-percent, $bottom $bottom-percent); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top $top-percent, $bottom $bottom-percent); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top $top-percent, $bottom $bottom-percent); /* IE10+ */
+  background: linear-gradient(to bottom, $top $top-percent, $bottom $bottom-percent); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* IE6-9 */
+}
 
 %clear-embeded-line-bottom {
   border-bottom: none;
