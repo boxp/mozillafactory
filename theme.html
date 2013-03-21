@@ -41,7 +41,7 @@
     {block:Description}
     <meta name="description" content="{MetaDescription}" />
     {/block:Description}
-    <title>{block:TagPage}{URLSafeTag}{block:Pagination}:page {CurrentPage}{/block:Pagination} &mdash; {/block:TagPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
+    <title>{block:TagPage}{Tag}{block:Pagination}:page {CurrentPage}{/block:Pagination} &mdash; {/block:TagPage}{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}</title>
     <!--[if lt IE 9]>
       <script src="http://saneyuki.mozlabs.jp/factory/script/html5shiv.js"></script>
     <![endif]-->
@@ -93,7 +93,7 @@
   <article id="main">
 
     {block:TagPage}
-      <h2 id="tag-title" class="{Tag}">{URLSafeTag}</h2>
+      <h2 id="tag-title" class="{Tag}">{Tag}</h2>
     {/block:TagPage}
 
     <section id="posts" class="{block:TagPage}{Tag}{/block:TagPage} {block:IndexPage}index{/block:IndexPage}">
