@@ -439,12 +439,16 @@ html {
   & video,
   & audio,
   & iframe {
-    @extend %media-justify;
-
+    max-width: 100%;
     display: block;
     margin-right: auto;
     margin-left: auto;
     float: none;
+  }
+  & img,
+  & video,
+  & audio {
+    height: auto;
   }
 
   .post-title {
