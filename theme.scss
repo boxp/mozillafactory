@@ -593,11 +593,14 @@ blockquote.post-title > a {
 .tag-list {
   list-style-type: none;
   float: right;
+  text-align: right;
 }
 .tag {
 
+  display: inline-block;
   background: $tag-fallback-bg-color;
   text-transform: uppercase;
+  margin: 1px;
 
   & a {
     padding: 5px 10px;
