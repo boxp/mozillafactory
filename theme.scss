@@ -375,12 +375,10 @@ html {
 
   & > h1 {
     margin-bottom: 0.5em;
+    font-size: 16px;
 
     @include phone {
       font-size: 14px;
-    }
-    @include tablet {
-      font-size: 16px;
     }
   }
 
