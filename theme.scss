@@ -88,6 +88,20 @@ html {
 #tabzilla-nav:after {
   @extend %clear-float;
 }
+#lang-navigation {
+  float: right;
+
+  & > li {
+    display: inline-block;
+    padding: 12px;
+    list-style-type: none;
+
+    & > a {
+      color: $text-color-primary;
+      text-decoration: none;
+    }
+  }
+}
 
 #title-wrapper {
   text-align: center;
@@ -439,12 +453,16 @@ html {
   & video,
   & audio,
   & iframe {
-    @extend %media-justify;
-
+    max-width: 100%;
     display: block;
     margin-right: auto;
     margin-left: auto;
     float: none;
+  }
+  & img,
+  & video,
+  & audio {
+    height: auto;
   }
 
   .post-title {
@@ -483,6 +501,14 @@ html {
 
   .source-logo {
     display: inline;
+  }
+}
+blockquote.post-title > a {
+  &:before {
+    content: "“";
+  }
+  &:after {
+    content: "”";
   }
 }
 .source-container {
@@ -585,11 +611,14 @@ html {
 .tag-list {
   list-style-type: none;
   float: right;
+  text-align: right;
 }
 .tag {
 
+  display: inline-block;
   background: $tag-fallback-bg-color;
   text-transform: uppercase;
+  margin: 1px;
 
   & a {
     padding: 5px 10px;
@@ -599,23 +628,23 @@ html {
   &.project {
     background: $tag-project-bg-color;
   }
-  &.Mentor {
+  &.mentor {
     background: $tag-mentor-bg-color;
   }
   &.event {
     background: $tag-event-bg-color;
   }
-  &.News {
+  &.news {
     background: $tag-news-bg-color;
   }
-  &.moz-bus {
+  &.mozbus {
     background: $tag-mozbus-bg-color;
   }
   &.webmaker {
     background: $tag-webmaker-bg-color;
   }
-  &.mecha-mozilla {
-    background: $tag-mecha-mozilla-bg-color;
+  &.mechamozilla {
+    background: $tag-mechamozilla-bg-color;
   }
   &.ぶっとび {
     background: $tag-buttobi-bg-color;
@@ -629,26 +658,23 @@ html {
   &.project {
     border-color: $tag-project-bg-color;
   }
-  &.project {
-    border-color: $tag-project-bg-color;
-  }
-  &.Mentor {
+  &.mentor {
     border-color: $tag-mentor-bg-color;
   }
   &.event {
     border-color: $tag-event-bg-color;
   }
-  &.News {
+  &.news {
     border-color: $tag-news-bg-color;
   }
-  &.moz-bus {
+  &.mozbus {
     border-color: $tag-mozbus-bg-color;
   }
   &.webmaker {
     border-color: $tag-webmaker-bg-color;
   }
-  &.mecha-mozilla {
-    border-color: $tag-mecha-mozilla-bg-color;
+  &.mechamozilla {
+    border-color: $tag-mechamozilla-bg-color;
   }
   &.ぶっとび {
     border-color: $tag-buttobi-bg-color;
@@ -659,32 +685,19 @@ html {
 }
 
 
-/* 投稿一覧において日付を表示しない */
+/*
+ * 各投稿ページにて、特定のタグに所属する投稿の場合は、
+ * 投稿日時を表示しない
+ */
 %hide-date-info {
   & .post-time {
     display: none;
   }
 }
-
-/*
- * 各投稿ページにて、特定のタグに所属する投稿の場合は、
- * 投稿日時を表示しない
- */
 .post {
-  &[data-post-tag~=Mentor],
-  &[data-post-tag~=project] {
-    & time.post-time {
-      display: none;
-    }
+  &[data-post-tag~="mentor"],
+  &[data-post-tag~="project"] {
+    @extend %hide-date-info;
   }
 }
-#posts {
-  &.mentor,
-  &.project,
-  &.Mentor {
-    .post {
-      @extend %hide-date-info;
-    }
-  }
 
-}

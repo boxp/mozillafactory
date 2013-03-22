@@ -100,7 +100,7 @@ $tag-mentor-bg-color: #666666;
 $tag-event-bg-color: #45756d;
 $tag-mozbus-bg-color: #f88e11;
 $tag-webmaker-bg-color: #99cc33;
-$tag-mecha-mozilla-bg-color: #660099;
+$tag-mechamozilla-bg-color: #660099;
 $tag-buttobi-bg-color: #a3953f;
 $tag-spare-bg-color: #003366;
 
@@ -164,11 +164,6 @@ $tag-spare-bg-color: #003366;
   content: "";
   display: block;
   clear: both;
-}
-
-%media-justify {
-  max-width: 100%;
-  height: auto;
 }
 
 %basic-block {
