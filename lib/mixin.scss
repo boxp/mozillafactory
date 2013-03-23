@@ -76,6 +76,12 @@ $post-width-tablet: 100%;
 $post-maxwidth-tablet: 100%;
 
 /*
+ * お問い合わせフォーム埋め込みiframe
+ */
+/* iframeの高さ。余裕を見て「これなら大丈夫だろう」という値を決め打ち */
+$contact-form-frame-height: 900px;
+
+/*
  * post index variable
  */
 $post-index-padding-width: 15px;

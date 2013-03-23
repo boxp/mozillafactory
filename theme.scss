@@ -605,7 +605,7 @@ blockquote.post-title > a {
 /* 問い合わせ用フォーム */
 #contact-form-frame {
   width: 100%;
-  min-height: 900px;
+  min-height: $contact-form-frame-height;
 }
 
 /*
