@@ -8,6 +8,7 @@
     <meta property="og:image" content="{PortraitURL-48}">
     <meta property="og:title" content="{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}">
     <script type="text/javascript">
+    (function(){
       if (!window.addEventListener) {
         window.addEventListener = function addEventListener(type, listener, useCapture) {
           window.attachEvent("on" + type, listener);
@@ -27,6 +28,7 @@
       };
       window.addEventListener("DOMContentLoaded", onLoad, false);
       window.addEventListener("load", onLoad, false);
+    })();
     </script>
     {block:IndexPage}
     <meta property="og:type" content="blog">
