@@ -17,10 +17,7 @@ body {
   font-family: $base-font-family;
   color: $text-color-primary;
 
-  @include phone {
-    width: 100%;
-  }
-  @include tablet {
+  @include mobile {
     width: 100%;
   }
 }
@@ -69,10 +66,7 @@ html {
     @extend %clear-float;
   }
 
-  @include phone {
-    width: 100%;
-  }
-  @include tablet {
+  @include mobile {
     width: 100%;
   }
 }
@@ -341,10 +335,7 @@ html {
     @extend %clear-float;
   }
 
-  @include phone {
-    width: 80%;
-  }
-  @include tablet {
+  @include mobile {
     width: 80%;
   }
 }
@@ -353,20 +344,13 @@ html {
 #footer-info {
   float: left;
 
-  @include phone {
-    text-align: center;
-    float: none;
-  }
-  @include tablet {
+  @include mobile {
     text-align: center;
     float: none;
   }
 }
 #footer-mozilla-japan-logo {
-  @include phone {
-    margin-bottom: 40px;
-  }
-  @include tablet {
+  @include mobile {
     margin-bottom: 40px;
   }
 }
@@ -408,10 +392,7 @@ html {
     display: inline-block;
     margin: 0.5em 1em 1em;
 
-    @include phone {
-      display: block;
-    }
-    @include tablet {
+    @include mobile {
       display: block;
     }
   }

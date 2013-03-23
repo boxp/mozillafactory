@@ -268,8 +268,16 @@ $tag-spare-bg-color: #003366;
 
 /*
  * Media Queries
+ *
+ * # Breakpoints
+ *
+ * |      |  phone-wide |            |
+ * |      |-------------|            |
+ * |      phone         |   tablet   |
+ * |--------------------|------------|---Desktop---...
+ * |           mobile                |
+ *
  */
-
 $mq-tablet-max-wide: 1082px - 1px;
 $mq-tablet-min-wide: 768px;
 $mq-phone-max-wide: $mq-tablet-min-wide - 1px;
@@ -289,6 +297,12 @@ $mq-phone-wide-min-wide: 480px;
 
 @mixin tablet {
   @media only screen and (min-width: $mq-tablet-min-wide) and (max-width: $mq-tablet-max-wide) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mq-tablet-max-wide) {
     @content;
   }
 }
