@@ -604,7 +604,7 @@ blockquote.post-title > a {
   display: inline-block;
   background: $tag-fallback-bg-color;
   text-transform: uppercase;
-  margin: 1px;
+  margin: 0.5px 1px;
 
   & a {
     padding: 5px 10px;
