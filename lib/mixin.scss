@@ -265,20 +265,30 @@ $tag-spare-bg-color: #003366;
 
 }
 
+
+/*
+ * Media Queries
+ */
+
+$mq-tablet-max-wide: 1082px - 1px;
+$mq-tablet-min-wide: 768px;
+$mq-phone-max-wide: $mq-tablet-min-wide - 1px;
+$mq-phone-wide-min-wide: 480px;
+
 @mixin phone {
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: $mq-phone-max-wide) {
     @content;
   }
 }
 
 @mixin phone-wide {
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: $mq-phone-wide-min-wide) and (max-width: $mq-phone-max-wide) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media only screen and (min-width: 768px) and (max-width: 1081px) {
+  @media only screen and (min-width: $mq-tablet-min-wide) and (max-width: $mq-tablet-max-wide) {
     @content;
   }
 }
