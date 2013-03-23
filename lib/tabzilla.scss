@@ -42,7 +42,7 @@
 #tabzilla {
     float: right;
     display: block;
-    background: url('http://saneyuki.mozlabs.jp/factory/img/tabzilla/tabzilla-tab.png');
+    background: url('#{$base-path}/img/tabzilla/tabzilla-tab.png');
     height: 44px;
     width: 150px;
     position: relative;
@@ -437,7 +437,7 @@
     }
 
     #tabzilla-panel #tabzilla-nav h2:after {
-        background: url('http://saneyuki.mozlabs.jp/factory/img/tabzilla/menu-arrow.png');
+        background: url('#{$base-path}/img/tabzilla/menu-arrow.png');
         content: " ";
         position: absolute;
         height: 15px;

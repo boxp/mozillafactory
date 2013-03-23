@@ -51,9 +51,9 @@ h1, h2, h3, h4, h5, h6 {
  *****************/
 
 html {
-  background: $body-bg-color image-url("bg-sand.png") repeat;
-  background: image-url("bg-gradient-sand.png") repeat-x 0 0,
-              image-url("bg-sand.png") repeat 0 0,
+  background: $body-bg-color url("#{$base-path}/img/bg-sand.png") repeat;
+  background: url("#{$base-path}/img/bg-gradient-sand.png") repeat-x 0 0,
+              url("#{$base-path}/img/bg-sand.png") repeat 0 0,
               $body-bg-color;
 }
 
@@ -309,10 +309,10 @@ html {
   }
 }
 #side-social-twitter {
-  background-image: image-url("twitter-icon.png");
+  background-image: url("#{$base-path}/img/twitter-icon.png");
 }
 #side-social-fb {
-  background-image: image-url("facebook-icon.png");
+  background-image: url("#{$base-path}/img/facebook-icon.png");
 }
 
 
