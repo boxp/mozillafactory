@@ -11,4 +11,4 @@ lint: $(SRCS)
 	$(CC) $(SRCS) -e development --dry-run
 
 release:
-	$(CC) $(SRCS) -e production --force
+	$(CC) $(SRCS) -e production --force -s compressed
