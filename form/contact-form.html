@@ -11,6 +11,9 @@
         width: 100%;
         background: #faf8f3;
         font-size: 12px;
+        font-family: 'Open Sans',
+                   "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+                   メイリオ, Meiryo, sans-serif;
         margin: auto;
       }
       #contact-form {
@@ -42,7 +45,6 @@
         margin: auto;
       }
       #send-mail p {
-        width: 80%;
         text-align: left;
         margin: auto;
       }
@@ -63,20 +65,21 @@
     <form id="contact-form" action="" method="get">
       <dl>
         <dt>
-          <label for="subject" class="required">お問い合わせの内容</label>
+          <label for="subject" class="required">お問い合わせ内容</label>
         </dt>
         <dd>
           <select id="subject" name="subject" required>
-            <option value="">プロジェクトへの参加希望</option>
-            <option value="">イベントへの参加希望</option>
-            <option value="">Mozilla Factory に関するご質問</option>
-            <option value="">Mozilla Factory へのご協力やご支援のお申し出</option>
-            <option value="">その他</option>
+            <option value="プロジェクトへの参加希望">プロジェクトへの参加希望</option>
+            <option value="イベントへの参加希望">イベントへの参加希望</option>
+            <option value="Mozilla Factory に関するご質問">Mozilla Factory に関するご質問</option>
+            <option value="Mozilla Factory へのご協力やご支援のお申し出">Mozilla Factory へのご協力やご支援のお申し出</option>
+            <option value="その他">その他</option>
           </select>
         </dd>
 
         <dt>
-          <label for="title">参加希望のプロジェクト・イベント</label>
+          <label for="title">参加を希望するプロジェクトやイベント名があれば
+ご記入ください</label>
         </dt>
         <dd>
           <input id="title" name="title" type="text"/>
@@ -111,10 +114,17 @@
         </dd>
 
         <dt>
-          <label for="comment">問い合わせ内容</label>
+          <label for="request">Mozilla Factory でやりたいこと、期待することがあればお書きください</label>
         </dt>
         <dd>
-          <textarea id="comment" name="comment" rows="5" required>Mozilla Factory でやりたいこと、期待すること、ご質問やお問い合わせなどご記入ください</textarea>
+          <textarea id="request" name="request" rows="5"></textarea>
+        </dd>
+
+        <dt>
+          <label for="comment">コメント</label>
+        </dt>
+        <dd>
+          <textarea id="comment" name="comment" rows="5" placeholder="ご質問やお問い合わせなどご記入ください"></textarea>
         </dd>
       </dl>
 

@@ -8,6 +8,7 @@
     <meta property="og:image" content="{PortraitURL-48}">
     <meta property="og:title" content="{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{Title}">
     <script type="text/javascript">
+    (function(){
       if (!window.addEventListener) {
         window.addEventListener = function addEventListener(type, listener, useCapture) {
           window.attachEvent("on" + type, listener);
@@ -27,6 +28,7 @@
       };
       window.addEventListener("DOMContentLoaded", onLoad, false);
       window.addEventListener("load", onLoad, false);
+    })();
     </script>
     {block:IndexPage}
     <meta property="og:type" content="blog">
@@ -333,7 +335,6 @@
             <a href="http://creativecommons.org/">
               <img src="http://saneyuki.mozlabs.jp/factory/img/supporter/cc-logo.png"
                    alt="Creative Commons"
-                   width="140" height="33"
                    class="supporter-logo"/>
             </a>
           </li>
@@ -341,7 +342,6 @@
             <a href="http://www.fabcafe.com/">
               <img src="http://saneyuki.mozlabs.jp/factory/img/supporter/fabcafe-logo.png"
                    alt="FabCafe"
-                   width="110" height="110"
                    class="supporter-logo"/>
             </a>
           </li>
@@ -349,7 +349,6 @@
             <a href="http://www.kddi.com/">
               <img src="http://saneyuki.mozlabs.jp/factory/img/supporter/KDDI-logo.png"
                    alt="KDDI"
-                   width="120" height="50"
                    class="supporter-logo"/>
             </a>
           </li>
@@ -357,7 +356,6 @@
             <a href="http://www.loftwork.jp/">
               <img src="http://saneyuki.mozlabs.jp/factory/img/supporter/loftwork-logo.png"
                    alt="loftwork"
-                   width="120" height="90"
                    class="supporter-logo"/>
             </a>
           </li>

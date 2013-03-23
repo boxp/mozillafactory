@@ -17,10 +17,7 @@ body {
   font-family: $base-font-family;
   color: $text-color-primary;
 
-  @include phone {
-    width: 100%;
-  }
-  @include tablet {
+  @include mobile {
     width: 100%;
   }
 }
@@ -54,9 +51,9 @@ h1, h2, h3, h4, h5, h6 {
  *****************/
 
 html {
-  background: $body-bg-color image-url("bg-sand.png") repeat;
-  background: image-url("bg-gradient-sand.png") repeat-x 0 0,
-              image-url("bg-sand.png") repeat 0 0,
+  background: $body-bg-color url("#{$base-path}/img/bg-sand.png") repeat;
+  background: url("#{$base-path}/img/bg-gradient-sand.png") repeat-x 0 0,
+              url("#{$base-path}/img/bg-sand.png") repeat 0 0,
               $body-bg-color;
 }
 
@@ -69,10 +66,7 @@ html {
     @extend %clear-float;
   }
 
-  @include phone {
-    width: 100%;
-  }
-  @include tablet {
+  @include mobile {
     width: 100%;
   }
 }
@@ -315,10 +309,10 @@ html {
   }
 }
 #side-social-twitter {
-  background-image: image-url("twitter-icon.png");
+  background-image: url("#{$base-path}/img/twitter-icon.png");
 }
 #side-social-fb {
-  background-image: image-url("facebook-icon.png");
+  background-image: url("#{$base-path}/img/facebook-icon.png");
 }
 
 
@@ -341,10 +335,7 @@ html {
     @extend %clear-float;
   }
 
-  @include phone {
-    width: 80%;
-  }
-  @include tablet {
+  @include mobile {
     width: 80%;
   }
 }
@@ -353,20 +344,13 @@ html {
 #footer-info {
   float: left;
 
-  @include phone {
-    text-align: center;
-    float: none;
-  }
-  @include tablet {
+  @include mobile {
     text-align: center;
     float: none;
   }
 }
 #footer-mozilla-japan-logo {
-  @include phone {
-    margin-bottom: 40px;
-  }
-  @include tablet {
+  @include mobile {
     margin-bottom: 40px;
   }
 }
@@ -375,12 +359,10 @@ html {
 
   & > h1 {
     margin-bottom: 0.5em;
+    font-size: 16px;
 
     @include phone {
       font-size: 14px;
-    }
-    @include tablet {
-      font-size: 16px;
     }
   }
 
@@ -410,10 +392,7 @@ html {
     display: inline-block;
     margin: 0.5em 1em 1em;
 
-    @include phone {
-      display: block;
-    }
-    @include tablet {
+    @include mobile {
       display: block;
     }
   }
@@ -516,6 +495,7 @@ blockquote.post-title > a {
 }
 .source.reblog {
   display: block;
+  font-style: normal;
 }
 
 /*
@@ -603,6 +583,12 @@ blockquote.post-title > a {
   }
 }
 
+/* 問い合わせ用フォーム */
+#contact-form-frame {
+  width: 100%;
+  min-height: $contact-form-frame-height;
+}
+
 /*
  * 特定のタグに関連する設定
  *
@@ -618,7 +604,7 @@ blockquote.post-title > a {
   display: inline-block;
   background: $tag-fallback-bg-color;
   text-transform: uppercase;
-  margin: 1px;
+  margin: 0.5px 1px;
 
   & a {
     padding: 5px 10px;
