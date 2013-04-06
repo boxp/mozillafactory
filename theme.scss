@@ -632,8 +632,11 @@ blockquote.post-title > a {
   &.mechamozilla {
     background: $tag-mechamozilla-bg-color;
   }
-  &.ぶっとび {
+  &.buttobi {
     background: $tag-buttobi-bg-color;
+  }
+  &.openlifemap {
+    background: $tag-openlifemap-bg-color;
   }
   &.spare {
     background: $tag-spare-bg-color;
@@ -662,8 +665,11 @@ blockquote.post-title > a {
   &.mechamozilla {
     border-color: $tag-mechamozilla-bg-color;
   }
-  &.ぶっとび {
+  &.buttobi {
     border-color: $tag-buttobi-bg-color;
+  }
+  &.openlifemap {
+    border-color: $tag-openlifemap-bg-color;
   }
   &.spare {
     border-color: $tag-spare-bg-color;
