@@ -269,6 +269,9 @@ html {
     }
   }
 }
+.bannar-caption {
+  display: block;
+}
 .bannar-icon {
   @include transition(transform 0.1s linear 0s);
 }
