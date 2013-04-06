@@ -269,13 +269,13 @@ html {
     }
   }
 }
-.bannar-caption {
+.banner-caption {
   display: block;
 }
-.bannar-icon {
+.banner-icon {
   @include transition(transform 0.1s linear 0s);
 }
-.bannar-link:hover {
+.banner-link:hover {
   & #banner-player-icon {
     @include transform(rotate(-20deg) translate(-10px, -5px));
   }
