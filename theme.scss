@@ -635,6 +635,9 @@ blockquote.post-title > a {
   &.ぶっとび {
     background: $tag-buttobi-bg-color;
   }
+  &.openlifemap {
+    background: $tag-openlifemap-bg-color;
+  }
   &.spare {
     background: $tag-spare-bg-color;
   }
@@ -664,6 +667,9 @@ blockquote.post-title > a {
   }
   &.ぶっとび {
     border-color: $tag-buttobi-bg-color;
+  }
+  &.openlifemap {
+    border-color: $tag-openlifemap-bg-color;
   }
   &.spare {
     border-color: $tag-spare-bg-color;
