@@ -245,34 +245,34 @@ html {
     margin-left: $header-nav-margin-tablet;
     margin-right: $header-nav-margin-tablet;
   }
+}
+.banner-list-item {
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0 2em;
+  border-bottom: $banner-border;
+  margin: 1em 0;
 
-  & .banner {
-    text-align: center;
-    width: 100%;
-    padding: 1em 0 2em;
-    margin: 1em 0;
-    border-bottom: $banner-border;
+  &:first-child {
+    margin-top: 0;
+  }
 
-    @include phone {
-      display: inline-block;
-      width: $sidebar-banner-width-phone;
-      min-width: 200px;
-      margin: auto;
-      border-bottom: none;
-    }
-
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      border: none;
-    }
+  @include phone {
+    display: inline-block;
+    width: $sidebar-banner-width-phone;
+    min-width: 200px;
+    margin: auto;
+    border-bottom: none;
   }
 }
-.bannar-icon {
+.banner-caption {
+  display: block;
+}
+.banner-icon {
   @include transition(transform 0.1s linear 0s);
 }
-.bannar-link:hover {
+.banner-link:hover {
   & #banner-player-icon {
     @include transform(rotate(-20deg) translate(-10px, -5px));
   }
