@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="../css/form.css"/>
   </head>
   <body>
-
 <form id="contact-form" action="send.php" method="POST">
   <dl>
     <dt>
@@ -15,6 +14,7 @@
     </dt>
     <dd>
 <?php 
+  $hasError = false;
   $value = htmlspecialchars($_POST['subject'], ENT_QUOTES);
   echo $value;
 ?>
@@ -38,7 +38,13 @@
     <dd>
 <?php 
   $value = htmlspecialchars($_POST['name'], ENT_QUOTES);
-  echo $value;
+  $value = trim($value);
+  if (strlen($value) == 0) {
+    $hasError = true;
+    echo "<span class='error'>Please enter your name.</span>";
+  } else {
+    echo $value;
+  }
 ?>
 <input type="hidden" name="name" value="<?php echo $value; ?>" />
     </dd>
@@ -49,7 +55,16 @@
     <dd>
 <?php 
   $value = htmlspecialchars($_POST['email'], ENT_QUOTES);
-  echo $value;
+  if (strlen($value) == 0) {
+    $hasError = true;
+    echo "<div class='error'>Please enter your e-mail address.<div>";
+  } else if (!preg_match('/^[\w\.\-]+@[\w\.\-]+$/', $value)) {
+    $hasError = true;
+    echo $value;
+    echo "<div class='error'>Please enter a valid address in the format.</div>";
+  } else {
+    echo $value;
+  }
 ?>
 <input type="hidden" name="email" value="<?php echo $value; ?>" />
     </dd>
@@ -99,11 +114,30 @@
 <input type="hidden" name="key" value="<?php include_once('../include/key.inc');
  echo $_key; ?>" />
     </dd>
+
+    <dt>
+      <label for="comment">Agree to plivacy policy</label>
+    </dt>
+    <dd>
+<?php 
+  $value = htmlspecialchars($_POST['privacy'], ENT_QUOTES);
+  if (strcmp($value, "agree") != 0) {
+    $hasError = true;
+    echo "<div class='error'>Please select this checkbox if you have read and agree to our Privacy Policy.</div>";
+  } else {
+    echo "Agree";
+  }
+?>
+<input type="hidden" name="privacy" value="<?php echo $value; ?>" />
+    </dd>
+
   </dl>
 
   <div id="send-mail">
     <input type="button" value="back" onclick="history.back();"/>
+    <?php if ($hasError == false) { ?>
     <input id="submit" name="submit" type="submit" value="submit" />
+    <?php } ?>
   </div>
 </form>
 

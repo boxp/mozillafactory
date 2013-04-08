@@ -53,3 +53,7 @@ em.required {
   background: #fafafa;
   color: #d20000;
 }
+
+.error {
+  color: red;
+}

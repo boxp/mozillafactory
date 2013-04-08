@@ -9,7 +9,6 @@
     <title>お問い合わせフォーム | Mozilla Factory</title>
   </head>
   <body>
-
 <form id="contact-form" action="send.php" method="POST">
   <dl>
     <dt>
@@ -17,6 +16,7 @@
     </dt>
     <dd>
 <?php 
+  $hasError = false;
   $value = htmlspecialchars($_POST['subject'], ENT_QUOTES);
   echo $value;
 ?>
@@ -40,7 +40,13 @@
     <dd>
 <?php 
   $value = htmlspecialchars($_POST['name'], ENT_QUOTES);
-  echo $value;
+  $value = trim($value);
+  if (strlen($value) == 0) {
+    $hasError = true;
+    echo "<div class='error'>お名前が入力されていません。</div>";
+  } else {
+    echo $value;
+  }
 ?>
 <input type="hidden" name="name" value="<?php echo $value; ?>" />
     </dd>
@@ -51,7 +57,16 @@
     <dd>
 <?php 
   $value = htmlspecialchars($_POST['email'], ENT_QUOTES);
-  echo $value;
+  if (strlen($value) == 0) {
+    $hasError = true;
+    echo "<div class='error'>メールアドレスが入力されていません。</div>";
+  } else if (!preg_match('/^[\w\.\-]+@[\w\.\-]+$/', $value)) {
+    $hasError = true;
+    echo $value;
+    echo "<div class='error'>メールアドレスの形式が正しくありません。</div>";
+  } else {
+    echo $value;
+  }
 ?>
 <input type="hidden" name="email" value="<?php echo $value; ?>" />
     </dd>
@@ -101,11 +116,29 @@
 <input type="hidden" name="key" value="<?php include_once('../include/key.inc');
  echo $_key; ?>" />
     </dd>
+
+    <dt>
+      <label for="comment">Mozilla Japan 個人情報保護方針への同意</label>
+    </dt>
+    <dd>
+<?php 
+  $value = htmlspecialchars($_POST['privacy'], ENT_QUOTES);
+  if (strcmp($value, "agree") != 0) {
+    $hasError = true;
+    echo "<div class='error'>同意が得られていません。</div>";
+  } else {
+    echo "同意する";
+  }
+?>
+<input type="hidden" name="privacy" value="<?php echo $value; ?>" />
+    </dd>
   </dl>
 
   <div id="send-mail">
     <input type="button" value="戻る" onclick="history.back();"/>
+    <?php if ($hasError == false) { ?>
     <input id="submit" name="submit" type="submit" value="送信" />
+    <?php } ?>
   </div>
 </form>
 
