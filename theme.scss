@@ -638,6 +638,18 @@ blockquote.post-title > a {
   &.openlifemap {
     background: $tag-openlifemap-bg-color;
   }
+  &.workshoptools {
+    background: $tag-workshoptools-bg-color;
+  }
+  &.education {
+    background: $tag-education-bg-color;
+  }
+  &.design {
+    background: $tag-design-bg-color;
+  }
+  &.physicalweb {
+    background: $tag-physicalweb-bg-color;
+  }
   &.spare {
     background: $tag-spare-bg-color;
   }
@@ -670,6 +682,18 @@ blockquote.post-title > a {
   }
   &.openlifemap {
     border-color: $tag-openlifemap-bg-color;
+  }
+  &.workshoptools {
+    border-color: $tag-workshoptools-bg-color;
+  }
+  &.education {
+    border-color: $tag-education-bg-color;
+  }
+  &.design {
+    border-color: $tag-design-bg-color;
+  }
+  &.physicalweb {
+    border-color: $tag-physicalweb-bg-color;
   }
   &.spare {
     border-color: $tag-spare-bg-color;
