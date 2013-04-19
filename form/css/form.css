@@ -1,0 +1,59 @@
+body {
+  width: 100%;
+  background: #faf8f3;
+  font-size: 12px;
+  font-family: 'Open Sans',
+                   "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+                   メイリオ, Meiryo, sans-serif;
+  margin: auto;
+}
+
+#contact-form {
+  padding: 12px 36px;
+}
+
+#contact-form dt,
+#contact-form dd {
+  margin: 0px 0px;
+}
+
+#contact-form dt {
+  margin: 12px 0 0;
+}
+#contact-form dd {
+  margin: 0;
+}
+#contact-form dl input,
+#contact-form dl textarea {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.1) inset;
+}
+#contact-form dl input {
+  height: 1.8em;
+}
+#send-mail {
+  text-align: center;
+  padding: auto;
+  margin: auto;
+}
+#send-mail p {
+  text-align: left;
+  margin: auto;
+}
+#send-mail label {
+  margin-top: 8px;
+}
+fieldset {
+  border: none;
+}
+em.required {
+  font-style: normal;
+  background: #fafafa;
+  color: #d20000;
+}
+
+.error {
+  color: red;
+}
