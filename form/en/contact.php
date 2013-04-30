@@ -75,7 +75,7 @@
 
   <div id="send-mail">
     <fieldset>
-      <p>We respect your privacy and entered information will be handled properly according to our privacy policy. Your contact information will be used for Mozilla Factory to contact you and to notify you about any future promotions of Mozilla Factory.</p>
+    <p>We respect your privacy and entered information will be handled properly according to the Mozilla Japan <a target="_blank" href="http://www.mozilla.jp/legal/privacy/japan/">Privacy Policy</a>. Your contact information will be used for Mozilla Factory to contact you and to notify you about any future promotions of Mozilla Factory.</p>
       <label for="privacy" class="required"><input id="privacy" name="privacy" type="checkbox" value="agree" required />Agree</label><em class="required">(required)</em>
     </fieldset>
     <input id="submit" name="submit" type="submit" value="confirm" />
