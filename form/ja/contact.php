@@ -78,7 +78,7 @@
 
   <div id="send-mail">
     <fieldset>
-      <p>ここで入力いただいた情報は、Mozilla Japan 個人情報保護方針 に従って管理し、Mozilla Factory に関するご連絡および Mozilla Japan からの各種ご案内 (イベント告知など) にのみ使用されます。</p>
+    <p>ここで入力いただいた情報は、Mozilla Japan <a target="_blank" href="http://www.mozilla.jp/legal/privacy/japan/">個人情報保護方針</a> に従って管理し、Mozilla Factory に関するご連絡および Mozilla Japan からの各種ご案内 (イベント告知など) にのみ使用されます。</p>
       <label for="privacy" class="required"><input id="privacy" name="privacy" type="checkbox" value="agree" required />同意する</label><em class="required">（必須）</em>
     </fieldset>
     <input id="submit" name="submit" type="submit" value="確認" />
