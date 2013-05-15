@@ -270,6 +270,7 @@ html {
   display: block;
 }
 .banner-icon {
+  @include transition(-webkit-transform, linear, 0.1s, 0s);
   @include transition(transform, linear, 0.1s, 0s);
 }
 .banner-link:hover {
