@@ -121,10 +121,10 @@ $tag-spare-bg-color: #f88e11;
  * Mixins
  *
  */
-@mixin transition($transition: all linear .25s) {
-  -webkit-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
+@mixin transition($prop_name: all, $timing_fn:linear, $duration: .25s, $delay: 0s) {
+  -webkit-transition: $prop_name $timing_fn $duration $delay;
+  -o-transition: $prop_name $timing_fn $duration $delay;
+  transition: $prop_name $timing_fn $duration $delay;
 }
 
 @mixin transform($transform) {
