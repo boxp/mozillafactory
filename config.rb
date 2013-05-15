@@ -2,6 +2,7 @@
 preferred_syntax = :scss
 
 # Require any additional compass plugins here.
+require "./plugins/utils.rb"
 
 # Set this to the root of your project when deployed:
 http_path = (environment === :development) ?  "http://saneyuki.mozlabs.jp/factory" : "/"
