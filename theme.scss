@@ -357,6 +357,7 @@ html {
 }
 #supporter-section {
   margin-left: 70px;
+  width: 740px;
 
   & > h1 {
     margin-bottom: 0.5em;
@@ -369,18 +370,16 @@ html {
 
   @include phone {
     margin: 1em 0;
+    width: auto;
   }
   @include tablet {
     margin: 2em 0;
+    width: auto;
   }
 }
 .supporter {
   display: inline-block;
-  margin: 0 1em;
-
-  &:first-child {
-    margin-left: 0;
-  }
+  margin: 0 2em 1em 0;
 }
 .supporter-logo {
   vertical-align: middle;
@@ -388,6 +387,7 @@ html {
 
 #footer-info {
   padding: 1em auto;
+  margin-top: 25px;
 
   & li {
     display: inline-block;
@@ -396,6 +396,13 @@ html {
     @include mobile {
       display: block;
     }
+  }
+
+  @include tablet{
+      margin-top: auto;
+  }
+  @include mobile{
+      margin-top: auto;
   }
 }
 
