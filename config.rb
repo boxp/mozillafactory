@@ -6,6 +6,7 @@ require "./plugins/utils.rb"
 
 # Set this to the root of your project when deployed:
 http_path = (environment === :development) ?  "http://saneyuki.mozlabs.jp/factory" : "/"
+http_path_michi = (environment === :development) ? "http://michi.mozlabs.jp/factory" : "/"
 css_dir = "/"
 sass_dir = "/"
 images_dir = "img"
