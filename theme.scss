@@ -316,6 +316,39 @@ html {
   background-image: url("#{$base-path}/img/facebook-icon.png");
 }
 
+#side-nav-access-list {
+
+    @include phone {
+        width: $sidebar-banner-width-phone;
+        margin: auto;
+    }
+    li {
+        list-style-type: none;
+        @include phone-wide {
+            display: inline-block;
+        }
+
+        & > a {
+            display: block;
+            min-height: 30px;
+            padding: 5px 15px 5px 40px;
+            border-bottom: $banner-border;
+            margin: 10px auto;
+            background-repeat: no-repeat;
+        
+            @include phone {
+                border-bottom: none;
+            }
+        }
+    }
+}
+#side-access-calendar {
+  background-image: url("#{$base-path-michi}/img/calendar-icon.png");
+}
+#side-access-map {
+  background-image: url("#{$base-path-michi}/img/map-icon.png");
+}
+
 
 /*
  * global footer
